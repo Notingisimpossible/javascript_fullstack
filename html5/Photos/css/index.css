@@ -1,0 +1,126 @@
+@keyframes run1{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(60deg) translateZ(300px);
+  }
+}
+  @keyframes run2{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(120deg) translateZ(300px);
+  }
+}
+  @keyframes run3{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(180deg) translateZ(300px);
+  }
+}
+  @keyframes run4{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(240deg) translateZ(300px);
+  }
+}
+  @keyframes run5{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(300deg) translateZ(300px);
+  }
+}
+  @keyframes run6{
+  from{
+    transform: rotateY(0deg) translateZ(0px);
+  }
+  to{
+    transform: rotateY(360deg) translateZ(300px);
+  }
+}
+      @keyframes run{
+  from{
+    transform: rotateY(0deg) ;
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+body{
+  width:100%;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background:#00ffb4;
+}
+  .wrap{
+    width: 120px;
+    height: 200px;		
+    margin:200px auto;
+    position: relative;
+    transform-style: preserve-3d;
+    animation:run 5s 2s infinite linear;
+  }
+  .box{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    opacity: 0.85;    
+    box-shadow: 0px 10px 100px yellowgreen;
+    
+  }
+  .box:nth-child(1){
+    animation: run1 1s linear forwards;
+  
+
+  }
+  .box:nth-child(2){
+  animation: run2 1s 0.2s linear forwards;
+  
+  }
+  .box:nth-child(3){
+      animation: run3 1s 0.4s linear forwards;
+  
+  }
+  .box:nth-child(4){
+      animation: run4 1s  0.6s linear forwards;
+    
+
+  }
+  .box:nth-child(5){
+      animation: run5 1s 0.8s linear forwards;
+
+
+  }
+  .box:nth-child(6){
+      animation: run6 1s  1s linear forwards;
+
+
+  }
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+  }
+   img:hover{
+  box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+  transform:rotate(0deg) scale(2.50);
+  -webkit-transform:rotate(0deg) scale(2.50);
+  z-index: 1000;
+}
+  embed{
+    width: 0;
+    height: 0;
+  }
