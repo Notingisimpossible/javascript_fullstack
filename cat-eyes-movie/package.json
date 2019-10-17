@@ -1,0 +1,13 @@
+{
+  "name": "cat-eyes-movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile_stylus":"stylus style.styl -w style.css",
+    "start": "live-server" 
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
