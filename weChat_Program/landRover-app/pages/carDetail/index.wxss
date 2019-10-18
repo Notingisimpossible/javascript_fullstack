@@ -1,0 +1,14 @@
+/* pages/carDetail/index.wxss */
+.cover .content {
+  justify-content: space-between;/*调节文字空格 */
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  text-shadow: 0 5px 19px rgb(0, 0, 0,0.5);
+  width: 100%;
+}
+.cover{position: relative;}
+.cover image {
+  width: 100%;
+  height: 38.2vh;  
+}
