@@ -13,6 +13,7 @@
       <img src="img/bird0.png" alt="" id="headBird">
     </div>
     <button id="startBtn"></button>
+    <button id="endBtn"></button>
     <div id="grassLand1"></div>
     <div id="grassLand2"></div>
   </div>
@@ -23,6 +24,7 @@
     var jsWrapBg = document.querySelector('.wrapBg')
     var jsHeadTitle = document.querySelector('.headTitle')
     var jsHeadBird = document.getElementById('headBird')
+    var jsEndBtn = document.getElementById('endBtn')
     var blocksArr = []
     var blockDistance = baseObj.randomNum(120, 350)
     var Y = 3
@@ -65,6 +67,12 @@
               bird.fallSpeed=0
               clearInterval(landTimer)
               jsWrapBg.onclick=null
+              jsEndBtn.style.display='block'
+              jsEndBtn.onclick = function() {
+                window.location.reload();
+                window.history.go(0);
+                document.execCommand('Refresh');
+              }
           }
         }
 

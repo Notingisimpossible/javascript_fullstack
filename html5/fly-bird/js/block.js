@@ -13,6 +13,7 @@ function Block() {
     newDiv.style.position = positionType
     newDiv.style.left = left
     newDiv.style.top = top
+    newDiv.style.zIndex=0
     newDiv.style.backgroundImage = url // "url(/img/0.jpg)"
     return newDiv
   }

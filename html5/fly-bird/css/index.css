@@ -35,6 +35,18 @@
     top: 250px;
     
 }
+#endBtn{
+    width: 226px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+    background-image: url(../img/game_over.jpg);
+    position: absolute;
+    left: 59px;
+    top: 150px;
+    display: none;
+    z-index: 10;
+}
 #grassLand1{
     height: 14px;
     width: 343px;
