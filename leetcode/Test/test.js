@@ -1,20 +1,58 @@
 /**
- * @param {number} x
+ * @param {number[]} ratings
  * @return {number}
  */
-var reverse = function(x) {
-		var k=String(x);
-		k=Array.from(k).reverse().join('');
-		if(k.charAt(k.length-1)==="-"){
-			k="-"+k;
-			k=k.substring(0,a.length-1);
+var candy = function(ratings) {
+	let number=0
+	let list = new Array()
+	for(let i=0;i<ratings.length;i++){
+		list[i]=1
+	}
+	for (let i = 1; i < ratings.length-1; i++) {
+		if(ratings[i]>ratings[i-1]&&ratings[i]<ratings[i+1]){
+			list[i]=list[i-1]+1
 		}
-		k=parseInt(k);
-		if(k<Math.pow(-2,31)||k>Math.pow(2,31)-1){
-			return 0;
+		else if(ratings[i]<ratings[i-1]&&ratings[i]>ratings[i+1]){
+			list[i]=list[i+1]+1
 		}
-		return k;
+		else if(ratings[i]<ratings[i-1]&&ratings[i]<ratings[i+1]){
+			list[i]=Math.min(list[i-1],list[i+1])-1
+		}
+		else if(ratings[i]==ratings[i-1]&&ratings[i]<ratings[i+1]){
+			if(list[i+1]!=1){
+				list[i]=[i+1]-1
+			}
+		}
+		else if(ratings[i]==ratings[i-1]&&ratings[i]>ratings[i+1]){
+			list[i]=list[i+1]+1
+		}
+		else if(ratings[i]<ratings[i-1]&&ratings[i]==ratings[i+1]){
+			if(list[i-1]!=1){
+				list[i]=list[i-1]-1
+			}
+		}
+		else if(ratings[i]>ratings[i-1]&&ratings[i]==ratings[i+1]){
+			list[i]=list[i-1]+1
+		}
+		else if(ratings[i]==ratings[i-1]&&ratings[i]==ratings[i+1]){
+			list[i]=1
+		}
+		else{
+			list[i]=Math.max(list[i-1],list[i+1])+1
+		}
+	}
+	if(ratings[0]>ratings[1]){
+		list[0]=list[1]+1
+	}
+	if(ratings[ratings.length-1]>ratings.length-2){
+		list[ratings.length-1]=list[ratings.length-2]
+	}
+	for(let i=0;i<list.length;i++){
+		number+=list[i]
+	}
+	console.log(list)
+	return number
 };
 
-var x=1534236469
-console.log(reverse(x));
+var number=[1,2,87,87,87,2,1]
+console.log(candy(number))
