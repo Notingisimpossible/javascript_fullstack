@@ -90,9 +90,9 @@ var candy = function(ratings) {
 		}
 		number+=list3[i]
 	}
-	console.log(list1)
-	console.log(list2)
-	console.log(list3)
+	// console.log(list1)
+	// console.log(list2)
+	// console.log(list3)
 	return number
 };
 
