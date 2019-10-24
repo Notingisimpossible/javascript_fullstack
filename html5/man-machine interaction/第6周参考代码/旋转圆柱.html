@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>旋转圆柱</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<style>
+			.out{ width:105px; height:200px;background: gray; margin:70px auto; -webkit-transform-style:preserve-3d; -webkit-perspective:1000px;-webkit-perspective-origin: center center;}
+			.con{width:105px; height:200px; -webkit-transform-style:preserve-3d; position: relative; -webkit-transform: rotateY(0deg) rotateX(-20deg);}
+			.con div{width:105px; height:200px; background: red; position: absolute; left: 0px; top:0px;}
+			.con div:nth-child(1){background:#324212;   -webkit-transform: translateZ(200px);}
+			.con div:nth-child(2){background:#537212;   -webkit-transform:rotateY(30deg) translateZ(200px);}
+			.con div:nth-child(3){background:#865332;-webkit-transform: rotateY(60deg) translateZ(200px);}
+			.con div:nth-child(4){background:#325612;-webkit-transform: rotateY(90deg) translateZ(200px);}
+			.con div:nth-child(5){background:#374712;-webkit-transform: rotateY(120deg) translateZ(200px);}
+			.con div:nth-child(6){background:#329612;-webkit-transform: rotateY(150deg) translateZ(200px);}
+			.con div:nth-child(7){background:#322612;-webkit-transform: rotateY(180deg) translateZ(200px);}
+			.con div:nth-child(8){background:#329612;-webkit-transform: rotateY(210deg) translateZ(200px);}
+			.con div:nth-child(9){background:#324256;-webkit-transform: rotateY(240deg) translateZ(200px);}
+			.con div:nth-child(10){background:#335712;-webkit-transform: rotateY(270deg) translateZ(200px);}
+			.con div:nth-child(11){background:#555212;-webkit-transform: rotateY(300deg) translateZ(200px);}
+			.con div:nth-child(12){background:#664212;-webkit-transform: rotateY(330deg) translateZ(200px);}
+			@-webkit-keyframes 'run'{
+			    0%{-webkit-transform:rotateX(-20deg) rotateY(0deg);}
+			    100%{-webkit-transform:rotateX(-20deg) rotateY(360deg);}
+			}
+			.con2{-webkit-animation:run 10s linear infinite 0.5s;}
+		</style>
+	</head>
+
+	<body>
+		<div class="out">
+			<div class="con con2">
+				<div>第1面</div>
+				<div>第2面</div>
+				<div>第3面</div>
+				<div>第4面</div>
+				<div>第5面</div>
+				<div>第6面</div>
+				<div>第7面</div>
+				<div>第8面</div>
+				<div>第9面</div>
+				<div>第10面</div>
+				<div>第11面</div>
+				<div>第12面</div>
+			</div>
+		</div>
+	</body>
+
+</html>

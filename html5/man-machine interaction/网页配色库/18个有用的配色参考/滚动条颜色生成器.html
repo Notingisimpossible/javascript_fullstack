@@ -1,0 +1,118 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>滚动条颜色生成器</title>
+<STYLE type=text/css>
+<!--
+body {
+	background:url(../images/bg.gif);
+	}
+-->
+</STYLE>
+</head>
+
+<body>
+
+
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) { 
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+<META content="MSHTML 5.50.4134.600" name=GENERATOR>
+<script language="JavaScript">
+function UpdateScroll(el) {
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+	if (document.body) {
+		document.body.style[el.name] = el.value
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+	
+}
+
+function showHideSet(ob){
+ob.style.display=(ob.style.display)?'':'none';
+}
+
+
+function setTarget(tob){
+for (i=1;i<9;i++){
+eval('e'+i).className='';
+}
+
+event.srcElement.className='target'
+obcurrentSet=MM_findObj('currentSet')
+obcurrentSet.value=tob
+//alert(obcurrentSet.value);
+
+}
+function setScroll(el) { 
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+	if (document.body) {
+		document.body.style[el.value] = el.value
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+	
+}
+function choiceColor(){
+obt=MM_findObj('currentSet')
+ob=MM_findObj(obt.value)
+ob.value=event.srcElement.color
+if (document.body) {
+document.body.style[obt.value] = ob.value
+var sB='<STYLE>\nBODY {\n';sE='\n}\n</STYLE>';sR=/;/g
+var obj=MM_findObj('js_1'); if (obj) { 
+nCssText=document.body.style.cssText.replace(sR,";\n");
+obj.value=sB+nCssText+sE}
+}
+}
+function hi(){
+event.srcElement.className='hi';
+}
+function lo(){
+event.srcElement.className='';
+}
+</script>
+</HEAD>
+<BODY id=all >
+
+
+支持：IE5.5浏览器版本以上。 <br>
+<input type="hidden" name="currentSet" value="scrollbarBaseColor"><br />
+<input onChange=UpdateScroll(this) name=scrollbarBaseColor> 滚动条的基本颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarFaceColor> 滚动条凸出部分的颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarTrackColor> 滚动条的背景颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarHighlightColor> 滚动条空白部分的颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarArrowColor> 上下按钮上三角箭头的颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbar3dLightColor> 滚动条亮边的颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarShadowColor> 立体滚动条阴影的颜色<br />
+<input onChange=UpdateScroll(this) name=scrollbarDarkShadowColor> 滚动条强阴影的颜色<br /><br />
+<form name="form1" method="post" action="">
+<textarea name="js_1" wrap="VIRTUAL" cols="80" rows="10"></textarea>
+</form>        
+
+
+
+
+</body>
+</html>

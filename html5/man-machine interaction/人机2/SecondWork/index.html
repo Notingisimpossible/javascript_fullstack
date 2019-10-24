@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,
+			maximum-scale=1.0,user-scalable=no" />
+
+		<title>Animals Word</title>
+		<style type="text/css">
+			.D{
+				width: 1200px;
+				height: 618px;
+				margin: 0;
+				border: 0;
+				background-image: url(img/1.jpg);
+				
+			}
+			.d1{
+				width:1200px;
+				height:200px;
+				margin: 0;
+				border: 0;
+			}
+			ul{
+				width: 1206px;
+				height: 314px;
+				margin: 0;
+				border: 0;
+				padding-left: 0;
+			}
+			ul li{height: 314px; margin: 0;}
+			.l1{
+				float: left;
+				width:350px;
+				height: 314px;
+				margin: 0;
+				border: 0;
+				list-style: none;
+				background-image: url("img/6.jpg");
+				
+			}
+			.l2{
+				float: left;
+				width: 500px;
+				height: 314px;
+				margin: 0;
+				border:0;
+				list-style: none;
+				
+			}
+			.l3{
+				width: 1200px;
+				height: 100px;
+				margin: 0;
+				border: 0;
+				list-style: none;
+				text-align: center;
+				align-content: center;
+				font-size: 45px;
+				color: #fff907;
+				 -webkit-text-stroke-width: medium;
+				 -webkit-text-stroke-color: #EB23B6;
+				 text-shadow: 0px 0px 0px #e2d83c,1px 1px 0px #fff907,
+				 2px 2px 0px #e2d83c,3px 3px 0px #e2d83c,4px 4px 0px #e2d83c,5px 5px 0px #e2d83c
+				 10px 5px 30px #fff907;
+				 transform:skew(10deg,5deg);
+				 color:#fff907;font:100px "隶书";
+			}
+			.l4{
+				
+			}
+			.l5{
+				width: 400px;
+				height: 100px;
+				margin: 0;
+				border: 0;
+				list-style: none;
+				text-align: center;
+				float: left;
+				padding-top: 0;
+				font-size: 30px ;
+				color: #EB23B6;
+			}
+			.l6{
+				float: left;
+				width:350px;
+				height: 314px;
+				margin: 0;
+				border: 0;
+				list-style: none;
+				background-image: url("img/4.jpg");
+				
+			}
+			
+p {
+   
+    text-align: center;
+    box-shadow: 0px 0px 15px 15px rgb(250,20,150,1);
+    background: radial-gradient(at 50px 50px, #FB7006 15% ,#F1D419 100%);
+    background: -webkit-radial-gradient(50px 50px,#FB7006 15%,#F1D419 100%);
+    background: linear-gradient(to bottom,#F1D419 10%,#FB7006 36%,#71F512 50%,#F1D419 100%);
+    background: -webkit-radial-gradient(top ,#F1D419 10%,#FB7006 36%,#71F512 75%,#F1D419 100%);
+    text-shadow: rgba(0,0,0,0);
+    border-radius: 25px;
+    font-size: 30px;
+    -webkit-text-stroke-color: #EB23B6;
+    -webkit-text-stroke-width: medium;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+.container {
+     
+        border: 1px solid #333;
+         position: relative;
+     }
+     .ball {
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 120px;
+         height: 120px;
+         border-radius: 120px;
+         border: 1px solid #999;
+         /* alternate：动画先正常运行再反方向运行，并持续交替运行 */
+         animation: horizontal 12s linear 0s infinite alternate, vertical 8s linear 0s infinite alternate;
+     }
+     @keyframes horizontal {
+         0% {
+             left: 0;
+         }
+         100% {
+             /* 运动最大距离为盒子长度减去球的长度 */
+             left: calc(1206px - 120px);         }
+     }
+     @keyframes vertical {
+         0% {
+             top: 0;
+         }
+         100% {
+             /* 运动最大距离为盒子高度减去球的高度 */
+             top: calc(620px - 120px);
+         }
+     }
+     .btn {
+    		height: 42px;
+   			width: 160px;
+   			position: absolute;
+    		top: 563px;
+    		left: 533px;
+    		border: none;
+    		outline: none;
+    		cursor: pointer;
+    		background-color:#1AF13D;
+    		border-radius: 18px;
+    		font-size: 20px;
+    		font-family:"宋体";
+		}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				resetPage();
+			}
+			window.onresize=function(){
+				resetPage();
+			}
+			function resetPage(){
+				var deviceWidth=document.documentElement.clientWidth;
+				/*480是根据原始网页的宽度来定的*/
+				scale=deviceWidth/1200;  
+				document.body.style.zoom=scale;
+			}
+		</script>
+
+	</head>
+	<body>
+		<div class="D" class="container">
+			<div class="d1">
+			<ul>
+				
+		<li class="l3">
+				动物世界
+			</li>
+			<li class="l5">
+				<a href="https://baike.baidu.com/item/%E5%A4%A7%E7%86%8A%E7%8C%AB/34935?fr=aladdin">
+						<img  src="img/3.jpg"/  class="ball">
+						</a>
+			</li>
+			<li class="l5"><p>你想要了解的动物都在这里</p></li>
+			<li class="l5">
+				
+			</li>
+				</ul>
+		</div>
+		<div >
+			<ul>
+				<li class="l6">
+					<img src="img/5.jpg" / style="opacity: 0.3 ;" >
+				</li>
+				<li class="l2">
+					
+					<img src="img/2.jpg"/>
+				</li>
+				<li class="l1">
+					<img src="img/5.jpg" / style="opacity: 0.3;" >
+				</li>
+			</ul>
+		</div>
+<div>
+	<ul style="width: 1200px; height: 100px; align-content: center; text-align: center; padding-top: 0px;"> 
+		<input  type="submit"class="btn" value="了解更多动物" id="">
+	</ul>
+</div>
+</div>
+	</body>
+</html>

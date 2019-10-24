@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>标题</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#div1 {
+				height: 100px;
+				width: 100px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1"></div>
+	</body>
+	<script>
+//		document.onmousedown = function() {　　
+//			alert('鼠标按下了');
+//		};
+//		document.onmouseup = function() {　　
+//			alert('鼠标抬起了');
+//		};
+//		document.oncontextmenu = function() {　　
+//			alert('鼠标右键点击了');
+//		};
+		document.onmousemove = function(ev) {
+			var oEvent = ev || event;
+			var oDiv = document.getElementById("div1");
+			oDiv.style.left = oEvent.clientX + "px";
+			oDiv.style.top = oEvent.clientY + "px";
+		}
+	</script>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>标题</title>
+	</head>
+
+	<body>
+		<textarea name="" rows="" cols="" id="key"></textarea>
+
+	</body>
+	<script>
+		document.onkeydown = function(ev) {
+			var oEvent = ev || event;
+			alert(oEvent.keyCode);
+
+		}
+		var key = document.getElementById("key");
+		key.onkeydown = f;
+
+		function f(e) {
+			var e = e || window.event;
+			var s;
+			var s = e.type + "&" + e.keyCode + "&" + e.charCode + "字符" + String.fromCharCode(e.which);
+			key.value = s;
+
+		}
+	</script>
+
+</html>

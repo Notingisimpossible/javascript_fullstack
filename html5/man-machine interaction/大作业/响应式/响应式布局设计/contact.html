@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Contact</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.useso.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<!--start header-->
+<div class="h_bg">
+<div class="wrap">
+<div class="wrapper">
+<div class="header">
+	<div class="logo">
+		 <a href=""><img src="images/logo.png"> </a>
+	</div>
+	<div class="cssmenu">
+		<ul>
+		   <li><a href="Animals Word.html"><span>官网首页</span></a></li>
+		   <li><a href=""><span>关于我们</span></a></li>
+		   <li class="has-sub"><a href=""><span>动物简介</span></a></li>
+		   <li class="active" class="last"><a href=""><span>联系我们</span></a></li>
+		 <div class="clear"></div>
+		 </ul>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- start content -->
+<div class="content_bg">
+<div class="wrap">
+<div class="wrapper">
+	<!-- start main -->
+	<div class="main">
+		<div class="section group">				
+				<div class="col span_1_of_2">
+					<div class="contact_info">
+			    	 	<h2>我们在这里</h2>
+			    	 		<div id="obj">
+					   			<img src="images/map.jpg" />
+					   			<div id="drag"></div>
+					   		</div>
+					   		<div id="rightShow">
+					   			<img id="rightimg" src="images/map-max.jpg" />
+					   		</div>
+      				</div>
+      			<div class="company_address">
+				     	<h2>官方地址 </h2>
+						<p>江西省 南昌市 江西财经大学麦庐园校区</p>
+				   		<p>手机:182 7952 6994</p>
+				   		<p>微信:18279526994</p>
+				 	 	<p>邮箱: <span>2421665649@qq.com</span></p>
+				   		<p>项目负责人: <span>宋敏</span></p>
+				   </div>
+				   <div class="clear"></div>
+				</div>				
+				<div class="col span_2_of_4">
+				  <div class="contact-form">
+				  	<h2>联系我们</h2>
+					       <form >
+					    	<div>
+						    	<span><label>姓名</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>电子邮箱</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>电话</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>对我们的建议</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span style="cursor: pointer;background-color:#008fcf;color: white;
+						   			padding:10px 20px;border-radius:35px;
+						   			display: inline-block;font-size: 35px;">发送</span>
+						  </div>
+					    </form>
+
+				    </div>
+  				</div>		
+  			<div class="clear"></div>
+		  </div>
+	</div>
+</div>
+</div>
+</div>
+<!-- start footer -->
+<div class="footer_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="copy">
+			<p class="w3-link">Copyright &copy; 2019.Person name All rights reserved.<a  href="#">敏哥</a></p>
+		</div>
+		<div class="f_nav">
+		<ul>
+			<li><a href="#">电话</a></li>
+			<li><a href="#">邮箱</a></li>
+			<li><a href="#">QQ</a></li>
+			<li><a href="#">微信</a></li>
+		</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+		var obj = document.getElementById('obj');
+		var rightShow = document.getElementById('rightShow');
+		var drag = document.getElementById('drag');
+		var rightImg = document.getElementById('rightimg');
+		obj.onmouseover = function(){
+			//鼠标在obj上移动时显示滤镜和放大图
+			drag.style.display = 'block';
+			rightShow.style.display = 'block';			
+		}
+		obj.onmousemove = function(event) {
+			var e = event || window.event;
+			//获得鼠标移动后drag应该距离obj盒子左、上边有多远
+			var lefts = e.clientX - obj.offsetLeft - (drag.offsetWidth) / 2;
+			var tops = e.clientY - obj.offsetTop - (drag.offsetHeight) / 2;
+			//计算向右、向下移动的临界值
+			var maxmovex = obj.clientWidth - drag.offsetWidth;
+			var maxmovey = obj.clientHeight - drag.offsetHeight;
+			//超出临界值即维持在临界值上
+			if (lefts > maxmovex) {
+				lefts = maxmovex;
+			}
+			if (tops > maxmovey) {
+				tops = maxmovey;
+			}
+			if (lefts < 0) {
+				lefts = 0;
+			}
+			if (tops < 0) {
+				tops = 0;
+			}
+			//鼠标移动后对drag盒子定位
+			drag.style.left = lefts + "px";
+			drag.style.top = tops + "px";
+			//对放大图进行等比反向移动
+			var percentageX = lefts/(obj.offsetWidth-drag.offsetWidth);
+			var percentageY = tops/(obj.offsetHeight-drag.offsetHeight);
+			rightShow.scrollLeft = (rightimg.offsetWidth-rightShow.offsetWidth) * percentageX;
+			rightShow.scrollTop = (rightimg.offsetHeight-rightShow.offsetHeight) * percentageY;
+		}
+		obj.onmouseout = function() {
+			drag.style.display = 'none';
+			rightShow.style.display = 'none';
+		}
+	</script>
+</html>
