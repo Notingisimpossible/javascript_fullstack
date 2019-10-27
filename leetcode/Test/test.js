@@ -3,6 +3,7 @@
  * @return {number}
  */
 var candy = function(ratings) {
+	let i = "love"
 	let number=0
 	let list1 = new Array()
 	let list2 = new Array()
