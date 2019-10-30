@@ -1,3 +1,3 @@
 - v-model 双向数据绑定
 - v-bind 绑定类名
-- watch(newVal,oldVal) 监听 newVal 变化之后的值 oldVal 变化之前的值
+- watch(newVal,oldVal) 监听 newVal 变化之后的值 ；oldVal 变化之前的值
