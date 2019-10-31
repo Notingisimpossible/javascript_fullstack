@@ -55,10 +55,10 @@
     var bar =new Bar();
     console.log(bar.toFoo());
     // Bar.prototype.toFoo()
-    console.log(Bar.prototype.toFoo.call({ abc:100 }))//未实例化无法直接调用toFoo 需用call矫正指针 call类似this
 
     var obj = {};
     console.log(obj.toString());
-  </script>
+  </script>    console.log(Bar.prototype.toFoo.call({ abc:100 }))//未实例化无法直接调用toFoo 需用call矫正指针 call类似this
+
 </body>
 </html>
