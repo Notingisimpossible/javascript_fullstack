@@ -10,7 +10,7 @@
         <span>密码</span>
         <input type="text">
       </p>
-      <div class="btn">{{btn}}</div>
+      <button class="btn">{{btn}}</button>
     </div>
   </div>
 </template>
