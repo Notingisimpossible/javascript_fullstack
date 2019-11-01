@@ -1,0 +1,30 @@
+*
+  margin 0
+  padding 0
+body html
+  line-height 1
+  font-weight 200
+  font-family 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+
+ul
+  li
+    list-style none
+
+.clearfix
+  display inline-block
+  &:after//伪类
+    display block
+    content ''
+    height 0
+    line-height 0
+    clear both//清除浮动
+    visibility hidden//看不见 但原有容器位置依旧占着
+
+@media (min-device-pixel-ration: 1.5)
+  .border-1px
+    &::after
+      transform scaleY(0.7)
+@media (min-device-pixel-ration: 2)
+  .border-1px
+    &::after
+      transform scaleY(0.5)

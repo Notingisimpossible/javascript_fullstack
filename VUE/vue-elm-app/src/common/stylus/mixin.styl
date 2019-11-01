@@ -1,0 +1,19 @@
+border-1px($color)
+  position relative
+  &:after
+    display block
+    position relative
+    left 0
+    bottom 0
+    width 100%
+    content ''
+    border-top 1px solid $color
+
+border-none()
+  &:after
+    display: none
+
+bg-image($url)
+  background-image url($url + '@2x.png')
+  @media (min-device-pixel-ration: 3)//媒体查询
+    background-image url($url + '@3x.png')
