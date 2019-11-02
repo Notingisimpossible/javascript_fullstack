@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/apis':{
+        target: 'http://ustbhuangyi.com/sell/',  // 后台api
+        changeOrigin: true,  //是否跨域
+        // secure: true,
+        pathRewrite: {
+          '^/api': ''   //需要rewrite的,
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

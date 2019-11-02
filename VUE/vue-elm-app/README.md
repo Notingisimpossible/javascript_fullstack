@@ -1,4 +1,4 @@
-# vue-elm-app
+# vue-ele-app
 
 > A Vue.js project
 
