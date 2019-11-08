@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore.js"></script>
+</head>
+<body>
+  <!-- 函数式编程 -->
+  <!-- 函数 是一等公民 -->
+  <script>
+    function req(erro,success) {
+      setTimeout(() => {
+        let rmd = Math.random()
+        if(rmd<0.5){
+          success({ code: 200 })
+        }else{
+          erro({ code:500 })
+        }
+      },3000)
+    }
+    req((res) => {
+      console.log(res)
+    },(res) => {
+      console.log(res)
+    })
+    // 函数式编程 提倡 单独的功能拆解为函数
+    // 函数式 通过什么组合单一功能？
+
+    function setRedColor(btn){
+      btn.style.color = 'red'
+      return btn
+    }
+    function setInnerHTML(btn){
+      btn.innerHTML = '立即购买'
+      return btn
+    }
+    function append(btn){
+      document.body.appendChild(btn)
+      return btn
+    }
+    let btn = document.createElement('button')
+    // append(setInnerHTML(setRedColor(btn)))
+    // setRedColor(btn)
+    // setInnerHTML(btn)
+    // append(btn)
+
+    // 组合方法
+    let nFn = _.compose(append,setInnerHTML,setRedColor)//_.为引入underscore underscore中包含compose组合方法
+    let btn1 = document.createElement('button')
+    nFn(btn1)
+
+
+
+
+    // 自定义一个组合
+    function compose1(fn1,fn2,fn3){
+      return function (params){
+        fn1(fn2(fn3(params)))
+      }
+    }
+
+
+    function myConpose(...fns){//将传进来的参数存储在数组中
+      return function(params){
+        let res = fns.pop()(params)
+        while (fns.length){
+          let fn = fns.pop()
+          res = fn(res)
+        }
+        return res
+      }
+    }
+
+  </script>
+</body>
+</html>
