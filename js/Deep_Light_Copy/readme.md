@@ -1,0 +1,9 @@
+- 基础数据类型 深拷贝
+- 对象及其他 浅拷贝
+- object.assign({},{}) 当数据类型是基础类型时为深拷贝 为其他类型时为浅拷贝
+- JSON.stringify({}) 将对象转化为字符串
+- JSON.parse(str) 将字符串转化为对象 
+- for ( a of b) 遍历数组 （可遍历{}）
+- for (a in b) 遍历对象（可遍历数组）
+- Object.prototype.hasOwnProperty.call(source,key) 判断source 中的 key是否为它本身自带的而不是从原型链上继承而来
+- var target = Array.isArray(X) ? []:{} 判断是否为数组类型
