@@ -1,0 +1,43 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
+// js 懒加载
+export default new Router({
+  dev: {
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {
+      "/api": {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          '^/api': '/static/mock/'
+        }
+      }
+    }
+  },
+  routes: [
+    {
+      path: '/',
+      name: 'Home',
+      component: () => import('@/page/home/Home')
+    },
+    {
+      path: '/city',
+      name: 'City',
+      component: () => import('@/page/city/City'),
+      children: [
+        {
+        path: '/city/in',
+        name: 'CityIn',
+        component: () => import('@/page/city/CityIn')
+      },
+      {
+        path: '/city/out',
+        name: 'CityOut',
+        component: () => import('@/page/city/CityOut')
+      }
+    ]
+    }
+  ]
+})
