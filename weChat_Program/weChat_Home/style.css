@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+html,body{
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+}
+.header{
+    padding: 10px 5px;/*上、右、下、左 边距*/
+    background-color: #eeeeee;
+    text-align: center;
+}
+.search input{
+    width: 100%;
+    box-sizing: border-box;/*挤自己宽度*/
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    text-align: center;
+    outline: none;
+    margin-top: 15px;
+}
+.content{
+    width: 100%;
+}
+.content-items{
+    width: 100%;
+}
+.content-item{
+    display: flex;/*弹性布局*/
+    padding: 10px;
+    /*justify-content: center;*/ /*控制弹性布局水平居中*/
+    align-items: center;/*控制弹性布局垂直居中*/
+}
+.pic{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+
+}
+.pic img{
+    width: 100%;
+}
+.message{
+    flex: 1;/*弹性容器属性，*/
+    margin-left: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;/*挤自己，变宽*/
+
+}
+.name{
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.detial{
+    font-size: 10px;
+    max-width: 280px;
+    color: #555555;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.footer{
+    width: 100%;
+    position:fixed;/*弹性定位*/
+    bottom: 0px;
+    padding: 10px 0 5px 0;
+    background-color: #eee;
+    border-top: 1px solid #e5e5e5;
+}
+.ft-items{
+    width: 100%;
+    display: flex;
+}
+.item{
+    flex: 1;
+    text-align: center;
+
+}
+.item img{
+    display: block;
+    width: 20px;
+    margin: 0 auto;
+}
+.item-name{
+    font-style: 12px;
+    color: #555555;
+
+}
