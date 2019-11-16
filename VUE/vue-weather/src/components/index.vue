@@ -1,9 +1,8 @@
 <template>
   <div class="contaner">
     <div class="bg"></div>
-    <div class="map-container" ref="mapContainer"></div>
     <div class="address">
-      <span class="change-city">切换城市</span>
+      <span class="change-city" @click="changeCity">切换城市</span>
       <p style="height: 21px">{{localTime}}</p>
       <div class="city-info">
         <dl>
@@ -21,25 +20,29 @@
       </div>
     </div>
     <div class="feature">
-        <div class="group" v-if="futureTem && futureTem[1]">
-            明日：
-            <span class="tm">白天:{{futureTem[1].dayTemp}} {{futureTem[1].dayWeather}} {{futureTem[1].dayWindDir}} {{futureTem[1].dayWindPower}}</span>
-            <span class="tm">夜间:{{futureTem[1].nightTemp}} {{futureTem[1].nightWeather}} {{futureTem[1].nightWindDir}} {{futureTem[1].nightWindPower}}</span>
-        </div>
-        <div class="group" v-if="futureTem && futureTem[2]">
-            后天：
-            <span class="tm">白天:{{futureTem[2].dayTemp}} {{futureTem[2].dayWeather}} {{futureTem[2].dayWindDir}} {{futureTem[2].dayWindPower}}</span>
-            <span class="tm">夜间:{{futureTem[2].nightTemp}} {{futureTem[2].nightWeather}} {{futureTem[2].nightWindDir}} {{futureTem[2].nightWindPower}}</span>
-        </div>
-        <div class="group" v-if="futureTem && futureTem[3]">
-            三天后：
-            <span class="tm">白天:{{futureTem[3].dayTemp}} {{futureTem[3].dayWeather}} {{futureTem[3].dayWindDir}} {{futureTem[3].dayWindPower}}</span>
-            <span class="tm">夜间:{{futureTem[3].nightTemp}} {{futureTem[3].nightWeather}} {{futureTem[3].nightWindDir}} {{futureTem[3].nightWindPower}}</span>
-        </div>
+      <div class="group" v-if="futureTem && futureTem[1]">
+        明日：
+        <span
+          class="tm"
+        >白天:{{futureTem[1].dayTemp}} {{futureTem[1].dayWeather}} {{futureTem[1].dayWindDir}} {{futureTem[1].dayWindPower}}</span>
+        <span
+          class="tm"
+        >夜间:{{futureTem[1].nightTemp}} {{futureTem[1].nightWeather}} {{futureTem[1].nightWindDir}} {{futureTem[1].nightWindPower}}</span>
+      </div>
+      <div class="group" v-if="futureTem && futureTem[2]">
+        后天：
+        <span
+          class="tm"
+        >白天:{{futureTem[2].dayTemp}} {{futureTem[2].dayWeather}} {{futureTem[2].dayWindDir}} {{futureTem[2].dayWindPower}}</span>
+        <span
+          class="tm"
+        >夜间:{{futureTem[2].nightTemp}} {{futureTem[2].nightWeather}} {{futureTem[2].nightWindDir}} {{futureTem[2].nightWindPower}}</span>
+      </div>
     </div>
-    <div class="echart-contaier" ref="echartContainer">
 
-    </div>
+    <div class="echart-contaier" ref="echartContaier"></div>
+
+    <div class="map-container" ref="mapContainer"></div>
 
     <div class="loading" v-show="loader">
       <div class="loader">
@@ -51,8 +54,14 @@
         </div>
       </div>
     </div>
-    <div class="select-city-box">
-        <van-area :area-list="areaList" :columns-num="2" title="选择城市"/>
+
+    <div class="select-city-box" v-show="citybox">
+      <van-area 
+      :area-list="areaList" 
+      :columns-num="2" 
+      title="选择城市" 
+      @cancel="cancel"
+      @confirm="complete"/>
     </div>
   </div>
 </template>
@@ -67,7 +76,8 @@ export default {
       cityData: {},
       futureTem: [],
       seriesData: [],
-      areaList: AreaList
+      areaList: AreaList,
+      citybox: false
     };
   },
   created() {
@@ -76,8 +86,7 @@ export default {
     }, 1000);
   },
   mounted() {
-    this.initMap()
-    
+    this.initMap();
   },
   methods: {
     getLocalTime() {
@@ -94,7 +103,7 @@ export default {
           if (status === "complete" && result.info === "OK") {
             // 查询成功，result即为当前所在城市信息
             console.log(result);
-            _self.getCurrentCityData(result.city)
+            _self.getCurrentCityData(result.city);
           }
         });
       });
@@ -109,91 +118,96 @@ export default {
         //执行实时天气信息查询
         weather.getLive(cityName, function(err, data) {
           console.log(err, data);
-          _self.cityData = data
+          _self.cityData = data;
         });
         //执行实时天气信息查询
         weather.getForecast(cityName, function(err, data) {
-            console.log(err, data);
-            _self.futureTem = data.forecasts
-            _self.futureTem.map((item, index) => {
-                _self.seriesData.push(item.dayTemp)
-            })
-            _self.loader = false
-            _self.initEchart()
-        })
-      })
+          console.log(err, data);
+          _self.futureTem = data.forecasts;
+          _self.futureTem.map((item, index) => {
+            _self.seriesData.push(item.dayTemp)
+          })
+          _self.loader = false;
+          _self.initEchart()
+        });
+      });
     },
     initEchart() {
-        let dom = this.$refs.echartContainer
-        let myechart = echarts.init(dom) // cdn中引入echarts echart初始化目标容器
-        let app = {}, option = null
-        option = {
-            xAxis: {
-                show: true, // 展示x轴，默认为true
-                splitLine: {
-                    show: false
-                },
-                type: 'category',
-                data: ['今天', '明天', '后天', '三天后'],
-                axisLine: {
-                    lineStyle: {
-                        color: '#fff'
-                    }
-                },
-                axisTick: {
-                    show: false
-                }
-            },
-            yAxis: {
-                show: false,
-                axisLine: {
-                    show: false,
-                    lineStyle: {
-                        color: '#fff'
-                    }
-                },
-                axisTick: {
-                    show: true,                
-                },
-                splitLine:{
-                    show: false
-                }
-            },
-            tooltip: {
-                trigger: 'axis',
-                formatter: function(params) {
-                    var relVal = params[0].name
-                    for (let i = 0, l = params.length; i < l; i++) {
-                    relVal += params[i].value + '℃'
-                    }
-                    return relVal
-                }
-            },
-            legend: {
-              data: ['气温']
-            },
-            series: [{
-                data: this.seriesData,
-                type: 'line',          
-                label: {
-                  normal: {
-                    show: true,
-                    position: 'top'
-                  }
-                }
-            }]
-        }
-        myechart.setOption(option, true)
+      let dom = this.$refs.echartContaier;
+      let myChart = echarts.init(dom);
+      let app = {}, option = null;
+      option = {
+        xAxis: {
+          show: true,
+          splitLine: {show: false},
+          type: "category",
+          data: ["今天", "明天", "后天", "三天后"],
+          axisLine: {
+            lineStyle: {
+              color: '#fff'
+            }
+          },
+          axisTick: {
+            show: false
+          }
+        },
+        yAxis: {
+          show: false,
+          axisLine: {
+            show: false,
+            lineStyle: {
+              color: '#fff'
+            }
+          },
+          axisTick: {show: true},
+          splitLine: {show: false}
+        },
+        tooltip: {
+          trigger: 'axis',
+          formatter: function(params) {
+            var relVal = params[0].name
+            for (let i = 0, l = params.length; i < l; i++) {
+              relVal += params[i].value + '℃'
+            }
+            return relVal
+          }
+        },
+        legend: {
+          data: ['气温']
+        },
+        series: [
+          {
+            data: this.seriesData,
+            type: "line",
+            label: {
+              normal: {
+                show: true,
+                position: 'top'
+              }
+            }
+          }
+        ]
+      };
+      myChart.setOption(option, true)
+    },
+    changeCity () {
+      this.citybox = true
+    },
+    cancel () {
+      this.citybox = false
+    },
+    complete (val) {
+      console.log(val)
+      this.seriesData = []
+      this.getCurrentCityData(val[1].name)
+      this.cancel()
+      
     }
   }
-}
+};
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
 .loading {
   width: 100%;
   height: 100%;
@@ -202,8 +216,8 @@ export default {
   top: 0;
   background-color: #000;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .loader {
   width: 20em;
@@ -211,8 +225,8 @@ export default {
   font-size: 10px;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .loader .face {
   position: absolute;
@@ -225,23 +239,24 @@ export default {
   height: 100%;
   color: gold;
   border-width: 0.2em 0.2em 0em 0em;
-  border-color: currentColor transparent transparent currentColor; /*继承当前的color */
-  --deg: -45deg; /**会从当前-45deg开始旋转  animate 中from的起点*/
-  animation-direction: normal; /*正常旋转*/
+  border-color: currentColor transparent transparent currentColor;
+  --deg: -45deg;
+  animation-direction: normal;
 }
 .loader .face:nth-child(2) {
   width: 70%;
   height: 70%;
-  color: green;
+  color: lime;
   border-width: 0.2em 0em 0em 0.2em;
-  border-color: currentColor currentColor transparent transparent; /*继承当前的color */
-  --deg: -135deg; /**会从当前-135deg开始旋转  animate 中from的起点*/
-  animation-direction: reverse; /*正常旋转*/
+  border-color: currentColor currentColor transparent transparent;
+  --deg: -135deg;
+  animation-direction: reverse;
 }
+
 .loader .face .circle {
   position: absolute;
   width: 50%;
-  height: 0.1rem;
+  height: 0.1em;
   top: 50%;
   left: 50%;
   background-color: transparent;
