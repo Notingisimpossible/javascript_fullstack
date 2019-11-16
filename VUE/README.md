@@ -1,4 +1,4 @@
-# qunar-webapp
+# vue-weather
 
 > A Vue.js project
 
