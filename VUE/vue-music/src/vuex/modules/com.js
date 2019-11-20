@@ -1,0 +1,28 @@
+import * as types from '../types'
+
+const state = {
+  showSidebar: true
+}
+
+const getters = {
+  showSidebar: state => state.showSidebar
+}
+
+const mutations = {
+  [types.COM_SHOW_DIDE_BAR] (state, status) {
+    state.showSidebar = status
+  }
+}
+
+const actions = {
+  setShowSidebar ({commit}, status) {
+    commit(types.COM_SHOW_DIDE_BAR, status)
+  }
+}
+
+export default {
+  state,
+  getters,
+  mutations,
+  actions
+}
