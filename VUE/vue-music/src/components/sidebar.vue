@@ -80,7 +80,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../assets/css/function';
+@import '../assets/css/function'
 
 .sidebar {
   color: #e8e8e8;

@@ -1,7 +1,7 @@
 import * as types from '../types'
 
 const state = {
-  showSidebar: true
+  showSidebar: false
 }
 
 const getters = {

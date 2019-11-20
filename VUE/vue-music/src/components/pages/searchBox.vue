@@ -1,5 +1,5 @@
 <template>
-  <div class="search-vox">
+  <div class="search-box">
     <i class="icon icon-search">&#xe638;</i>
     <input type="text" class="box" v-model="query" :placeholer="placeholer">
     <i class="icon icon-dismiss">&#xe638;</i>
@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { debounce } from '@/common/util'
 export default {
   props: {
     placeholer: {
@@ -16,14 +17,19 @@ export default {
   },
   data() {
     return{
-      query
+      query: ''
     }
+  },
+  created () {
+    this.$watch('query', debounce((newQuery) => {
+      this.$emit('query', newQuery)
+    }, 300))
   }
 }
 </script>
 
 <style lang='stylus' scoped>
-@import '../assets/css/function'
+@import '../../assets/css/function'
 .search-box 
   display flex
   align-items center
