@@ -11,10 +11,10 @@ export default new Router({
       name: 'Search',
       component: Search
     },
-    // {
-    //   path:
-    //   name:
-    //   component: 
-    // }
+    {
+      path: '/search',
+      name: 'Search',
+      component: Search
+    }
   ]
 })

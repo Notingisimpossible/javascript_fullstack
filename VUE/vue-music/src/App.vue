@@ -2,7 +2,6 @@
   <div id="app">
     <!-- 头部 -->
     <v-header>
-      <!-- slot 插槽 -->
       <i class="icon" slot="left-icon">&#xe692;</i>
       <span slot="content">我的音乐</span>
       <router-link to="/user" slot="right-icon">
@@ -11,9 +10,8 @@
     </v-header>
     <!-- tab -->
     <v-tab></v-tab>
-    <!-- v-sidebar -->
-    <v-sidebar></v-sidebar>
     <router-view/>
+    <v-sidebar></v-sidebar>
   </div>
 </template>
 
