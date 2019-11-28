@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="list"></ul>
+  <script>
+    let msgList = [{msg: '1'}]
+    console.log(msgList)
+    function h() {
+      document.getElementById('list').innerHTML = msgList
+      .map((item) => {
+        return `<li>${item.msg}</li><li>${msgList.msg}</li>`
+      }).join('')
+    }
+    // Array.prototype.push
+    Array.prototype.reserverJoin = function() {//原生js 扩展数组方法
+      msgList.msg = "123"
+      console.log(msgList.msg)
+      console.log('hello')
+    }
+    let arr = [1,2,3]
+    arr.reserverJoin()
+    h()
+
+
+    // 重写push方法
+    const originPush = Array.prototype.push
+    Array.prototype.push = function(...args) {
+      // 1 重写方法
+      console.log('I know')
+      // 2 实现原生push方法
+      originPush.apply(this, args) //apply 绑定this指针  args传入参数
+      h()
+    }
+  </script>
+</body>
+</html>
