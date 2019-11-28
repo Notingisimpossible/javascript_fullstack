@@ -13,13 +13,16 @@
   </div>
 
   <script>
-    var obj = {}
+    var obj = {
+    }
 
     Object.defineProperty(obj, 'txt', {
       get () {
+        // console.log(obj)
         return obj
       },
       set (newVal) {
+        // console.log(txt,newVal)
         document.getElementById('show-txt').innerHTML = newVal
       }
     })
