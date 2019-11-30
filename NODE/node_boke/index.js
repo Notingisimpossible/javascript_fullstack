@@ -20,6 +20,7 @@ router.get('*', (ctx, next) => {
 
 app.use(router.routes())
 // 缓存
+
 app.use(staticCache(path.join(__dirname, './public'), 
 { dynamic: true}, 
 { maxAge: 365*24*60*60 }
