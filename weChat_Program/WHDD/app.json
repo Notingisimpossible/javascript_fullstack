@@ -2,7 +2,7 @@
   "pages": [
     "pages/starting/starting.wxml",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs" 
   ],
   "window": {
     "backgroundTextStyle": "light",

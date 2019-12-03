@@ -20,7 +20,7 @@ Page({
   // 一个请求一个函数
   requestCart() {
     wx.request({
-      url: 'http://localhost:1234/indexPage',
+      url: 'http://localhost:3000/indexPage',
       success: (res) => {
         // console.log(this)
         // console.log(res.data)

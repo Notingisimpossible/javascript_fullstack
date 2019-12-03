@@ -1,4 +1,4 @@
-/* @import '../../styles/loading.wxss'; */
+@import '../../styles/loading.wxss';
 page{
   width: 100%;
   height: 100vh;
