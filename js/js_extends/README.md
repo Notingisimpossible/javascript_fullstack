@@ -1,6 +1,7 @@
 ## extend 继承实现
 - 原型链继承
-* ```
+* 
+```
 function Person() {
   this.a = 123
 }
@@ -10,9 +11,13 @@ function Student() {
 
 }
 Student.prototype.__proto__ = Person.Prototype
-var s = new Student()```
+var s = new Student()
+```
+
+
 - object.create() 继承
-* ```
+*  
+```
 function myCreate(obj) {  
       var F = function(){}  
       F.prototype = obj  
@@ -21,9 +26,13 @@ function myCreate(obj) {
     // Student.prototype = Object.create(Person.prototype)
     Student.prototype = Object.myCreate(Person.prototype)
     var s = new Student()  
-    ```
+```
+
+
 - 同时继承属性和方法  
-* ```
+* 
+```
+
 // 3 es6 extends 使用的方法  
     function Student1() {  
       // 继承属性  绑定this指针
@@ -32,10 +41,14 @@ function myCreate(obj) {
     // 继承方法  
     Student1.prototype = myCreate(Person.prototype)  
     // 修正 constructor  
-    Student1.prototype.constructor = Student1```
+    Student1.prototype.constructor = Student1
+```
+
 
 - new 方法实现
-* ```
+* 
+```
+
 function myNew(constructor, ...args) {
       // 1
       let obj = {}
@@ -45,10 +58,14 @@ function myNew(constructor, ...args) {
       obj.__proto__ = constructor.prototype
       // 4 注意构造函数返回值
       return typeof ret === 'object' ? ret : obj
-    }```
+    }
+    
+```
 
 - call apply bind  
-* ```
+* 
+```
+
 var xw = {
       name: '小王',
       age: 14 ,
@@ -66,3 +83,4 @@ var xw = {
     xw.say.apply(xh, ["实验小学"]) // 传入参数为数组类型
     xw.say.bind(xh, "实验小学")() // 传参和call一样 但是返回的是方法 需要在后面用()调用
 ```
+
