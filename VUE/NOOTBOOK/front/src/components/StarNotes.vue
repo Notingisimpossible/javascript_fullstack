@@ -1,6 +1,6 @@
 <template>
-  <div class="star-notes-index">
-    <h1 @click="goBanner">探索「星辰笔记」</h1>
+  <div class="star-nodes-index">
+    <h1 @click="goBanner">探索「 星辰笔记 」</h1>
   </div>
 </template>
 
@@ -9,14 +9,14 @@ export default {
   name: 'StarNotes',
   methods: {
     goBanner () {
-      this.$router.push({ path: '/StarBanner'})
+      this.$router.push({ path: '/StarBanner' })
     }
-  },
+  }
 }
 </script>
 
 <style lang="less" scoped>
-  .star-notes-index{
+  .star-nodes-index{
     width: 100vw;
     height: 100vh;
     background: url(./../assets/img/raw_1512446172.jpeg) center no-repeat;
@@ -33,10 +33,9 @@ export default {
       border-radius: .5333333rem;
       background-color: rgba(11, 29, 64, 1);
       color: rgba(255, 255, 255, 1);
-      font-size: 0.48rem;
+      font-size: .48rem;
       text-align: center;
       font-family: Microsoft Yahei;
-      cursor: pointer;
     }
   }
 </style>

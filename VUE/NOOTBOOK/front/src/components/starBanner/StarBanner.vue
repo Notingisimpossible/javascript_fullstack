@@ -1,64 +1,60 @@
 <template>
-<div class="star-banner">
-  <van-swipe :loop= 'false' @change="onChange">
-  <van-swipe-item v-for="(item, index) in bannerList" :key="index">
-    <div class="banner-img" :style=" `background-image: url(${item.img})` "></div>
-    <div class="title">{{item.title}}</div>
-    <div class="desc">{{item.content}}</div>
-  </van-swipe-item>
-</van-swipe>
-<div class="jump-over" @click="starLogin">跳过</div>
-</div>
+  <div class="star-banner">
+    <van-swipe :loop="false" @change="onChange">
+      <van-swipe-item v-for="(item, index) in bannerList" :key="index">
+        <div class="banner-img" :style="`background-image: url(${item.img})`"></div>
+        <div class="title">{{item.title}}</div>
+        <div class="desc">{{item.content}}</div>
+      </van-swipe-item>
+    </van-swipe>
+    <div class="jump-over" @click="starLogin">跳过</div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'StarBanner',
+  name: "StarBanner",
   data() {
     return {
       current: 0,
       bannerList: [
         {
-          img:
-          require("../../assets/img/raw_1512446076.jpeg"),
+          img: require("../../assets/img/raw_1512446076.jpeg"),
           title: "半亩方田",
           content: "足以记录最美好的时光"
         },
         {
-        img:
-        require("../../assets/img/raw_1512446089.jpeg"),
-        title: "一指流沙",
+          img: require("../../assets/img/raw_1512446089.jpeg"),
+          title: "一指流沙",
           content: "足以消散所有的烦恼"
         },
         {
-            img: 
-            require("../../assets/img/raw_1512446063.jpeg"),
-            title: "一支画笔",
-            content: "足以描绘最好的自己"
+          img: require("../../assets/img/raw_1512446063.jpeg"),
+          title: "一支画笔",
+          content: "足以描绘最好的自己"
         },
         {
-            img: 
-            require("../../assets/img/raw_1512446113.jpeg"),
-            title: "一辆小车",
-            content: "足以在全世界留下我们的足迹"
+          img: require("../../assets/img/raw_1512446113.jpeg"),
+          title: "一辆小车",
+          content: "足以在全世界留下我们的足迹"
         }
       ]
-    }
+    };
   },
   methods: {
-    onChange(index) {
-      if (index == 3) {
+    onChange (index) {
+      if (index === 3) {
         let t = setTimeout(() => {
           this.starLogin()
           clearTimeout(t)
-        },500)
+        }, 500)
       }
     },
-    starLogin() {
-      this.$router.push({ path: '/StarLogin'})
+    starLogin () {
+      this.$router.push({ path: '/StarLogin' })
     }
-  },
-}
+  }
+};
 </script>
 
 <style lang="less" scoped>
