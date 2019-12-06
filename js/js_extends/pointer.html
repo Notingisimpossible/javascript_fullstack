@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var xw = {
+      name: '小王',
+      age: 14 ,
+      school: this.school,
+      say : function (school) {
+        console.log(school)
+      console.log(this.name, '今年', this.age, '学校是', school)
+      }
+    }
+    var xh = {
+      name: '小红',
+      age: 15,
+    }
+    xw.say.call(xh, "实验小学") //直接绑定指针 传入参数为接收参数类型
+    xw.say.apply(xh, ["实验小学"]) // 传入参数为数组类型
+    xw.say.bind(xh, "实验小学")() // 传参和call一样 但是返回的是方法 需要在后面用()调用
+  </script>
+</body>
+</html>
