@@ -116,7 +116,7 @@ router.post('/userRegister', async(ctx, next) => {
   })
 })
 
-// 
+// 抛出查询noteList
 router.post('/findNoteListBytype', async(ctx, next) => {
   let note_type = ctx.request.body.note_type
   await userService.findNoteListByType(note_type).then(async(res) => {
@@ -140,6 +140,34 @@ router.post('/findNoteListBytype', async(ctx, next) => {
     ctx.body = {
       code: '500',
       data: err,
+    }
+  })
+})
+
+router.post('/findNoteDetailById', async(ctx, next) => {
+  let id = ctx.request.body.id
+  await userService.findNoteDetailById(id)
+  .then(async(res) => {
+    let r = ''
+    if (res.length){
+      r = 'ok'
+      ctx.body = {
+        code: '200',
+        data: res[0],
+        mess: '查找成功'
+      }
+    }else{
+      ctx.body = {
+        code: '404',
+        data: r,
+        mess: '找不到页面'
+      }
+    }
+  })
+  .catch((err) => {
+    ctx.body = {
+      code: '500',
+      data: err
     }
   })
 })
