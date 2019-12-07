@@ -6,7 +6,7 @@
           <van-icon name="wap-nav" size="20px" />
           </div>
         <div>
-          <van-icon name="like-o" size="20px" />
+          <van-icon name="like-o" size="20px" @click="writeNote"/>
           <van-icon name="search" size="20px"/>
         </div>
       </header>
@@ -68,6 +68,7 @@ export default {
         {img:require("./../../assets/img/raw_1512446243.jpeg"),title:"时尚"},
         {img:require("./../../assets/img/raw_1512446251.jpeg"),title:"科技"}
       ],
+      username: '',
       isClickMenu_info: false,
       avatar: require("../../assets/img/raw_1512446140.jpeg")
     }
@@ -81,6 +82,9 @@ export default {
     },
     noteList (title) {
       this.$router.push({path:'/noteList', query:{'title': title}})
+    },
+    writeNote() {
+      this.$router.push({path: 'publishNote'})
     }
   },
 }

@@ -12,22 +12,22 @@
     <div class="note-wrap">
       <div class="note-title">
         <h2>输入标题</h2>
-        <van-field v-bind="title"  placeholder="请在此输入笔记标题" />
+        <van-field v-model="title"  placeholder="请在此输入笔记标题" />
       </div>
       <div class="note-title">
         <h2>上传图片</h2>
-        <van-uploader v-model="fileList" multiple />
-        <!-- <van-uploader :after-read="onRead" accept="image/*.*">
+        <!-- <van-uploader v-model="fileList" multiple /> -->
+        <van-uploader :after-read="onRead" accept="image/*.*">
           <van-icon name="photograph" style="font-size:15px; color:red;margin-left:15px;">
           </van-icon>
-        </van-uploader> -->
-        <!-- <img class="preImg" :src="preImg" alt="" v-if="preImg"> -->
+        </van-uploader>
+        <img class="preImg" :src="preImg" alt="" v-if="preImg">
       </div>
       <div class="note-title">
         <h2>请选择分类</h2>
         <span class="note-type" @click="selectType">选择分类 &gt;{{selectCon}}</span>
         <van-action-sheet v-model="show" :actions="actions" @select="onSelect" cancel-text="取消" @cancel="onCancel" />
-        <div class="publish-btn">发布笔记</div>
+        <div class="publish-btn" @click="publish">发布笔记</div>
       </div>
     </div>
   </div>
@@ -46,13 +46,9 @@ export default {
     return {
       content: '',
       title: '',
-      // preImg: '',
+      preImg: '',
       selectCon: '',
       show: false,
-      fileList: [
-        // Uploader 根据文件后缀来判断是否为图片文件
-        // 如果图片 URL 中不包含类型信息，可以添加 isImage 标记来声明
-      ],
       actions: [
         {
           name: "选项"
@@ -104,7 +100,9 @@ export default {
     onEditorBlur(){},
     onEditorFocus() {},
     onEditorChange() {},
-    onRead() {},
+    onRead(file) {
+      this.preImg = file.content
+    },
     onSelect(item) {
       this.selectCon = item.subname
       this.show = false
@@ -114,9 +112,31 @@ export default {
     },
     selectType() {
       this.show = true
+    },
+    publish() {
+      let curUserId = JSON.parse(sessionStorage.getItem('userInfo')).id
+      let curUserName = JSON.parse(sessionStorage.getItem('userInfo')).nickname
+      console.log(curUserId)
+      this.$http({
+        method: "post",
+        url: "http://localhost:3000/users/insertNote",
+        data: {
+          note_content: this.content,
+          head_img: this.preImg,
+          title: this.title,
+          note_type: this.selectCon,
+          useId: curUserId,
+          nickname: curUserName
+        }
+      }).then((res) => {
+        console.log(res);
+        this.$toast(res.data.mess)
+        setTimeout(() => {
+          this.$router.push({path:'/noteClass'})
+        }, 1000)
+      })
     }
-  },
-
+  }
 }
 </script>
 
