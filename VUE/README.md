@@ -3,7 +3,7 @@
 > A Vue.js project
 
 ## Build Setup
-
+- vue init webpack
 ``` bash
 # install dependencies
 npm install
