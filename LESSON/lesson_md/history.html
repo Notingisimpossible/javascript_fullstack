@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- ['baidu.com', 'baidu.com/1', 'baidu.com/2'] -->
+  <script>
+    history.pushState({}, '', '/url1')
+    history.pushState({}, '', '/url2')
+    history.pushState({}, '', '/url3')
+    // history.go(-2)
+    // history.forward()
+    // history.back()
+    history.replaceState({}, '', '/url0')
+    setTimeout(() => {
+      history.pushState({}, '', 'url4')
+    },3000)
+    // 1
+    const backup = history.pushState
+    // 2
+    history.pushState = function() {
+      console.log("url变了")
+      // 3
+      backup.call(this,...args)
+    }
+    // 1 保存
+    const backPush = Array.prototype.push
+    // 重写
+    Array.prototype.push = function() {
+      console.log('array changed')
+      // 3 使用保存功能
+      backPush()
+    }
+  </script>
+</body>
+</html>

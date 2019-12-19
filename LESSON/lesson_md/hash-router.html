@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#/">home</a>
+  <a href="#/book">book</a>
+  <a href="#/movie">movie</a>
+  <div id="content"></div>
+
+
+  <script>
+    class VueRouter {
+      constructor(opts) {
+        const {routes} = opts;
+        this.init();
+      }
+      init() {
+        // <img src="">
+        // 请求外部资源 标签 img link 浏览器还会接着发出请求
+        // DOM 树 + 外部资源加载完毕
+        // 不仅指当前的html加载完 
+        window.addEventListener('load', this.updateView)
+        window.addEventListener('hashchange', this.updateView)
+      }
+      updateView() {
+        // slice  截取 对原来的数据不产生影响
+        //  splice 截取 对原来数据产生影响
+        const hash = window.location.hash.slice(1)
+      }
+    }
+    new VurRouter({
+      routes: [{
+        path: '/',
+        component: 'home'
+        },
+        {
+          path: 'book',
+          component: 'book'
+        },
+        {
+          path: '/movie',
+          component: 'movie'
+        }
+      ]
+    })
+  </script>
+</body>
+</html>
