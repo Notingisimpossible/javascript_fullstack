@@ -1,23 +1,53 @@
 <template>
   <div id="app">
     <h1>cliverSnail's blog</h1>
-    <BlogPage></BlogPage>
-    <router-view/>
+    <button @click="ShowHide">Show/Hide Post</button>
+    <BlogPost v-for="blogPost in visiabileBlogPosts" :post = "blogPost" :key="blogPost.title" ></BlogPost>
+    <!-- <router-view/> -->
   </div>
 </template>
 
 <script lang="ts">
-  import BlogPage from './components/BlogPage.vue';
+  import BlogPost, { Post } from './components/BlogPost.vue';
   import { Component, Vue } from 'vue-property-decorator';
 
   @Component({
     components: {
-      BlogPage,
+      BlogPost,
     },
   })
 
   export default class App extends Vue {
+    private blogPosts: Post[] = [
+      {
+        title: 'My first blogpost ever',
+        body: 'I never forget it',
+        author: 'MG',
+        datePosted: new Date(2020, 1, 7)
+      },
+      {
+        title: 'My second blogpost ever',
+        body: 'I never forget it',
+        author: 'MG',
+        datePosted: new Date(2020, 1, 8),
+        highlighted: true
+      },
+      {
+        title: 'My third blogpost ever',
+        body: 'I never forget it',
+        author: 'MG',
+        datePosted: new Date(2020, 1, 9)
+      }
+    ]
 
+    public showHighlighted: boolean = true
+    get visiabileBlogPosts() {//计算属性
+      return this.blogPosts.filter((post:Post) => post.highlighted === undefined || post.highlighted === this.showHighlighted)
+    }
+    public ShowHide () {
+      console.log(this.visiabileBlogPosts)
+      this.showHighlighted = !this.showHighlighted
+    }
   }
 </script>
 
