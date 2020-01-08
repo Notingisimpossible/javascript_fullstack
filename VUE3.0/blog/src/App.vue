@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/Articles">Articles</router-link>
-    </div>
+    <!-- header -->
+    <Nav></Nav>
+    <RegisterAndLogin></RegisterAndLogin>
     <router-view />
   </div>
 </template>
+<script lang='ts'>
+import { Vue, Component } from 'vue-property-decorator'
+import Nav from '@/components/Nav.vue'
+import RegisterAndLogin from '@/components/RegisterAndLogin.vue'
 
+@Component({
+  components: {
+      Nav,
+      RegisterAndLogin,
+    },
+})
+
+export default class App extends Vue {
+}
+</script>
 <style lang="less">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
