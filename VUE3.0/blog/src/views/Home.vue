@@ -4,7 +4,7 @@
     <div class="content">
       <div class="home-header">
         <router-link class="link" to="/home">
-          <img src="../assets/logo.png" alt="" class="home-logo">
+          <img src="../assets/TX.png" alt="" class="home-logo">
         </router-link>
       </div>
       <div class='home-body'>
@@ -1305,6 +1305,7 @@ export default class Home extends Vue {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 10;
   .content {
     position: fixed;
     left: 0;

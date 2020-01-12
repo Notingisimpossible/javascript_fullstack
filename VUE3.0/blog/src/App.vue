@@ -1,24 +1,35 @@
 <template>
   <div id="app">
     <!-- header -->
-    <Nav></Nav>
-    <RegisterAndLogin></RegisterAndLogin>
-    <router-view />
+    <Nav v-if="isShowNav"></Nav>
+    <div class="layout">
+      <router-view />
+      <Slider class="slider"></Slider>
+    </div>
   </div>
 </template>
 <script lang='ts'>
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component, Watch } from 'vue-property-decorator'
+import Slider from '@/components/Slider.vue'
 import Nav from '@/components/Nav.vue'
-import RegisterAndLogin from '@/components/RegisterAndLogin.vue'
 
 @Component({
   components: {
       Nav,
-      RegisterAndLogin,
-    },
+      Slider
+    }
 })
 
 export default class App extends Vue {
+  private isShowNav: boolean = false
+  @Watch('$route')
+  routeChange(val, oldVal) {
+    if (val.path === '/') {
+      this.isShowNav =false
+    }else {
+      this.isShowNav = true
+    }
+  }
 }
 </script>
 <style lang="less">
@@ -29,7 +40,13 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
 }
-
+.layout{
+  display: flex;
+  justify-content: space-around;
+}
+.slider{
+  flex: 0 0 300px
+}
 #nav {
   padding: 30px;
 
