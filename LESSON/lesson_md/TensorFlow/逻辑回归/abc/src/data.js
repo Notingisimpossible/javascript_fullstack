@@ -6,6 +6,7 @@ export function getData(nums) {
       let y = normalRandom(fanwei)
       point.push({x, y, label: label})
     }
+    console.log(point)
   }
   // 黄点
   generate(-2, 0);
