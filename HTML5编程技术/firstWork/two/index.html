@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #all {
+      width: 800px;
+      height: 350px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: yellowgreen;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .header1 {
+      width: 796px;
+      height: 100px;
+      background-color: #f47d31;
+      margin-left: 2px;
+      margin-top: 2px;
+      position: relative;
+      text-overflow:ellipsis;
+      white-space:nowrap;
+      overflow: hidden;
+    }
+    .message {
+      height: 20px;
+      width: 180px;
+      background-color: white;
+      text-align: center;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(-45deg);
+      border-radius: 5px;
+      color: #f47d31;
+      position: absolute;
+      overflow: hidden;
+      left: -10px;
+      top: 40px;
+      z-index: 0;
+    }
+    .topic {
+      text-align: center;
+      font-size: 50px;
+      color: white;
+    }
+    .contain {
+      width: 796px;
+      height: 200px;
+      background-color: #888888;
+      margin-left: 2px;
+    }
+    nav {
+      width: 25%;
+      height: 100%;
+      float: left;
+    }
+    .nav1 {
+      color: white;
+      text-align: center;
+      padding-top: 15px;
+    }
+    .nav2 {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      padding-left: 15px;
+    }
+    a {
+      text-decoration: none;
+      color: #f17d33;
+    }
+    section {
+      width: 50%;
+      height: 30%;
+      border-radius: 5px;
+      background-color: #eeeeee;
+      z-index: 100;
+      position: absolute;
+      left: 28%;
+      margin-top: 30px;
+      z-index: 5;
+      -webkit-box-shadow: 2px 2px 20px #888;
+      -webkit-transform: rotate(-15deg);
+    }
+    .fubiaoti {
+      width: 380px;
+      height: 20px;
+      background-color: #f47d31;
+      border-radius: 5px;
+      margin-top: 10px;
+      margin-left:10px ;
+      text-align: center;
+      color: white;
+    }
+    .article{
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    aside {
+      position: absolute;
+      left: 80%;
+      width: 15%;
+      height: 30%;
+    }
+    .footer2 {
+      width: 796px;
+      height: 50px;
+      background-color: #f47d31;
+      margin-left: 2px;
+    }
+    .footer2 p {
+      text-align: center;
+      padding-top: 15px;
+      font-size: 15px;
+      color: white;
+    }
+  </style>
+  <title>旅行札记</title>
+</head>
+<body>
+  <div id="all">
+    <header class="header1">
+      <p class="topic">网页标题</p>
+      <span class="message">提示信息</span>
+    </header>
+    <div class="contain">
+      <nav>
+        <div class="nav1">
+          <strong>导航</strong>
+        </div>
+        <div class="nav2">
+          <a href="" >链接1</a>
+        </div>
+        <hr style="margin-left: 10px;" size="3px" color="white">
+        <div class="nav2">
+          <a href="">链接2</a>
+        </div>
+        <hr style="margin-left: 10px;" size="3px" color="white">
+        <div class="nav2">
+          <a href="">链接3</a>
+        </div>
+        <hr style="margin-left: 10px;" size="3px" color="white">
+      </nav>
+      <section>
+        <header class="fubiaoti">
+          <strong>文章标题</strong>
+        </header>
+        <article class="article">
+          <p>文章内容.....</p>
+        </article>
+        <footer class="fubiaoti">
+          <strong>文章标题</strong>
+        </footer>
+      </section>
+      <aside>
+        <div style="padding-top: 20px;">
+          <strong style="color: white;padding-left: 35px;">相关内容</strong><br>
+        </div>
+        <p style="font-style: italic; padding-bottom: 10px; color: white;padding-top: 15px;">
+          相关辅助信息或者服务....</p>
+      </aside>
+    </div>
+    <footer class="footer2">
+      <p>页脚</p>
+    </footer>
+  </div>
+</body>
+</html>
