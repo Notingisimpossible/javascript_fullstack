@@ -2,16 +2,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Lifecycle from './components/Lifecycle'
-import CommentVs from'./components/CommentVs'
+import CommentVs from './components/CommentVs'
 import PureComponentTest from './components/PureComponentTest'
+import ButtonTest from './components/ButtonTest'
+import Hoc from './components/Hoc'
 // import App from './App'
+
 // class App extends React.Component {
-//   render () { // props
-//   return <div>
-//           hello {this.props.name}, I am {9+9} years old
-//          </div>
+//   render () { 
+//     // props
+//     return <div>
+//             hello {this.props.name}, I am {9 + 9} years old
+//           </div>
 //   }
 // }
+
 
 // state
 // 生命周期
@@ -26,20 +31,20 @@ import PureComponentTest from './components/PureComponentTest'
 //   }
 //   // 生命周期方法，组件渲染完成
 //   componentDidMount() {
-//     console.log("componentDidMount函数触发")
+//     console.log('componentDidMount 函数触发')
 //   }
-//   // 生命周期方法，避免组件重复或者无意义的渲染
+//   // 生命周期方法, 避免组件重复或者无意义的渲染
 //   shouldComponentUpdate(nextProps, nextState) {
+//     // console.log(nextProps, nextState)
 //     if (nextState.num%2) {
 //       return true
 //     }
-//     console.log("好")
 //     return false
 //   }
 //   handleClick() {
 //     console.log(123)
 //     this.setState({
-//       num: this.state.num+1
+//       num: this.state.num + 1
 //     })
 //   }
 //   render () {
@@ -52,39 +57,38 @@ import PureComponentTest from './components/PureComponentTest'
 //   }
 // }
 
-
 // 表单
-// // 渲染列表
+// 渲染列表
 // class TodoList extends React.Component {
 //   constructor (props) {
 //     super(props)
 //     this.state = {
-//       text: '敏哥',
+//       text: '帅气的蜗牛',
 //       todos: ['Learn React', 'Learn-Ant-design', 'Learn Koa']
 //     }
 //     this.handleChange = this.handleChange.bind(this)
 //     this.handleClick = this.handleClick.bind(this)
 //   }
-//   handleChange(e) {
+//   handleChange (e) {
 //     console.log(e.target.value)
 //     this.setState({
 //       text: e.target.value
 //     })
 //   }
-//   handleClick() {
+//   handleClick () {
 //     if (this.state.text) {
 //       this.setState(state => ({
-//         // 将text 值追加到todos数组里面
+//         // 将text值追加到todos数组里面
 //         todos: [...state.todos, state.text],
 //         text: ''
 //       }))
 //     }
 //   }
-//   render () {// jsx
+//   render () { //jsx
 //     return (
 //       <div>
 //         {this.state.text}
-//         <input type="text" value={this.state.text}  onChange={this.handleChange}/>
+//         <input type="text" value={this.state.text} onChange={this.handleChange}/>
 //         <button onClick={this.handleClick}>add</button>
 //         <ul>
 //           {this.state.todos.map( v => {
@@ -98,10 +102,10 @@ import PureComponentTest from './components/PureComponentTest'
 
 // React 16 新增
 // 1. render 函数支持返回数组和字符串
-// 2. 异常处理，添加conponentDidCatch钩子(函数)获取组建错误
+// 2. 异常处理， 添加componentDidCatch钩子（函数）获取组件错误
 
 class React16 extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       hasError: false
@@ -110,7 +114,7 @@ class React16 extends React.Component {
   render () {
     return (
       <div>
-        {this.state.hasError ? <div>出错啦</div> : null}
+        {this.state.hasError ? <div>出错了</div> : null}
         <ClickWriteError/>
         <FeatureReturnFraments/>
       </div>
@@ -118,43 +122,40 @@ class React16 extends React.Component {
   }
 }
 
-// ClickWriteError 是一个组件
+//ClickWriteError 是一个组件
 class ClickWriteError extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      errror :false
+      error: false
     }
     this.handleClick = this.handleClick.bind(this)
   }
-
-  handleClick() {
+  handleClick () {
     this.setState({
       error: true
     })
   }
-  render() {
-    if (this.state.errror) {
-      throw new Error('出错啦')
+  render () {
+    if (this.state.error) {
+      throw new Error ('出错了！')
     }
     return <button onClick={this.handleClick}>抛出错误</button>
   }
 }
 
+// FeatureReturnFraments 是一个组件
 class FeatureReturnFraments extends React.Component {
-  render() {
+  render () {
     return [
       <p key="key1">React 很不错</p>,
       '文本1',
-      <p key="key2">Antd 也很赞</p>,
+      <p key="key2">Antd也很赞</p>,
       '文本2'
     ]
   }
 }
 
-let body = '', author = ''
-setTimeout(() => {
-  body = 'vue is very good',
-  author = 'youyuxi'
-},2000)
-ReactDOM.render(<PureComponentTest body='' author=''/>, document.querySelector('#root'))
+// ReactDOM.render(<PureComponentTest body='vue is very good' author='youyuxi'/>, document.querySelector('#root'))
+ReactDOM.render(<Hoc state="React"/>, document.getElementById('root'))
+// ReactDOM.render(<ButtonTest/>, document.querySelector('#root'))
