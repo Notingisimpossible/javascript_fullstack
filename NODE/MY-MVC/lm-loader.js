@@ -18,11 +18,11 @@ function load(dir, cb) {
 }
 
 
-
 // 加载路由
-function initRouter () {
+function initRouter (app) {
   const router = new Router()
   load('routes', (filename, routes) => {
+    routes =  typeof routes === 'function' ? routes(app) : routes
     const prefix = filename === 'index' ? '' : `/${filename}`
     Object.keys(routes).forEach(key => {
       const [method, path] = key.split(' ') // [get, /]
@@ -30,13 +30,70 @@ function initRouter () {
 
       // 注册路由
       // app.get('/', ctx => {})
-      router[method](prefix + path, routes[key])
+      // router[method](prefix + path, routes[key])
+      router[method](prefix + path, async ctx => {
+        app.ctx = ctx
+        await routes[key](app)
+      })
     })
   })
   return router
 }
+
+
+function initService () {
+  const services = {}
+  load('service', (filename, controller) => {
+    services[filename] = controller
+  })
+  return services
+}
+
+function initController (app) {
+  const controllers = {}
+  load('controller', (filename, controller) => {
+    controllers[filename] = controller
+  })
+  return controllers
+}
+
+
+const Sequelize = require('sequelize')
+function loadConfig (app) {
+  load('config', (filename, conf) => {
+    if (conf.db) {
+      app.$db = new Sequelize(conf.db)
+      // 加载模型
+      app.$model = {}
+      load('model', (filename,{schema, options}) => {
+        app.$model[filename] = app.$db.define(filename, schema, options) //define 用来创建模板层
+      })
+      app.$db.sync() // 模块同步
+    }
+    if (conf.middleware) {
+      conf.middleware.forEach(mid => {
+        const midPath = path.resolve(__dirname, 'middleware', mid)
+        app.$app.use(require(midPath))
+      })
+    }
+  })
+}
+
+const schedule = require('node-schedule')
+function initSchedule () {
+  load('schedule', (filename, {interval, handler}) => {
+    schedule.scheduleJob(interval, handler)
+  })
+}
+
+
+
 module.exports = {
-  initRouter
+  initRouter,
+  initController,
+  initService,
+  loadConfig,
+  initSchedule
 }
 
 // load('routes', filename => console.log('routes:' + filename))
