@@ -88,35 +88,31 @@
     // 用来存放每次输入的数和符号
     var obj = {}
 
-    // 设置一个开关识别负号和减号
-    var bStop = false
-
     // 计算方法
     window.onload = function () {
       ilist.addEventListener('click', function (e) {
         // console.log(e)
         // 单击获取每次内容
-        var even = e || event
-        var target = e.target || e.srcElement
+        var even = e
+        var target = e.target
         // 保存每次点击内容
         var num = target.innerHTML
         console.log(num)
-        
-
+        // 字符串拼接
         output.value += num
 
-        // 清空
+        // 清空文本框
         if (num === 'Del') {
           input.value = ''
           output.value = ''
           obj = {}
         }
-        // 获取输入的值
+        // 获取输入值判断
         getValue(num)
       }, false)
     }
 
-    // 将从li中获取到的值输入到input框中
+    // 将从li中获取到的值输入到input框中并对li中内容判断
     function getValue(num) {
       // 判断输入为等号时
       if (num === '=') {
@@ -128,11 +124,11 @@
         // 在不输入等号情况下，输入的计算符号依旧可以计算下一轮计算结果
         if (obj.c) {
           obj.b = parseFloat(output.value)
+          // 计算结果
           finalResult(obj)
           input.value = output.value + num
           output.value = ''
-
-          // 将上一轮计算结果保存在下一轮第一个数
+          // 将上一次计算结果保存在下一次第一个数
           obj.a = parseFloat(input.value)
           // 保存计算符号
           obj.c = num
@@ -163,7 +159,7 @@
           break
         case '/':
           if (Number.isNaN(obj.a / obj.b)) {
-            output.value = '被除数不能为0'
+            output.value = 'Error'
           }else {
             output.value = obj.a / obj.b
           }
