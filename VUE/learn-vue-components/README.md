@@ -10,3 +10,9 @@ VUE 文档 MVVM 组件化思维
   2. tags 功能 活动 广告上线
   组件？ <search>
   1. 安装下iview i-input tag
+
+- 注册组件设计
+  1. 栅格系统
+    row + col iview
+  2. vue-routetr 结合 注册三个过程
+  

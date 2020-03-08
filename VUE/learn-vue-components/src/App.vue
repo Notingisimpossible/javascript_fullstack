@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <search />
+    
     <router-view/>
   </div>
 </template>
 
 <script>
-import Search from './components/Search'
+// import Search from './components/Search'
 export default {
   name: 'App',
   components: {
-    'search': Search //注册组件
+    // 'search': Search //注册组件
   }
 }
 </script>
