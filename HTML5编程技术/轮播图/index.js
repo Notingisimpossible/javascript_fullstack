@@ -1,5 +1,4 @@
 window.onload = function() {
-  var oOut = document.getElementById("out");
   var oleft = document.getElementById("left");
   var oright = document.getElementById("right");
   var aLi = document.getElementsByTagName("li");
@@ -50,13 +49,13 @@ window.onload = function() {
     })
   }
 
-  // 定义一个清楚计时器方法，每当点击切换图片后清除计时器，过1.5秒后重新启用定时器
+  // 定义一个清楚计时器方法，每当点击切换图片后清除计时器，过0.5秒后重新启用定时器
   function cleanTimer(){
     clearInterval(timer)
-    clearTimeout(myTimeOut)
+    clearTimeout(myTimeOut)// 防抖 防止快速点击左右切换图片后在1.5秒内多次调用定时器
     myTimeOut = setTimeout(function(e){
       scrollImg()
-    },1500)
+    },500)
   }
   // 定时轮播
   scrollImg()
@@ -69,6 +68,6 @@ window.onload = function() {
       }
       aLi[i].setAttribute("class", "select")
       aImgs[0].src = imgLists[i]
-    },1500)
+    },2000)
   }
 }
