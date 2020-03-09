@@ -1,15 +1,5 @@
 <template>
-  <div class="">
+  <div class="info">
     <h1>Info</h1>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
-
-<style>
-
-</style>
