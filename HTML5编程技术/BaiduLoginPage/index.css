@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+header {
+  width: 60%;
+  height: 20%;
+  padding-left: 20%;
+  padding-top: 2%;
+}
+section{
+  width: 920px;
+  height: 475px;
+  position: absolute;
+  left: 20%;
+  margin-top: 4%;
+  min-height: 475px;
+}
+section nav{
+  width: 500px;
+  float: left;
+}
+.form-list {
+  float: right;
+  width: 354px;
+  font-family: "Microsoft Yahei","å¾®è½¯é›…é»‘",Arial,STHeiti;
+  border: 1px solid #efefef;
+  box-shadow: 1px 1px 1px #efefef;
+  padding-top: 25px;
+}
+.form-list-logn {
+  width: 90%;
+  padding-left: 8%;
+}
+#tipMessage{
+  height: 20px;
+  margin-bottom: 3px;
+}
+#userNameTip {
+  font-size: 12px;
+  height: auto;
+  min-height: 28px;
+  color: #fc4343;
+}
+.logo-form {
+  background: url(images/loginlogo.gif) no-repeat left;
+  font-size: 16px;
+  height: 32px;
+  line-height: 46px;
+  padding-left: 118px;
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+#userName {
+  position: relative;
+  z-index: 17;
+  display: block;
+  padding: 10px 8px;
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  width: 300px;
+  border: 1px solid #dedede;
+  font-size: 12px;
+  color: #666;
+  transition: .3s;
+  font-family: Tahoma,Helvetica,"Microsoft Yahei","å¾®è½¯é›…é»‘",Arial,STHeiti;
+}
+#passWord {
+  position: relative;
+  top: 20px;
+  z-index: 17;
+  display: block;
+  padding: 10px 8px;
+  margin: 0;
+  height: 20px;
+  line-height: 20px;
+  width: 300px;
+  border: 1px solid #dedede;
+  font-size: 12px;
+  color: #666;
+  transition: .3s;
+  font-family: Tahoma,Helvetica,"Microsoft Yahei","å¾®è½¯é›…é»‘",Arial,STHeiti;
+}
+.p-login-button{
+  position: relative;
+  padding-top: 15px;
+  
+}
+.login-button{
+  height: 38px;
+  width: 320px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  line-height: 32px;
+  background-color: #4490f7;
+  border-radius: 5px;
+}
+.login-button:hover {
+  background-color: #69a0ee;
+}
+#p-forget-pwd{
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.forget-password{
+  text-decoration:none;
+  color: #69a0ee;
+  font-size: 12px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0;
+  height: 40px;
+  width: 120px;
+  margin-left: -60px;
+  line-height: 40px;
+  color: #7a77c8;
+}

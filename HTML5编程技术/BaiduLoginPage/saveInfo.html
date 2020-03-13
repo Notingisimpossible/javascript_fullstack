@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户信息</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: olivedrab;
+    }
+    .userInfo{
+      height: 300px;
+      width: 500px;
+      border: rgb(56, 154, 211) solid 1px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="userInfo">
+    <h2 style="text-align: center; padding-top: 10px; padding-bottom: 10px;">用户信息</h2>
+    <p style="padding-bottom: 20px;padding-left: 20px;font-size: 20px;">你的用户是：
+      <span id="username"></span>
+    </p>
+    <p style="padding-bottom: 20px;padding-left: 20px;font-size: 20px;">
+      你的密码是：
+      <span id="password"></span>
+    </p>
+  </div>
+  <script>
+    var url = decodeURI(location.href);
+			var getval = url.split('?')[1];
+			alert(getval);
+			var user = document.getElementById("username");
+			var password = document.getElementById("password");
+			window.onload =  function() {
+				user.innerHTML = getval.split('&')[0].split('=')[1];
+				password.innerHTML = getval.split('&')[1].split('=')[1];
+			}
+  </script>
+</body>
+</html>

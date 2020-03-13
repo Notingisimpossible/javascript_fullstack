@@ -58,7 +58,7 @@
 <body>
   <header>
     <h3>计算器</h3>
-    <input type="text" id="preResult">
+    <input type="text" id="preResult" value="100">
     <input type="text" id="result" value="">
     <ul id="list">
       <li>1</li>
@@ -90,6 +90,7 @@
 
     // 计算方法
     window.onload = function () {
+      console.log(input.value)
       ilist.addEventListener('click', function (e) {
         // console.log(e)
         // 单击获取每次内容

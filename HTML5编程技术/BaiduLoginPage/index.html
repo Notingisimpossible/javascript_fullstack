@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>登录百度账号</title>
+  <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon"></link>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <img src="./images/logo_pass.png">
+    </header>
+    <section>
+      <nav>
+        <img src="./images/login-bg.png">
+      </nav>
+      <div class="form-list">
+        <form id="myForm" method="post">
+          <div class="form-list-logn">
+            <p class="logo-form">用户密码登录</p>
+            <p id="tipMessage">
+              <span id="userNameTip"></span>
+            </p>
+            <p>
+              <input type="username" name="userName" id="userName" placeholder="手机/邮箱/账户名" form="myForm" >
+            </p>
+            <p>
+              <input type="password" name="passWord" placeholder="密码" id="passWord" form="myForm"/>
+            </p>
+            <p style="padding-top: 30px;">
+              <input type="checkbox" checked="true"/>
+              <label style="font-size: 12px; color: rgb(65, 62, 62);">下次自动登录</label>
+            </p>
+            <p class="p-login-button">
+              <input type="button" value="登录" class="login-button" style="color: rgb(255,255,255);" onclick="subForm()" form="myForm">
+            </p>
+            <p id="p-forget-pwd">
+              <a href="#" class="forget-password">忘记密码？</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      2020&nbsp;©Baidu
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
