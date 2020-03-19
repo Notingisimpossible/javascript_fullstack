@@ -4,8 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: rgb(130, 214, 235);
+    }
+    .box{
+      width: 1000px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-25%);
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    ul{
+      width: 720px;
+    }
+    ul li{
+      float: left;
+      list-style: none;
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgb(163, 241, 241);
+      box-sizing: border-box;
+    }
+    ul li:hover {
+      width: 195px;
+    }
+    img{
+      width: 120px;
+      height: 120px;
+      opacity:0.6; 
+    }
+    img:hover{
+      width: 195px;
+      cursor: pointer;
+      opacity: 1;
+    }
+   
+  </style>
 </head>
 <body>
-  
+  <div class="box">
+    <ul>
+      <li class="a"><img src="./images/1.jpg"></li>
+      <li class="b"><img src="./images/2.jpg"></li>
+      <li class="c"><img src="./images/3.jpg"></li>
+      <li class="d"><img src="./images/4.jpg"></li>
+      <li class="e"><img src="./images/5.jpg"></li>
+    </ul>
+  </div>
 </body>
 </html>
