@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 作用：1. 分步骤创建一个复杂的对象
+    // 2. 解耦封装过程和具体创建的组件
+    // 3. 无需关心组件如何组装
+
+    // 1. 产出的东西是房子
+    // 2. 包工头 调用工人开工 很清楚工人的具体大项
+    // 3. 工人可以建卧室 客厅 厨房...
+    function House() {
+      this.woshi = ''
+      this.keting = ''
+      this.chufang = ''
+    }
+
+    function Baogontou() {
+      this.gaihouse = function (gonren) {
+        gonren.build_woshi()
+        gonren.build_keting()
+        gonren.build_chufang()
+      }
+    }
+
+    function Gonren() {
+      this.build_woshi = function() {
+        alert('卧室建好了')
+      }
+      this.build_keting = function() {
+        alert('客厅建好了')
+      }
+      this.build_chufang = function() {
+        alert('厨房建好了')
+      }
+
+      this.commit = function () {
+        var _house = new House()
+        _house.woshi = 'ok'
+        _house.keting = 'ok'
+        build_chufang = 'ok'
+        return _house
+      }
+    }
+
+    var gonren = new Gonren()
+    var baogontou = new Baogontou()
+    baogontou.gaihouse(gonren)
+    // 得到房子
+    var myhouse = gonren.commit()
+    console.log(myhouse)
+  </script>
+</body>
+</html>
