@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    canvas{
+      background: url(./images/xue.jpg) no-repeat;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="snow">
+
+  </canvas>
+  <script>
+    /** @type {HTMLCanvasElement} */
+    var can = document.getElementById('snow')
+    var context = can.getContext('2d')
+    var width = window.innerWidth
+    var height = window.innerHeight
+    can.height = height
+    can.width = width
+
+    // 随机画小圆点
+    function painting(){
+      for (let i =  0; i < 300; i++) {
+        var h = Math.random()*height
+        var w = Math.random()*width
+        var r = Math.random()*7
+        var sa = 0
+        console.log('111')
+        context.beginPath()
+        context.arc(w, h, r, sa, r*Math.PI/2)
+        context.strokeStyle = "#fff"
+        context.lineWidth= 1
+        context.stroke()
+        context.fillStyle = "#fff"
+        context.fill()
+        context.closePath();
+        context.restore()
+      }
+    }
+    // 雪花下落
+    function snowDown() {
+      context.clearRect(-10, -20, width, height)
+      painting()
+      context.save()
+      context.translate(10,20)
+      
+    }
+    setInterval(snowDown, 100); 
+  </script>
+</body>
+</html>
