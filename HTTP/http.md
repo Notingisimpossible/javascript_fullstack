@@ -8,6 +8,15 @@
 http: 传输ht(超文本)这样的文本规则
 http://ietf.org(官网)
 
-- HTTP 规定了请求发送的数据格式，规定了返回的数据格式，传输的规则
+# HTTP
+ - 规定了请求发送的数据格式
+   Request 消息分3部分：
+    1. Request Line: 请求行 (包含：Method，Path-to-resoure(请求资源))
+    
+    2. Request header: 请求头
+    3. Request body: 请求正文
+
+ - 规定了返回的数据格式
+ - 传输的规则
 
 # HTTP - NODE.JS

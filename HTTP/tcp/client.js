@@ -8,7 +8,7 @@ const fs = require('fs')
 // 你要连接的目标主机地址与端口号
 const clientSocket = net.createConnection(12345, '127.0.0.1')
 var base64Img = null;
-var img = null;
+var img = Buffer.alloc(0);
 // 可读流对象 监听数据传输
 clientSocket.on('data', data => {
   // console.log('服务器返回' + data)
@@ -16,9 +16,7 @@ clientSocket.on('data', data => {
   // fs.writeFileSync('./server/timg.jpg', data)
   // clientSocket.write('getmoney')
   // clientSocket.write('getBaby')
-  base64Img = data.toString('base64')
-  console.log(base64Img)
-  img = new Buffer(base64Img, 'base64')
+  img = Buffer.concat([img, data], img.length + data.length)
 })
 
 clientSocket.on('end', (data) => {

@@ -9,24 +9,15 @@ const fs = require('fs')
 // 请求行：get http://127.0.0.1:8000/   http/1.1
 const client = http.request({
   // tcp
-  host: 'www.baidu.com',
-  port: 80,
+  host: '127.0.0.1',
+  port: 8000,
   // http
   protocol: 'http:',
   method: 'GET',
-  path: '/img/bd_logo1.png?where=super'
+  path: '/view'
 }, (res) => {
-  // 这个函数会在服务器响应的时候触发
-  // res => socket
-  let content = Buffer.alloc(0)
   res.on('data', (data) => {
-    // console.log(data.toString())
-    content = Buffer.concat([content, data], content.length + data.length)
-  })
-
-  
-  res.on('end', () => {
-    fs.writeFileSync('./baidu.png', content)
+    console.log(data.toString())
   })
 })
 
