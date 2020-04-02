@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: rgb(183, 216, 226);
+    }
+    #myCanvas{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-200px) translateY(-200px);
+      background-color: rgb(168, 179, 184);
+    }
+  </style>
+</head>
+<body>
+  <audio src="./images/clockMusic.mp3" hidden="true" id="vd"></audio>
+  <canvas id="myCanvas" width="400" height="400">
+
+  </canvas>
+  <script>
+    var myCanvas = document.getElementById("myCanvas")
+    var ctx = myCanvas.getContext("2d")
+    var height = ctx.canvas.height
+    var width = ctx.canvas.width
+    var r = width/2
+    var img = new Image()
+    img.src = "./images/01.jpg"
+    function paintingClock() {
+      var time = new Date()//获取系统当前时间
+      var sec = time.getSeconds()//获取当前时间的秒
+      var min = time.getMinutes()//获取分钟
+      var hour = time.getHours() + min/60//获取时
+      var date
+      if (min < 10){
+        date = time.getHours() + ":0" + min
+      }else{
+        date = time.getHours() + ":" + min
+      }
+      // 清除画布
+      ctx.clearRect(0,0,400,400)
+      // 画图片
+      // 画表盘
+      ctx.beginPath()
+      ctx.drawImage(img, 0, 0)
+      ctx.font = "30px 黑体·"//显示时间样式
+      ctx.fillStyle = "red"
+      ctx.fillText(date,162, 360)
+      ctx.lineWidth = 10
+      ctx.strokeStyle = "blue"
+      ctx.arc(200,200,r,0,2*Math.PI, false)
+      ctx.clip()
+      ctx.closePath()
+      ctx.stroke()
+
+
+      // 画刻度
+      for(var i = 0; i<60; i++) {
+        toggleSound() 
+        ctx.save()//保存上一次画布
+        if(i%5 == 0){
+          ctx.lineWidth = 6
+          ctx.strokeStyle = "red"
+          ctx.translate(200,200) //移动画布到圆心位置
+          ctx.rotate(i*30*Math.PI/180)//设置旋转角度
+          ctx.beginPath()
+          ctx.moveTo(0,-180)
+          ctx.lineTo(0,-195)
+        }else{
+          ctx.lineWidth = 4
+          ctx.strokeStyle = "yellow" //设置刻度颜色
+          ctx.translate(200,200) //移动画布到圆心位置
+          ctx.rotate(i*6*Math.PI/180)//设置旋转角度
+          ctx.beginPath()
+          ctx.moveTo(0,-188)
+          ctx.lineTo(0,-195)
+        }
+        ctx.closePath()
+        ctx.stroke()
+        ctx.restore()//释放画布
+      }
+      
+      // 画时针
+      ctx.save()
+      ctx.lineWidth = 6
+      ctx.strokeStyle = "red"
+      ctx.translate(200,200)
+      ctx.rotate(hour*30*Math.PI/180)
+      ctx.beginPath()
+      ctx.moveTo(0,-130)
+      ctx.lineTo(0,10)
+      ctx.closePath()
+      ctx.stroke()
+      ctx.restore()
+      // 画分针
+      ctx.save()
+      ctx.lineWidth = 3
+      ctx.strokeStyle = "yellow"
+      ctx.translate(200,200)
+      ctx.rotate(min*6*Math.PI/180)
+      ctx.beginPath()
+      ctx.moveTo(0,-140)
+      ctx.lineTo(0,15)
+      ctx.closePath()
+      ctx.stroke()
+      ctx.restore()
+      // 画秒针
+      ctx.save()
+      ctx.lineWidth = 2
+      ctx.strokeStyle = "green"
+      ctx.translate(200,200)
+      ctx.rotate(sec*6*Math.PI/180)
+      ctx.beginPath()
+      ctx.moveTo(0,-160)
+      ctx.lineTo(0,20)
+      ctx.closePath()
+      ctx.stroke()
+      // 加小圆点
+      ctx.beginPath()
+      ctx.arc(0,0,5,0,360,false)
+      ctx.closePath()
+      ctx.fillStyle = "yellow"
+      ctx.fill()
+      ctx.strokeStyle = "green"
+      ctx.lineWidth = 2
+      ctx.stroke()
+      // 画前端圆点
+      ctx.beginPath()
+      ctx.arc(0,-150,3,0,360,false)
+      ctx.closePath()
+      ctx.closePath()
+      ctx.fillStyle = "yellow"
+      ctx.fill()
+      ctx.strokeStyle = "green"
+      ctx.lineWidth = 2
+      ctx.stroke()
+      ctx.restore()
+    }
+    // 播放音效
+    function toggleSound() {
+      var music = document.getElementById("vd");
+      console.log(music);
+      console.log(music.paused);
+      if (music.paused) { //判读是否播放 
+        music.paused = false 
+        music.play(); //没有就播放 
+      }
+    }
+    paintingClock()
+    setInterval(paintingClock,1000)
+  </script>
+</body>
+</html>
