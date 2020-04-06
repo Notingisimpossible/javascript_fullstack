@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>实现跨域</div></div>
+  <script>
+
+    // socket.html
+    let socket = new WebSocket('ws://me.csdn.net/api/relation/check?follows=threelifeadv,angelo_gs,lncci,CSDN_JPL,lw1242189467,eacc31,Yj_sail,weixin_42925715,xiaofeng66666,weixin_30824479?callback=show');
+    socket.onopen = function () {
+      socket.send('我爱你');//向服务器发送数据
+    }
+    socket.onmessage = function (e) {
+      console.log(e.data);//接收服务器返回的数据
+    }
+
+    //原生的实现方式
+    // let script = document.createElement('script');
+    // script.src = 'https://me.csdn.net/api/relation/check?follows=threelifeadv,angelo_gs,lncci,CSDN_JPL,lw1242189467,eacc31,Yj_sail,weixin_42925715,xiaofeng66666,weixin_30824479?callback=show';
+    // document.body.appendChild(script);
+    // function show(res) {
+    //   console.log(res);
+    // }
+  </script>
+</body>
+</html>
