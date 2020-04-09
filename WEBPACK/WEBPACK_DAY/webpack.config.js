@@ -1,3 +1,6 @@
+// import "@babel/polyfill"
+
+
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -39,6 +42,25 @@ module.exports = {
       {
         test: /\.scss$/,
         use:["style-loader","css-loader","sass-loader"]
+      },
+      {
+        test: /\.js$/,
+        exclude:/node_modules/,//排除node_modules里面的js模块
+        use:{
+          loader: "babel-loader",
+          // options:{
+            // "presets": [
+            //   [
+            //     "@babel/preset-env",
+            //     {
+            //       useBuiltIns: "usage",//按需加载
+            //       // corejs: 2
+            //     }
+            //   ]
+            // ],
+            // "plugins":[["@babel/plugin-transform-runtime"]]
+          // }
+        }
       }
     ]
   },
@@ -59,7 +81,7 @@ module.exports = {
     // hotOnly: true, // 即使HMR不生效，浏览器也不会自动刷新
     port: "8081",
     proxy:{ //设置代理
-      '/api': 'http://localhost:3000'
+      '/api': 'https://web-api.juejin.im/query'
     }
   }
 }

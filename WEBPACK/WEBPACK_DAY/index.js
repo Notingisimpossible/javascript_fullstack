@@ -1,16 +1,28 @@
-// import './index.css'
-import a from './a'
-import b from './b'
-b()
-a()
+// import "@babel/polyfill"//以全局变量的方式注入进来的，window.Promise,他会造成全局变量的污染
+// @babel/plugin-transform-runtime 以插件的形式引入,不会造成全局变量的污染,因此他也不会对类似的Array.prototype.includes()进行polyfill
 
-if (module.hot) {
-  module.hot.accept("./a", () => {
-    console.log("有更新了")
-    document.body.removeChild(document.getElementById("number"))
-    a()
-  })
-}
+
+let obj = {}
+
+const arr = [new Promise(() => {}),new Promise(() => {})]
+arr.map(item => {
+  console.log(item)
+})
+
+// import './index.css'
+// import a from './a'
+// import b from './b'
+
+// b()
+// a()
+
+// if (module.hot) {
+//   module.hot.accept("./a", () => {
+//     console.log("有更新了")
+//     document.body.removeChild(document.getElementById("number"))
+//     a()
+//   })
+// }
 
 // HMR默认对css模块支持较好，对js模块需要额外处理
 // 通过module.hot.accept来对需要跟新的模块进行监控
