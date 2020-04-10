@@ -14,7 +14,7 @@ module.exports = {
   output:{ 
     // 公共路径设置
     // publicPath: "",
-    path: path.resolve(__dirname, "./build"), // 打包的绝对路径
+    path: path.resolve(__dirname, "./dist"), // 打包的绝对路径
     filename: "index.js"
   },
   // devtool: "source-map",
@@ -44,7 +44,7 @@ module.exports = {
         use:["style-loader","css-loader","sass-loader"]
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude:/node_modules/,//排除node_modules里面的js模块
         use:{
           loader: "babel-loader",
@@ -75,7 +75,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    contentBase: "./build",
+    contentBase: "./dist",
     open: true, //当执行服务时自动打开浏览器
     hot: true,
     // hotOnly: true, // 即使HMR不生效，浏览器也不会自动刷新
@@ -83,5 +83,8 @@ module.exports = {
     proxy:{ //设置代理
       '/api': 'https://web-api.juejin.im/query'
     }
-  }
+  },
+  optimization: {
+    usedExports: true
+  },
 }
