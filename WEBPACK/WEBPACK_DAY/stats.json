@@ -1,0 +1,556 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.42.1",
+  "hash": "3b45ce2b28f477b2c136",
+  "time": 946,
+  "builtAt": 1586596447865,
+  "publicPath": "",
+  "outputPath": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\dist",
+  "assetsByChunkName": {
+    "index": "index.js"
+  },
+  "assets": [
+    {
+      "name": "0.js",
+      "size": 1137,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "index.html",
+      "size": 263,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "index.js",
+      "size": 39883,
+      "chunks": [
+        "index"
+      ],
+      "chunkNames": [
+        "index"
+      ],
+      "info": {},
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "index": {
+      "chunks": [
+        "index"
+      ],
+      "assets": [
+        "index.js"
+      ],
+      "children": {
+        "prefetch": [
+          {
+            "name": null,
+            "chunks": [
+              0
+            ],
+            "assets": [
+              "0.js"
+            ]
+          }
+        ]
+      },
+      "childAssets": {
+        "prefetch": [
+          "0.js"
+        ]
+      }
+    }
+  },
+  "namedChunkGroups": {
+    "index": {
+      "chunks": [
+        "index"
+      ],
+      "assets": [
+        "index.js"
+      ],
+      "children": {
+        "prefetch": [
+          {
+            "name": null,
+            "chunks": [
+              0
+            ],
+            "assets": [
+              "0.js"
+            ]
+          }
+        ]
+      },
+      "childAssets": {
+        "prefetch": [
+          "0.js"
+        ]
+      }
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": false,
+      "entry": false,
+      "size": 198,
+      "names": [],
+      "files": [
+        "0.js"
+      ],
+      "hash": "2fce4953e7bd573a7697",
+      "siblings": [],
+      "parents": [
+        "index"
+      ],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": "./click.js",
+          "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\click.js",
+          "name": "./click.js",
+          "index": 1,
+          "index2": 1,
+          "size": 198,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "issuerId": "./index.js",
+          "issuerName": "./index.js",
+          "issuerPath": [
+            {
+              "id": "./index.js",
+              "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+              "name": "./index.js",
+              "profile": {
+                "factory": 65,
+                "building": 787
+              }
+            }
+          ],
+          "profile": {
+            "factory": 3,
+            "building": 10
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": "./index.js",
+              "moduleIdentifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+              "module": "./index.js",
+              "moduleName": "./index.js",
+              "type": "import()",
+              "userRequest": "./click.js",
+              "loc": "2:2-4:15"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 1,
+          "source": "// click\nfunction handleclick() {\n  var element = document.createElement(\"div\");\n  element.innerHTML = \"welcome to webpack4.x\";\n  document.body.appendChild(element);\n}\n\nmodule.exports = handleclick;"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "moduleId": "./index.js",
+          "module": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "moduleIdentifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "moduleName": "./index.js",
+          "loc": "2:2-4:15",
+          "request": "./click.js",
+          "reasons": []
+        }
+      ]
+    },
+    {
+      "id": "index",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 1698,
+      "names": [
+        "index"
+      ],
+      "files": [
+        "index.js"
+      ],
+      "hash": "166601ff4f5da26a1829",
+      "siblings": [],
+      "parents": [],
+      "children": [
+        0
+      ],
+      "childrenByOrder": {
+        "prefetch": [
+          0
+        ]
+      },
+      "modules": [
+        {
+          "id": "./index.js",
+          "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "name": "./index.js",
+          "index": 0,
+          "index2": 0,
+          "size": 1698,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "index"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 65,
+            "building": 787
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./index.js",
+              "loc": "index"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "document.addEventListener('click', function () {\n  import(\n  /*webpackPrefetch: true*/\n  \"./click.js\").then(function (_ref) {\n    var func = _ref[\"default\"];\n    func();\n  });\n}); // import _ from 'lodash'\n// console.log(_.join([\"a\",\"b\",\"c\"],\"***\")) // 1Mb\n// import {add} from './a.js'\n// import \"./index.css\"\n// add(1,2)\n// import \"@babel/polyfill\"//以全局变量的方式注入进来的，window.Promise,他会造成全局变量的污染\n// @babel/plugin-transform-runtime 以插件的形式引入,不会造成全局变量的污染,因此他也不会对类似的Array.prototype.includes()进行polyfill\n// import React,{Component} from 'react'\n// import ReactDom from 'react-dom'\n// import Child from './index.jsx'\n// class App extends Component{\n//   render() {\n//     return (\n//       <div>\n//         <Child />\n//       </div>\n//     )\n//   }\n// }\n// ReactDom.render(<App/>, document.getElementById(\"app\"))\n// let obj = {}\n// const arr = [new Promise(() => {}),new Promise(() => {})]\n// arr.map(item => {\n//   console.log(item)\n// })\n// import './index.css'\n// import a from './a'\n// import b from './b'\n// b()\n// a()\n// if (module.hot) {\n//   module.hot.accept(\"./a\", () => {\n//     console.log(\"有更新了\")\n//     document.body.removeChild(document.getElementById(\"number\"))\n//     a()\n//   })\n// }\n// HMR默认对css模块支持较好，对js模块需要额外处理\n// 通过module.hot.accept来对需要跟新的模块进行监控\n// var btn = document.createElement(\"button\")\n// btn.innerHTML = \"新增\"\n// document.body.appendChild(btn)\n// btn.onclick = function(){\n//   var div = document.createElement(\"div\")\n//   div.innerHTML = \"item\"\n//   document.body.appendChild(div)\n// }"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "index",
+          "request": "./index.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "./click.js",
+      "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\click.js",
+      "name": "./click.js",
+      "index": 1,
+      "index2": 1,
+      "size": 198,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+      "issuerId": "./index.js",
+      "issuerName": "./index.js",
+      "issuerPath": [
+        {
+          "id": "./index.js",
+          "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "name": "./index.js",
+          "profile": {
+            "factory": 65,
+            "building": 787
+          }
+        }
+      ],
+      "profile": {
+        "factory": 3,
+        "building": 10
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": "./index.js",
+          "moduleIdentifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+          "module": "./index.js",
+          "moduleName": "./index.js",
+          "type": "import()",
+          "userRequest": "./click.js",
+          "loc": "2:2-4:15"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 1,
+      "source": "// click\nfunction handleclick() {\n  var element = document.createElement(\"div\");\n  element.innerHTML = \"welcome to webpack4.x\";\n  document.body.appendChild(element);\n}\n\nmodule.exports = handleclick;"
+    },
+    {
+      "id": "./index.js",
+      "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_babel-loader@8.1.0@babel-loader\\lib\\index.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.js",
+      "name": "./index.js",
+      "index": 0,
+      "index2": 0,
+      "size": 1698,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        "index"
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 65,
+        "building": 787
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./index.js",
+          "loc": "index"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [],
+      "depth": 0,
+      "source": "document.addEventListener('click', function () {\n  import(\n  /*webpackPrefetch: true*/\n  \"./click.js\").then(function (_ref) {\n    var func = _ref[\"default\"];\n    func();\n  });\n}); // import _ from 'lodash'\n// console.log(_.join([\"a\",\"b\",\"c\"],\"***\")) // 1Mb\n// import {add} from './a.js'\n// import \"./index.css\"\n// add(1,2)\n// import \"@babel/polyfill\"//以全局变量的方式注入进来的，window.Promise,他会造成全局变量的污染\n// @babel/plugin-transform-runtime 以插件的形式引入,不会造成全局变量的污染,因此他也不会对类似的Array.prototype.includes()进行polyfill\n// import React,{Component} from 'react'\n// import ReactDom from 'react-dom'\n// import Child from './index.jsx'\n// class App extends Component{\n//   render() {\n//     return (\n//       <div>\n//         <Child />\n//       </div>\n//     )\n//   }\n// }\n// ReactDom.render(<App/>, document.getElementById(\"app\"))\n// let obj = {}\n// const arr = [new Promise(() => {}),new Promise(() => {})]\n// arr.map(item => {\n//   console.log(item)\n// })\n// import './index.css'\n// import a from './a'\n// import b from './b'\n// b()\n// a()\n// if (module.hot) {\n//   module.hot.accept(\"./a\", () => {\n//     console.log(\"有更新了\")\n//     document.body.removeChild(document.getElementById(\"number\"))\n//     a()\n//   })\n// }\n// HMR默认对css模块支持较好，对js模块需要额外处理\n// 通过module.hot.accept来对需要跟新的模块进行监控\n// var btn = document.createElement(\"button\")\n// btn.innerHTML = \"新增\"\n// document.body.appendChild(btn)\n// btn.onclick = function(){\n//   var div = document.createElement(\"div\")\n//   div.innerHTML = \"item\"\n//   document.body.appendChild(div)\n// }"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "",
+      "outputPath": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\dist",
+      "assetsByChunkName": {
+        "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
+      },
+      "assets": [
+        {
+          "name": "__child-HtmlWebpackPlugin_0",
+          "size": 6261,
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "chunkNames": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "info": {},
+          "emitted": false
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": "HtmlWebpackPlugin_0",
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 590,
+          "names": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "files": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "hash": "4053bd6caa99b7ac3d0c",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": "./node_modules/_html-webpack-plugin@4.0.4@html-webpack-plugin/lib/loader.js!./index.html",
+              "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_html-webpack-plugin@4.0.4@html-webpack-plugin\\lib\\loader.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.html",
+              "name": "./node_modules/_html-webpack-plugin@4.0.4@html-webpack-plugin/lib/loader.js!./index.html",
+              "index": 0,
+              "index2": 0,
+              "size": 590,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                "HtmlWebpackPlugin_0"
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 28,
+                "building": 19
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_html-webpack-plugin@4.0.4@html-webpack-plugin\\lib\\loader.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.html",
+                  "loc": "HtmlWebpackPlugin_0"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [],
+              "depth": 0,
+              "source": "var _ = __non_webpack_require__(\"F:\\\\javascript_fullstack\\\\WEBPACK\\\\WEBPACK_DAY\\\\node_modules\\\\_lodash@4.17.15@lodash\\\\lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\r\\n<html lang=\"en\">\\r\\n<head>\\r\\n  <meta charset=\"UTF-8\">\\r\\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\r\\n  <title>' +\n((__t = ( htmlWebpackPlugin.options.title )) == null ? '' : __t) +\n'</title></title>\\r\\n</head>\\r\\n<body>\\r\\n  <div id=\"app\"></div>\\r\\n</body>\\r\\n</html>';\nreturn __p\n})();}}"
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0",
+              "request": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_html-webpack-plugin@4.0.4@html-webpack-plugin\\lib\\loader.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.html",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": "./node_modules/_html-webpack-plugin@4.0.4@html-webpack-plugin/lib/loader.js!./index.html",
+          "identifier": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_html-webpack-plugin@4.0.4@html-webpack-plugin\\lib\\loader.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.html",
+          "name": "./node_modules/_html-webpack-plugin@4.0.4@html-webpack-plugin/lib/loader.js!./index.html",
+          "index": 0,
+          "index2": 0,
+          "size": 590,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 28,
+            "building": 19
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\node_modules\\_html-webpack-plugin@4.0.4@html-webpack-plugin\\lib\\loader.js!F:\\javascript_fullstack\\WEBPACK\\WEBPACK_DAY\\index.html",
+              "loc": "HtmlWebpackPlugin_0"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [],
+          "depth": 0,
+          "source": "var _ = __non_webpack_require__(\"F:\\\\javascript_fullstack\\\\WEBPACK\\\\WEBPACK_DAY\\\\node_modules\\\\_lodash@4.17.15@lodash\\\\lodash.js\");module.exports = function (templateParams) { with(templateParams) {return (function(data) {\nvar __t, __p = '';\n__p += '<!DOCTYPE html>\\r\\n<html lang=\"en\">\\r\\n<head>\\r\\n  <meta charset=\"UTF-8\">\\r\\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\\r\\n  <title>' +\n((__t = ( htmlWebpackPlugin.options.title )) == null ? '' : __t) +\n'</title></title>\\r\\n</head>\\r\\n<body>\\r\\n  <div id=\"app\"></div>\\r\\n</body>\\r\\n</html>';\nreturn __p\n})();}}"
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "HtmlWebpackCompiler"
+    }
+  ]
+}

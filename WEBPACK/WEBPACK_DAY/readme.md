@@ -13,3 +13,9 @@ optimization: {
   # development vs Production 模式区分打包
 
   # code Splitting 代码分割
+
+  # 打包分析
+
+  # webpack 官方推荐的编码方式
+
+  # 魔法注入

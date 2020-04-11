@@ -7,7 +7,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bundle": "webpack --config ./build/webpack.common.js",
+    "bundle": "webpack --profile --json > stats.json --config ./build/webpack.common.js",
     "build": "webpack --env.production --config ./build/webpack.common.js",
     "server": "webpack-dev-server --config ./build/webpack.common.js"
   },
