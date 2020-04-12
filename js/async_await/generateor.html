@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function foo() {
+      return 'foo'
+    }
+    function* test() {
+      console.log('start')
+      let a = yield foo()
+      // a ??? 和yeild后面的值没有关系
+      let b = yield 2;
+      console.log('start')
+    }
+    console.log(test().next())
+    // a的值可以通过next方法传递
+    // next 方法传递的参数 就是上一个yield的返回值
+    test().next('A Value')
+    // generate 内部相比普通函数是可以被中止的
+    // 相比普通函数 调用的时候 通过 一步步 next 来调用
+    // while(!test().next().done){
+    //   test().next()
+    // }
+
+    // 协程
+    function generateAutoRun(gen) {
+      let g = gen();
+      function next() {
+        let res = g.next();
+        if (!res.done) return;
+        next(res.value);
+      }
+      next()
+    }
+    generateAutoRun(test)
+  </script>
+</body>
+</html>
