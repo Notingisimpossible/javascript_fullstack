@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #trails{
+      position: absolute;
+      left: 40%;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="trails" width="400" height="600" style="border: 1px solid;"></canvas>
+
+  <script>
+    var can = document.getElementById("trails")
+    var ctx = can.getContext("2d")
+    var gravel = new Image()
+    gravel.src = "./inages/gravel.jpg"
+    gravel.onload = function() {
+      drawTrails()
+    }
+
+    function drawTrails() {
+      ctx.save()
+      ctx.translate(130,250)
+      drawTree(ctx)
+      ctx.restore()
+
+      ctx.save()
+      ctx.translate(260,500)
+      ctx.scale(2,2)
+      drawTree(ctx)
+      ctx.restore()
+
+      ctx.save()
+      ctx.translate(-10, 350)
+      drawCur(ctx)
+      ctx.restore()
+
+      ctx.save()
+      drawText(ctx)
+    }
+
+    function drawText(ctx) {
+      ctx.font = "60px impact"
+      ctx.textAlign = "center"
+      ctx.fillStyle = "#996600"
+      ctx.fillText("Happy Trails", 200, 60, 400)
+    }
+    function drawTree(ctx) {
+      ctx.save()
+      ctx.transform(-1,0,0.5,1,0,0)
+      ctx.scale(1,0.6)
+      ctx.fillStyle = 'rgba(0,0,0,0.2)'
+      ctx.fillRect(-5,-50,10,50)
+      createCanopy(ctx)
+      ctx.fill()
+      ctx.restore()
+
+      ctx.save()
+      createCanopy(ctx)
+      ctx.lineWidth = 4
+      ctx.lineJoin = "round"
+      ctx.strokeStyle = "#663300"
+      ctx.stroke()
+      ctx.fillStyle = "#339900"
+      ctx.fill()
+
+      ctx.fillStyle = "#663300"
+      ctx.fillRect(-5,-50,10,50)
+      ctx.restore()
+    }
+
+    function createCanopy(ctx) {
+      ctx.beginPath()
+      ctx.moveTo(-25,-50)
+      ctx.lineTo(-10,-80)
+      ctx.lineTo(-20,-80)
+      ctx.lineTo(-5,-110)
+      ctx.lineTo(-15,-110)
+      ctx.lineTo(0,-140)
+      ctx.lineTo(15,-110)
+      ctx.lineTo(5,-110)
+      ctx.lineTo(20,-80)
+      ctx.lineTo(10,-80)
+      ctx.lineTo(25,-50)
+      ctx.closePath()
+    }
+
+    function drawCur(ctx) {
+      ctx.beginPath()
+      ctx.moveTo(0,0)
+      ctx.quadraticCurveTo(200, -50, 260, -190)
+      ctx.quadraticCurveTo(310, -250, 410, -250)
+      ctx.strokeStyle = ctx.createPattern(gravel, "repeat")
+      ctx.lineWidth = 20
+      ctx.stroke()
+      ctx.closePath()
+    }
+  </script>
+</body>
+</html>
