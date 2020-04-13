@@ -33,6 +33,7 @@
     var img = new Image()
     img.src = "./images/01.jpg"
     function paintingClock() {
+      toggleSound()
       var time = new Date()//获取系统当前时间
       var sec = time.getSeconds()//获取当前时间的秒
       var min = time.getMinutes()//获取分钟
@@ -61,8 +62,7 @@
 
 
       // 画刻度
-      for(var i = 0; i<60; i++) {
-        toggleSound() 
+      for(var i = 0; i<60; i++) { 
         ctx.save()//保存上一次画布
         if(i%5 == 0){
           ctx.lineWidth = 6
@@ -145,15 +145,13 @@
     // 播放音效
     function toggleSound() {
       var music = document.getElementById("vd");
-      console.log(music);
-      console.log(music.paused);
       if (music.paused) { //判读是否播放 
         music.paused = false 
         music.play(); //没有就播放 
       }
     }
     paintingClock()
-    setInterval(paintingClock,1000)
+    setInterval(paintingClock,400)
   </script>
 </body>
 </html>
