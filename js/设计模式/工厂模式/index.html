@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 工厂应该有厂长来决定运行那一条生产线
+    // 消费者 --》 子类
+    var gongchang = {}
+    gongchang.chanyifu = function(argument) {
+      this.worker = 50
+      alert("我们有"+this.worker)
+    }
+    gongchang.chanxie = function() {
+      alert("产鞋子")
+    }
+    gongchang.yunshu = function() {
+      alert("运输")
+    }
+    gongchang.changzhang = function(para) {
+      // new js 构造函数模式 单例模式
+      return new gongchang[para]()
+    }
+    var me = gongchang.changzhang("chanyifu")
+    alert(me.worker)
+  </script>
+</body>
+</html>
