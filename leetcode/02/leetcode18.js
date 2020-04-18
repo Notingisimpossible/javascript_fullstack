@@ -12,7 +12,7 @@
  */
 var deleteNode = function(head, val) {
   let headNode = new ListNode()
-  headNode.next = headNode
+  headNode.next = head
   let previous = headNode
   let current = head
 
