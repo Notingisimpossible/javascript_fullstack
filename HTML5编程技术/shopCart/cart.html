@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .goods{
+      width: 45%;
+      float: left;
+      margin-top: 20px;
+    }
+    .goods img{
+      width: 180px;
+      padding-left: 10px;
+    }
+    p{
+      padding-left: 15%;
+    }
+    span{
+      padding-left: 15%;
+      color: tomato;
+    }
+    .footer{
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+    .footer a{
+      text-decoration: none;
+      font-size: 25px;
+      color: tomato;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="good">
+    <div><h2 style="text-align: center;">购物车</h2></div>
+    <div class="goods">
+      <img/>
+      <p></p>
+      <span onclick="delCart(1)"></span>
+    </div>
+    <div class="goods">
+      <img/>
+      <p></p>
+      <span onclick="delCart(2)"></span>
+    </div>
+    <div class="goods">
+      <img/>
+      <p ></p>
+      <span onclick="delCart(3)"></span>
+    </div>
+    <div class="goods">
+      <img />
+      <p></p>
+      <span onclick="delCart(4)"></span>
+    </div>
+    <div class="footer">
+      <h2 style=" color: tomato; float: left;" onclick="clearCart()">清空购物车</h2>
+      <a href="./index.html">返回商城</a>
+    </div>
+  </div>
+  <script>
+    var imgs = document.getElementsByTagName("img")
+    var ps = document.getElementsByTagName('p')
+    var sps = document.getElementsByTagName('span')
+    var goods = document.getElementsByClassName('goods')
+    var count1 = null
+    var count2 = null
+    var count3 = null
+    var count4 = null
+    window.onload = function () {
+      for(var i=0; i<localStorage.length;i++){
+      var k = localStorage.key(i)
+      var v = localStorage[k]
+      switch(k){
+        case "小米6":
+          count1 = v
+          imgs[0].src = "./img/phone3.jpg"
+          ps[0].innerHTML = `${k} 数量${v}台`
+          sps[0].innerHTML = "移出购物车"
+          break
+        case "苹果7":
+          count2 = v
+          imgs[1].src = './img/phone1.jpg'
+          ps[1].innerHTML = `${k}数量${v}台`
+          sps[1].innerHTML = "移出购物车"
+          break
+        case "荣耀9":
+          count3 = v
+          imgs[2].src = './img/phone2.jpg'
+          ps[2].innerHTML =`${k}  数量${v}台`
+          sps[2].innerHTML = "移出购物车"
+          break
+        case "魅族16":
+          count4 = v
+          imgs[3].src = './img/phone3.jpg'
+          ps[3].innerHTML = `${k} 数量${v}台`
+          sps[3].innerHTML = "移出购物车"
+          break
+      }
+    }
+    }
+    function delCart(n){
+      switch (n) {
+        case 1:
+          if(count1 !== 0) {
+            count1--
+            localStorage["小米6"] = count1
+            ps[0].innerHTML = `小米6 数量${count1}台`
+            alert("小米手机数量减一")
+          }
+          if(count1 === 0){
+            goods[0].style.display = "none"
+            localStorage.removeItem("小米6")
+          }
+          break
+        case 2:
+          if(count2 !== 0) {
+            count2--
+            localStorage["苹果7"] = count2
+            ps[1].innerHTML = `苹果7  数量${count2}台`
+            alert("苹果7数量减一")
+          }
+          if(count2 === 0){
+            localStorage.removeItem("苹果7")
+            goods[1].style.display = "none"
+          }
+          break
+        case 3:
+          if(count3 !== 0){
+            count3--
+            localStorage["荣耀9"] = count3
+            ps[2].innerHTML =`荣耀9  数量${count3}台`
+            alert("荣耀9数量减一")
+          }
+          if(count3 === 0){
+            localStorage.removeItem("荣耀9")
+            goods[2].style.display = "none"
+          }
+          break
+        case 4:
+          if(count4 !== 0){
+            count4--
+            localStorage["魅族16"] = count4
+            ps[3].innerHTML =`魅族16  数量${count4}台`
+            alert("魅族16数量减一")
+          }
+          if(count4 === 0){
+            localStorage.removeItem("魅族16")
+            goods[3].style.display = "none"
+          }
+          break
+        default:
+          break
+      }
+    }
+    function clearCart() {
+      localStorage.clear()
+      alert("您已经清空了购物车")
+      for(let i = 0; i < goods.length; i++) {
+        goods[i].style.display = "none"
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>shopCart</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    header{
+      height: 40px;
+      width: 100%;
+      padding-top: 5%;
+
+    }
+    ul{
+      height: auto;
+      width: 100%;
+    }
+    li{
+      float: left;
+      list-style: none;
+      margin-right: 20px;;
+    }
+    .title{
+      margin-left: 20px;
+    }
+    .title img{
+      width: 70px;
+      height: 35px;
+    }
+    .seach{
+      height: 37px;
+      width: 180px;
+	  background-color: rgb(216, 205, 205);
+      border-radius: 10px;
+    }
+    input{
+      border: none;
+      height: 35px;
+      width: 150px;
+	    outline: none;
+      background-color: rgb(216, 205, 205);
+      border-radius: 10px;
+    }
+    .icon{
+      width: 23px;
+      height: 23px;
+      position: relative;
+      top: 10px;
+    }
+    button{
+      margin-left: 5px;
+	  margin-top: 8px;
+      height: 25px;
+      width: 35px;
+      background-color: #fff;
+      border:1px #DD1A21 solid;
+      color: #DD1A21;
+      border-radius: 10px;
+      outline: none;
+    }
+    section{
+      padding-top: 5%;
+    }
+    .goods{
+      width: 45%;
+      float: left;
+	  margin-bottom: 20px;
+    }
+    .goods img{
+      width: 180px;
+      padding-left: 10px;
+    }
+    p{
+      padding-left: 10%;
+    }
+    p::after{
+      content: "加入购物车";
+      color: tomato;
+      margin-left: 10px;
+	  cursor: pointer;
+    }
+    footer{
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      z-index: 100;
+      font-size: 30px;
+      
+    }
+    footer a{
+      text-decoration: none;
+	  color: tomato;
+	  cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <ul>
+      <li class="title"><img src="./img/index.webp"/></li>
+      <li class="seach">
+        <input placeholder="输入商品名称"/>
+        <img class="icon" src="./img/search.png"/>
+      </li>
+      <!-- <li class="login"><button>登陆</button></li> -->
+    </ul>
+  </header>
+  <section>
+    <div class="goods">
+      <img src="./img/phone3.jpg"/>
+      <p onclick="addCart(1)">小米6</p>
+    </div>
+    <div class="goods">
+      <img src="./img/phone1.jpg"/>
+      <p onclick="addCart(2)">苹果7</p>
+    </div>
+    <div class="goods">
+      <img src="./img/phone2.jpg"/>
+      <p onclick="addCart(3)">荣耀9</p>
+    </div>
+    <div class="goods">
+      <img src="./img/phone3.jpg"/>
+      <p onclick="addCart(4)">魅族16s</p>
+    </div>
+  </section>
+  <footer><a href="./cart.html">购物车</a></footer>
+  <script>
+    var goods = document.getElementsByTagName("p")
+    var count1 = 0
+    var count2 = 0
+    var count3 = 0
+    var count4 = 0
+    function addCart(n){
+      switch (n) {
+        case 1:
+          count1++
+          localStorage["小米6"] = count1
+          alert("添加购物车成功")
+          break
+        case 2:
+          count2++
+          localStorage["苹果7"] = count2
+          alert("添加购物车成功")
+          break
+        case 3:
+          count3++
+          localStorage["荣耀9"] = count3
+          alert("添加购物车成功")
+          break
+        case 4:
+          count4++
+          localStorage["魅族16"] = count4
+          alert("添加购物车成功")
+          break
+        default:
+          break
+      }
+    }
+  </script>
+</body>
+</html>
