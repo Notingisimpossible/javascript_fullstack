@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      background-color: turquoise;
+    }
+    #box{
+      width: 96%;
+      height: auto;
+      position: absolute;
+      left: 2%;
+    }
+    header{
+      text-align: center;
+      color: rgb(47, 143, 221);
+      font-size: 20px;
+    }
+    #video{
+      width: 100%;
+      border: 1px solid yellowgreen;
+    }
+    ul{
+      width: 100%;
+      height: 100%;
+    }
+    li{
+      width: 100%;
+      height: 100%;
+      background-color: rgb(129, 187, 235);
+      margin-bottom: 1px;
+      list-style: none;
+    }
+	.bgc{
+		background-color: rgb(26, 98, 156);
+		color: rgb(47, 143, 221);
+	}
+    li:first-child{
+      color: rgb(47, 143, 221);
+    }
+  </style>
+  <title>视频播放器</title>
+</head>
+<body>
+  <div id="box">
+    <header>视频播放器</header>
+    <video id="video" src="./assets/1.webm" autoplay controls></video>
+    <ul>
+      <li><h2>视频列表：</h2></li>
+      <li class="bgc" onclick="changeVideo(1)">视频1</li>
+      <li onclick="changeVideo(2)">视频2</li>
+      <li onclick="changeVideo(3)">视频3</li>
+    </ul>
+  </div>
+  <script>
+    var video = document.getElementById("video")
+    var lis = document.getElementsByTagName("li")
+    var videos = ["./assets/1.webm", "./assets/2.webm", "./assets/3.webm"]
+    video.addEventListener('ended', function () {
+      let dirname = video.src.split("/")
+      let videoNum = dirname[dirname.length - 1].split(".")[0]
+      nextVideoPlay(videoNum)
+    })
+    const nextVideoPlay = (index) => {
+      console.log(index)
+      let i = parseInt(index)
+      switch (i) {
+        case 1:
+          video.src = videos[index]
+          lis[i + 1].setAttribute("class", "bgc")
+          lis[i].removeAttribute("class", "bgc")
+          lis[i + 2].removeAttribute("class", "bgc")
+          video.play()
+          break
+        case 2:
+          video.src = videos[index]
+          video.play()
+          lis[i + 1].setAttribute("class", "bgc")
+          lis[i].removeAttribute("class", "bgc")
+          lis[i - 1].removeAttribute("class", "bgc")
+          video.play()
+          break
+        case 3:
+          video.src = videos[0]
+          video.play()
+          lis[i - 2].setAttribute("class", "bgc")
+          lis[i - 1].removeAttribute("class", "bgc")
+          lis[i].removeAttribute("class", "bgc")
+          video.play()
+          break
+        default:
+          break
+      }
+    }
+    const changeVideo = (index) => {
+      switch (index) {
+        case 1:
+          video.src = videos[index - 1]
+          lis[index].classList.add("bgc")
+          lis[index + 1].classList.remove("bgc")
+          lis[index + 2].classList.remove("bgc")
+          break
+        case 2:
+          video.src = videos[index - 1]
+          lis[index].classList.add("bgc")
+          lis[index + 1].classList.remove("bgc")
+          lis[index - 1].classList.remove("bgc")
+          break
+        case 3:
+          video.src = videos[index - 1]
+          lis[index].classList.add("bgc")
+          lis[index - 1].classList.remove("bgc")
+          lis[index - 2].classList.remove("bgc")
+          break
+        default:
+          break
+      }
+    }
+  </script>
+</body>
+</html>
