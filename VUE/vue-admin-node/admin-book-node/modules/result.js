@@ -35,7 +35,7 @@ class Result{
     this.code = CODE_SUCCESS
     this.json(res)
   }
-  fail(Res){
+  fail(res){
     this.code = CODE_ERROR
     this.json(res)
   }
