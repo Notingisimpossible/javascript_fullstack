@@ -1,7 +1,7 @@
 const express = require('express')
 const Result = require('../modules/result')
-const {login} = require('../services/user')
-const {getAesString} = require('../utils/index')
+const {login, findUser} = require('../services/user')
+const {getAesString, decoded} = require('../utils/index')
 const {PWD_SALT} = require('../utils/constant')
 const { body, validationResult } = require('express-validator')
 const boom = require('boom')
@@ -40,8 +40,25 @@ router.post(
       })
     }
   })
-router.get('/info', function(req, res, next){
-  res.json('user info ...')
+router.get('/info', async function (req, res) {
+  // 拿到 token
+  const decode = decoded(req)
+  console.log(decode)
+  console.log(decode, '-------')
+  // if(decode && decode.username) {
+  //   console.log(decode)
+  // }
+  findUser('admin').then(user => {
+    console.log(user)
+    if (user) {
+      user.roles = [user.role]
+      new Result(user, '用户信息查询成功').success(res)
+    } else {
+      new Result(user, '用户信息查询失败').fail(res)
+    }
+  }).catch(err => {
+    new Result(err, '用户信息查询失败')
+  })
 })
 
 module.exports = router

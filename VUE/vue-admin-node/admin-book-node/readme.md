@@ -53,3 +53,5 @@
     ```
   # 生成JWT Token
     - npm i jsonwebtoken -S
+  # JWT认证
+    - npm i express-jwt -S

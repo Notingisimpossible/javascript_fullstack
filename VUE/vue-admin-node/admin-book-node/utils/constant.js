@@ -5,5 +5,6 @@ module.exports = {
   debug: true,
   PWD_SALT: 'admin-book-node',
   PRIVATE_KEY: 'vue-book-node-test-min',
-  JWT_EXPIRED:60*60
+  JWT_EXPIRED:60*60,
+  CODE_TOKEN_EXPIRED: -2
 }
