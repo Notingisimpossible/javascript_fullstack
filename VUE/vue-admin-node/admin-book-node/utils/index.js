@@ -1,8 +1,8 @@
-const CryptoJs = require('crypto-js')
+const CryptoJS = require("crypto-js");
 const jwt = require('jsonwebtoken')
 const { PRIVATE_KEY } = require('./constant')
 
-function getAesString(data,key,iv){//加密
+function md5(data, key, iv) { //加密
   var key  = CryptoJS.enc.Utf8.parse(key);
   var iv   = CryptoJS.enc.Utf8.parse(iv);
   var encrypted =CryptoJS.AES.encrypt(data,key,
@@ -14,16 +14,16 @@ function getAesString(data,key,iv){//加密
   return encrypted.toString();    //返回的是base64格式的密文
 }
 
-// verify解析token
-function decoded(req) {
-  let token = req.get('Authorization') // 从请求头里面拿token
-  if(token.indexOf('Bearer') === 0) {
-    token = token.replace('Bearer','')
+// verify
+function decoded (req) {
+  const authorization = req.get('Authorization')
+  let token = ''
+  if (authorization.indexOf('Bearer') >= 0) {
+    token = authorization.replace('Bearer ', '')
+  } else {
+    token = authorization
   }
   return jwt.verify(token, PRIVATE_KEY)
 }
 
-module.exports = {
-  getAesString,
-  decoded
-}
+module.exports = { md5, decoded }

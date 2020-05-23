@@ -8,24 +8,32 @@ const cors = require('cors')
 const app = express()
 
 app.use(cors())
-app.use(bodyParser.urlencoded({ extended: true })) //解析参数
-app.use(bodyParser.json())//解析json格式
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 app.use('/', router)
 
-const privateKey = fs.readFileSync('./https/privatekey.pem', 'utf8')
-const certification = fs.readFileSync('./https/certification.pem', 'utf8')
-const certrequest = {key: privateKey, cert: certification}
+const privateKey  = fs.readFileSync('./https/private.pem', 'utf8');
+const certificate = fs.readFileSync('./https/ca.cer', 'utf8');
+const credentials = {key: privateKey, cert: certificate};
+const httpsServer = https.createServer(credentials, app)
+const SSLPORT = 18082;
 
-const httpsServer = https.createServer(certrequest, app)
-const SSLPORT = 18082
-
-// app.get('/', router)
-const serevr = app.listen(5000, () => {
-  const {address, port} = serevr.address()
-  console.log('Http Server is Runing on http://%s:%s', address, port)
+const server = app.listen(5000, function() {
+  const { address, port } = server.address()
+  console.log('Http Server is runing on http://%s:%s', address, port)
 })
 
-// 创建https服务
+//创建https服务器
 httpsServer.listen(SSLPORT, function() {
-  console.log('Https Server is runing on https://localhost:%s', SSLPORT)
-})
+  console.log('HTTPS Server is running on: https://localhost:%s', SSLPORT);
+});
+
+// //可以根据请求判断是http还是https
+// app.get('/', function (req, res) {
+//   if(req.protocol === 'https') {
+//       res.status(200).send('This is https visit!');
+//   }
+//   else {
+//       res.status(200).send('This is http visit!');
+//   }
+// });

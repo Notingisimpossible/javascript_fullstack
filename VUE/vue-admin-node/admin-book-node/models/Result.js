@@ -1,19 +1,20 @@
 const {
   CODE_ERROR,
-  CODE_SUCCESS
-} = require('../utils/constant')
-const {CODE_TOKEN_EXPIRED} = require('../utils/constant')
-class Result{
+  CODE_SUCCESS,
+  CODE_TOKEN_EXPIRED
+}  = require('../utils/constant')
+
+class Result {
   constructor(data, msg='操作成功', options) {
     this.data = data
     this.msg = msg
-    if(options) {
+    if (options) {
       this.options = options
     }
   }
 
   createResult() {
-    if(!this.code){
+    if (!this.code) {
       this.code = CODE_SUCCESS
     }
     let base = {
@@ -21,7 +22,7 @@ class Result{
       data: this.data,
       msg: this.msg
     }
-    if(this.options) {
+    if (this.options) {
       base = {...base, ...this.options}
     }
     return base
@@ -30,16 +31,18 @@ class Result{
   json(res) {
     res.json(this.createResult())
   }
+
   success(res) {
-    // throw new Error('error...')
     this.code = CODE_SUCCESS
     this.json(res)
   }
-  fail(res){
+
+  fail(res) {
     this.code = CODE_ERROR
     this.json(res)
   }
-  jwtError(res){
+
+  jwtError(res) {
     this.code = CODE_TOKEN_EXPIRED
     this.json(res)
   }

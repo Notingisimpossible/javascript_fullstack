@@ -1,7 +1,6 @@
 const mysql = require('mysql')
 const config = require('./config')
-const { debug }  = require('../utils/constant')
-
+const { debug } = require('../utils/constant')
 
 function connect() {
   return mysql.createConnection({
@@ -19,17 +18,17 @@ function querySql(sql) {
   return new Promise((resolve, reject) => {
     try {
       conn.query(sql, (err, result) => {
-        if(err){
-          debug && console.log('查询失败，原因：', JSON.stringify(err))
+        if (err) {
+          debug && console.log('查询失败，原因:' + JSON.stringify(err))
           reject(err)
-        }else{
-          debug && console.log('查询成功', result)
+        } else {
+          debug && console.log('查询成功:' + JSON.stringify(result))
           resolve(result)
         }
       })
     } catch (error) {
       reject(error)
-    } finally{
+    } finally {
       conn.end() //释放连接池
     }
   })
@@ -38,9 +37,9 @@ function querySql(sql) {
 function queryOne(sql) {
   return new Promise((resolve, reject) => {
     querySql(sql).then(results => {
-      if(results && results.length > 0) {
+      if (results && results.length > 0) {
         resolve(results[0])
-      }else{
+      } else {
         resolve(null)
       }
     }).catch(err => {
@@ -48,6 +47,7 @@ function queryOne(sql) {
     })
   })
 }
+
 module.exports = {
   querySql,
   queryOne
