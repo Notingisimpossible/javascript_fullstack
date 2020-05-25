@@ -14,6 +14,7 @@
     "boom": "^7.3.0",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
+    "epub": "^1.2.1",
     "express": "^4.17.1",
     "express-jwt": "^5.3.3",
     "express-validator": "^6.5.0",

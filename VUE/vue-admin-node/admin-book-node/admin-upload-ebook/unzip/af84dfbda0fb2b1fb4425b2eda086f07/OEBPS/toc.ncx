@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+   <head>
+      <meta name="dtb:uid" content="bookid"/>
+      <meta name="dtb:depth" content="0"/>
+      <meta name="dtb:totalPageCount" content="0"/>
+      <meta name="dtb:maxPageNumber" content="0"/>
+   </head>
+   <docTitle>
+      <text>UnKnown</text>
+   </docTitle>
+   <navMap>
+     <navPoint id="id1" playOrder="1">
+       <navLabel>
+         <text>扉页</text>
+       </navLabel>
+       <content src="text00000.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id2" playOrder="2">
+       <navLabel>
+         <text>版权页</text>
+       </navLabel>
+       <content src="text00002.html#sigil_toc_id_1"/>
+     </navPoint>
+     <navPoint id="id3" playOrder="3">
+       <navLabel>
+         <text>目录</text>
+       </navLabel>
+       <content src="text00003.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id4" playOrder="4">
+       <navLabel>
+         <text>推荐序1 互联网金融重构金融业</text>
+       </navLabel>
+       <content src="text00004.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id5" playOrder="5">
+       <navLabel>
+         <text>推荐序2 居高声自远，非是藉秋风</text>
+       </navLabel>
+       <content src="text00005.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id6" playOrder="6">
+       <navLabel>
+         <text>推荐序3 “连接一切”时代的金融创新</text>
+       </navLabel>
+       <content src="text00006.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id7" playOrder="7">
+       <navLabel>
+         <text>推荐序4 移动互联颠覆资产管理</text>
+       </navLabel>
+       <content src="text00007.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id8" playOrder="8">
+       <navLabel>
+         <text>前言</text>
+       </navLabel>
+       <content src="text00008.html#calibre_pb_0"/>
+     </navPoint>
+     <navPoint id="id9" playOrder="9">
+       <navLabel>
+         <text>第一章 移动互联思维</text>
+       </navLabel>
+       <content src="text00009.html#calibre_pb_0"/>
+     <navPoint id="id10" playOrder="10">
+       <navLabel>
+         <text>思维的代谢</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_2"/>
+     </navPoint>
+     <navPoint id="id11" playOrder="11">
+       <navLabel>
+         <text>什么是移动互联思维</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_3"/>
+     </navPoint>
+     <navPoint id="id12" playOrder="12">
+       <navLabel>
+         <text>看市场</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_4"/>
+     </navPoint>
+     <navPoint id="id13" playOrder="13">
+       <navLabel>
+         <text>观政府</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_5"/>
+     </navPoint>
+     <navPoint id="id14" playOrder="14">
+       <navLabel>
+         <text>察个人</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_6"/>
+     </navPoint>
+     <navPoint id="id15" playOrder="15">
+       <navLabel>
+         <text>阅企业</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_7"/>
+     </navPoint>
+     <navPoint id="id16" playOrder="16">
+       <navLabel>
+         <text>资产管理的新预言</text>
+       </navLabel>
+       <content src="text00010.html#sigil_toc_id_8"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id17" playOrder="17">
+       <navLabel>
+         <text>第二章 大数据重塑投资流程</text>
+       </navLabel>
+       <content src="text00011.html#calibre_pb_0"/>
+     <navPoint id="id18" playOrder="18">
+       <navLabel>
+         <text>大数据颠覆投资方法</text>
+       </navLabel>
+       <content src="text00012.html#sigil_toc_id_9"/>
+     </navPoint>
+     <navPoint id="id19" playOrder="19">
+       <navLabel>
+         <text>变革投资实践</text>
+       </navLabel>
+       <content src="text00012.html#sigil_toc_id_10"/>
+     </navPoint>
+     <navPoint id="id20" playOrder="20">
+       <navLabel>
+         <text>投资新标的</text>
+       </navLabel>
+       <content src="text00012.html#sigil_toc_id_11"/>
+     </navPoint>
+     <navPoint id="id21" playOrder="21">
+       <navLabel>
+         <text>反思大数据</text>
+       </navLabel>
+       <content src="text00012.html#sigil_toc_id_12"/>
+     </navPoint>
+     <navPoint id="id22" playOrder="22">
+       <navLabel>
+         <text>未来不可预测</text>
+       </navLabel>
+       <content src="text00012.html#sigil_toc_id_13"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id23" playOrder="23">
+       <navLabel>
+         <text>第三章 社交网络与群体行为</text>
+       </navLabel>
+       <content src="text00013.html#calibre_pb_0"/>
+     <navPoint id="id24" playOrder="24">
+       <navLabel>
+         <text>探究人类行为</text>
+       </navLabel>
+       <content src="text00014.html#sigil_toc_id_14"/>
+     </navPoint>
+     <navPoint id="id25" playOrder="25">
+       <navLabel>
+         <text>从小世界、幂律到长尾</text>
+       </navLabel>
+       <content src="text00014.html#sigil_toc_id_15"/>
+     </navPoint>
+     <navPoint id="id26" playOrder="26">
+       <navLabel>
+         <text>意见领袖</text>
+       </navLabel>
+       <content src="text00014.html#sigil_toc_id_16"/>
+     </navPoint>
+     <navPoint id="id27" playOrder="27">
+       <navLabel>
+         <text>那些与我们相似的人</text>
+       </navLabel>
+       <content src="text00014.html#sigil_toc_id_17"/>
+     </navPoint>
+     <navPoint id="id28" playOrder="28">
+       <navLabel>
+         <text>移动互联之争</text>
+       </navLabel>
+       <content src="text00014.html#sigil_toc_id_18"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id29" playOrder="29">
+       <navLabel>
+         <text>第四章 资产管理云平台</text>
+       </navLabel>
+       <content src="text00015.html#calibre_pb_0"/>
+     <navPoint id="id30" playOrder="30">
+       <navLabel>
+         <text>移动互联网时代前的资产管理</text>
+       </navLabel>
+       <content src="text00016.html#sigil_toc_id_19"/>
+     </navPoint>
+     <navPoint id="id31" playOrder="31">
+       <navLabel>
+         <text>移动互联网时代信息技术新趋势</text>
+       </navLabel>
+       <content src="text00016.html#sigil_toc_id_20"/>
+     </navPoint>
+     <navPoint id="id32" playOrder="32">
+       <navLabel>
+         <text>再论社交网络</text>
+       </navLabel>
+       <content src="text00016.html#sigil_toc_id_21"/>
+     </navPoint>
+     <navPoint id="id33" playOrder="33">
+       <navLabel>
+         <text>平台模式</text>
+       </navLabel>
+       <content src="text00016.html#sigil_toc_id_22"/>
+     </navPoint>
+     <navPoint id="id34" playOrder="34">
+       <navLabel>
+         <text>资产管理生态系统</text>
+       </navLabel>
+       <content src="text00016.html#sigil_toc_id_23"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id35" playOrder="35">
+       <navLabel>
+         <text>第五章 投资主题与公司估值</text>
+       </navLabel>
+       <content src="text00017.html#calibre_pb_0"/>
+     <navPoint id="id36" playOrder="36">
+       <navLabel>
+         <text>拥抱资产管理新变化</text>
+       </navLabel>
+       <content src="text00018.html#sigil_toc_id_24"/>
+     </navPoint>
+     <navPoint id="id37" playOrder="37">
+       <navLabel>
+         <text>技术革命是永恒的投资主题</text>
+       </navLabel>
+       <content src="text00018.html#sigil_toc_id_25"/>
+     </navPoint>
+     <navPoint id="id38" playOrder="38">
+       <navLabel>
+         <text>估值大讨论</text>
+       </navLabel>
+       <content src="text00018.html#sigil_toc_id_26"/>
+     </navPoint>
+     <navPoint id="id39" playOrder="39">
+       <navLabel>
+         <text>如何对新技术估值</text>
+       </navLabel>
+       <content src="text00018.html#sigil_toc_id_27"/>
+     </navPoint>
+     <navPoint id="id40" playOrder="40">
+       <navLabel>
+         <text>情绪决定估值</text>
+       </navLabel>
+       <content src="text00018.html#sigil_toc_id_28"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id41" playOrder="41">
+       <navLabel>
+         <text>第六章 互联网货币挑战传统</text>
+       </navLabel>
+       <content src="text00019.html#calibre_pb_0"/>
+     <navPoint id="id42" playOrder="42">
+       <navLabel>
+         <text>互联网货币：没有国家意志支持的货币</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_29"/>
+     </navPoint>
+     <navPoint id="id43" playOrder="43">
+       <navLabel>
+         <text>谁需要比特币</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_30"/>
+     </navPoint>
+     <navPoint id="id44" playOrder="44">
+       <navLabel>
+         <text>为什么选择比特币</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_31"/>
+     </navPoint>
+     <navPoint id="id45" playOrder="45">
+       <navLabel>
+         <text>什么样的货币是最好的</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_32"/>
+     </navPoint>
+     <navPoint id="id46" playOrder="46">
+       <navLabel>
+         <text>如果比特币有了中央银行</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_33"/>
+     </navPoint>
+     <navPoint id="id47" playOrder="47">
+       <navLabel>
+         <text>另外一种黄金</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_34"/>
+     </navPoint>
+     <navPoint id="id48" playOrder="48">
+       <navLabel>
+         <text>投资互联网货币</text>
+       </navLabel>
+       <content src="text00020.html#sigil_toc_id_35"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id49" playOrder="49">
+       <navLabel>
+         <text>第七章 互联网改写经济学</text>
+       </navLabel>
+       <content src="text00021.html#calibre_pb_0"/>
+     <navPoint id="id50" playOrder="50">
+       <navLabel>
+         <text>经济增长新源泉</text>
+       </navLabel>
+       <content src="text00022.html#sigil_toc_id_36"/>
+     </navPoint>
+     <navPoint id="id51" playOrder="51">
+       <navLabel>
+         <text>从信息不对称到信息对称</text>
+       </navLabel>
+       <content src="text00022.html#sigil_toc_id_37"/>
+     </navPoint>
+     <navPoint id="id52" playOrder="52">
+       <navLabel>
+         <text>互联网重构企业组织</text>
+       </navLabel>
+       <content src="text00022.html#sigil_toc_id_38"/>
+     </navPoint>
+     <navPoint id="id53" playOrder="53">
+       <navLabel>
+         <text>经济学研究岂能不懂大数据</text>
+       </navLabel>
+       <content src="text00022.html#sigil_toc_id_39"/>
+     </navPoint>
+     </navPoint>
+     <navPoint id="id54" playOrder="54">
+       <navLabel>
+         <text>后记 正在发生的未来</text>
+       </navLabel>
+       <content src="text00023.html#calibre_pb_0"/>
+     </navPoint>
+   </navMap>
+</ncx>
