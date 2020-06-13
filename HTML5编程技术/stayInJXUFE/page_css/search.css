@@ -1,0 +1,122 @@
+#title {
+  padding-top: 2vh;
+  margin-left: 2vw;
+}
+#title::after {
+  content: "搜索";
+  color: black;
+  font-size: 15px;
+  margin-left: 2vw;
+}
+.iconfont{
+  color: #1677ff;
+}
+#search{
+  width: 96vw;
+  height: 5vh;
+  margin-top: 1vh;
+  border-radius: 20px;
+  background-color: #f0f1f2;
+  margin-left: 2vw;
+}
+#search-input {
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  outline: none;
+  border: none;
+  right: 0;
+  float: left;
+  background-color: #f0f1f2;
+  margin-top: 1vh;
+}
+#search .iconfont {
+  margin-left: 3vw;
+  color: #999999;
+  float: left;
+  margin-top: 1vh;
+}
+#search-content {
+  font-size: 15px;
+  color: #999999;
+  padding-left: 3vw;
+}
+#tag{
+  width: 96vw;
+  height: 18vh;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+.label{
+  color: #313131;
+}
+.label-default{
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: #f3f3f3;
+  margin-left: 2vw;
+  margin-bottom: 2vh;
+  float: left;
+}
+#tag-title{
+  width: 95vw;
+  height: 4vh;
+  margin-left: 2vw;
+}
+#tag-title-icon {
+  width: 8vw;
+  position: absolute;
+  right: 0;
+  color:#7f7f7f;
+}
+#tag-list{
+  width: 96vw;
+  height: 40vh;
+}
+#tag-list-ul{
+  width: 96vw;
+  height: 10vh;
+  display: flex;
+  align-items: flex-start;
+  padding: 4vw;
+}
+#tag-list-li{
+  width: 48vw;
+  height: 8vh;
+  list-style: none;
+  float: left;
+}
+#tag-list-li img{
+  width: 15vw;
+  float: left;
+}
+#tag-list-li-title{
+  width: 22vw;
+  height: 8vh;
+  float: left;
+  margin-left: 2vw;
+}
+#tag-list-li-title p:first-child{
+  padding-top: 1vh;
+  color: #333333;
+}
+#tag-list-li-title p:last-child{
+  font-size: 10px;
+  background-color: #fef0e5;
+  color: #f66f1b;
+}
+#tag-list-li2{
+  margin-left: 35vw;
+  list-style: none;
+}
+#tag-list-li2 img{
+  width: 15vw;
+}
+#home{
+  position: absolute;
+  right: 2.8vw;
+  top: 2vh;
+}

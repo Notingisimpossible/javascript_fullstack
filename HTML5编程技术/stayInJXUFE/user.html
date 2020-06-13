@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="shortcut icon" href="./assets/icon/user.svg" type="image/x-icon">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="./page_js/judgeLogin.js"></script>
+<style>
+  #header{
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-top: 1vh;
+    width: 96vw;
+    margin-left: 2vw;
+  }
+  .dropdown{
+    position: absolute;
+    right: 0;
+    top: 3vh;
+  }
+  .dropdown li a{
+    padding: 0px 10px !important;
+    color: #333333 !important;
+  }
+  #dropdown-menus{
+    width: 70px;
+    min-width: 70px !important;
+  }
+  .ui-content{
+    padding-left: 2vw;
+  }
+  .ui-footer{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+  }
+  #head-img{
+    width: 20vw;
+    margin: 2vw 2vh;
+  }
+  #head-img img{
+    width: 20vw;
+    border-radius: 50%;
+  }
+  #head-title{
+    position: absolute;
+    left: 30vw;
+    top: 3.5vh;
+  }
+  #head-title p:first-child{
+    height: 4vw;
+    color: #333333;
+    font-size: 5vw;
+    font-weight: 10000;
+  }
+  #head-title p:last-child{
+    color: #999999;
+    font-size: 2vh;
+    margin-top: 0vh;
+  }
+  #ui-grid{
+    width: 96vw;
+    height: 22vh;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 4vh;
+  }
+  #ui-grid p{
+    width: 94vw;
+    height: 2vh;
+    font-size: 3vh;
+    font-weight: 400;
+    color: black;
+    margin-top: 2vh;
+    margin-left: 2vh;
+  }
+  #ui-block, #ui-block ul{
+    width: 23vw;
+    height: 15vh;
+    margin-top: 0;
+  }
+  #ui-block ul li{
+    height: 13vh;
+    width: 20vw;
+    list-style: none;
+  }
+  #ui-block ul li:last-child{
+    height: 10vh;
+    margin-top: 0;
+    margin-top: -3vh;
+    margin-left: -1vw;
+    color: black;
+  }
+  #ui-block ul li img{
+    margin-left: -2vw;
+    width: 10vw;
+    height: 10vh;
+  }
+</style>
+<title>个人中心</title>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header" id="header">
+    <div id="head-img">
+      <img src="./assets/imgs/touxiang.jpg" alt="">
+    </div>
+    <div id="head-title">
+      <p id="head-title-name">182****6994</p>
+      <p>赚够了钱，才能快乐</p>
+    </div>
+    <div class="dropdown">
+      <div class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+        设置
+        <span class="caret"></span>
+      </div>
+      <ul class="dropdown-menu"role="menu" id="dropdown-menus" aria-labelledby="dropdownMenu1" style="width: 60px;">
+        <li role="presentation">
+          <a id="menu-a" role="menuitem" tabindex="-1" href="#">通用</a>
+        </li>
+        <li role="presentation">
+          <a role="menuitem" tabindex="-1" href="./register.html" rel="external">去注册</a>
+        </li>
+        <li role="presentation" id="exit">
+          <a role="menuitem" tabindex="-1" href="./login.html" rel="external">退出</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+
+    <div class="ui-grid-b" id="ui-grid">
+      <p>我的资产</p>
+      <div class="ui-block-a" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/春节-红包.svg" alt="">
+          </li>
+          <li>红包</li>
+        </ul>
+      </div>
+      <div class="ui-block-b" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/余额.svg" alt="">
+          </li>
+          <li>余额</li>
+        </ul>
+      </div>
+      <div class="ui-block-c" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/理财.svg" alt="">
+          </li>
+          <li>理财</li>
+        </ul>
+      </div>
+      <div class="ui-block-d" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/冻结金额.svg" alt="">
+          </li>
+          <li>待结算</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ui-grid-b" id="ui-grid">
+      <p>常用功能</p>
+      <div class="ui-block-a" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/收藏.svg" alt="">
+          </li>
+          <li>收藏</li>
+        </ul>
+      </div>
+      <div class="ui-block-b" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/地址.svg" alt="">
+          </li>
+          <li>地址</li>
+        </ul>
+      </div>
+      <div class="ui-block-c" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/客服.svg" alt="">
+          </li>
+          <li>客服</li>
+        </ul>
+      </div>
+      <div class="ui-block-d" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/提醒.svg" alt="">
+          </li>
+          <li>抢单</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div style="height: 37vh; margin-bottom: 8vh;" class="ui-grid-b" id="ui-grid">
+      <p>更多推荐</p>
+      <div class="ui-block-a" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/外卖.svg" alt="">
+          </li>
+          <li>配送</li>
+        </ul>
+      </div>
+      <div class="ui-block-b" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/代理商.svg" alt="">
+          </li>
+          <li>代理</li>
+        </ul>
+      </div>
+      <div class="ui-block-c" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/优惠券.svg" alt="">
+          </li>
+          <li>推荐</li>
+        </ul>
+      </div>
+      <div class="ui-block-d" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/合作.svg" alt="">
+          </li>
+          <li>合作</li>
+        </ul>
+      </div>
+      <div class="ui-block-e" id="ui-block">
+        <ul>
+          <li>
+            <img src="./assets/icon/小游戏.svg" alt="">
+          </li>
+          <li>娱乐</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="./index.html" data-icon="home" rel="external">首页</a></li>
+        <li><a href="./robFrom.html" data-icon="plus" rel="external">抢单</a></li>
+        <li><a href="./cart.html" data-icon="shop" rel="external">订单</a></li>
+        <li><a href="#" data-icon="user" class="ui-btn-active ui-state-persist" rel="external">我的</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  var headTitle = (function () {
+    console.log(555)
+    console.log($("#head-title-name"))
+    for (let i = 0; i < sessionStorage.length; i++) {
+      if (sessionStorage.key(i).split(".")[0] === "123") {
+        $("#head-title-name").html(sessionStorage.key(i).split(".")[1].toLocaleUpperCase())
+      }
+    }
+  })()
+  $("#menu-a").on('click', function() {
+    alert("功能开发中，敬请期待！")
+  })
+  $("#exit").on("click", function(){
+    window.sessionStorage.removeItem("login")
+    for (let i = 0; i < sessionStorage.length; i++) {
+      if (sessionStorage.key(i).split(".")[0] === "123") {
+        sessionStorage.removeItem(sessionStorage.key(i))
+      }
+    }
+  })
+</script>
+</body>
+</html>

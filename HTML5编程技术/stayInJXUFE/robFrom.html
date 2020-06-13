@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="./page_css/robFrom.css">
+<link rel="shortcut icon" href="./assets/icon/抢单icon.svg" type="image/x-icon">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="./page_js/judgeLogin.js"></script>
+<title>抢单</title>
+</head>
+<body>
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <div class="wrapp" style="width:100vw">
+      <div class="load-3">
+        <p>正在自动为您抢单</p>
+        <div class="k-line2 k-line12-1"></div>
+        <div class="k-line2 k-line12-2"></div>
+        <div class="k-line2 k-line12-3"></div>
+        <div class="k-line2 k-line12-4"></div>
+        <div class="k-line2 k-line12-5"></div>
+        <div class="k-line2 k-line12-6"></div>
+        <div class="k-line2 k-line12-7"></div>
+        <div class="k-line2 k-line12-8"></div>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div class="radar"></div>
+  </div>
+
+  <div data-role="footer">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="./index.html" rel="external" data-icon="home">首页</a></li>
+        <li><a href="#" data-icon="plus" class="ui-btn-active ui-state-persist" >抢单</a></li>
+        <li><a href="./cart.html" data-icon="shop" rel="external">订单</a></li>
+        <li><a href="./user.html" data-icon="user" rel="external">我的</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    setTimeout(()=>{
+      alert("暂时未抢到订单，去试试手动抢单叭！")
+      window.location.href="./loading.html"
+    },500)
+  </script>
+</div> 
+</body>
+</html>

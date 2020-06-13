@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/icon/iconfont.css">
+  <link rel="shortcut icon" href="./assets/icon/搜索.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./page_css/search.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>搜索</title>
+</head>
+<body>
+  <div data-role="page" id="page-five">
+    <div data-role="header" id="header-box">
+      <div id="title" class="iconfont">
+        &#xe646;
+      </div>
+      <div id="home">
+        <span class="iconfont">&#xe600;</span>
+      </div>
+      <div id="search">
+        <span class="iconfont">&#xe7c4;</span>
+        <input id="search-input" type="text" placeholder="去宁庐">
+      </div>
+      <div id="tag">
+        <div id="tag-title">
+          <span>历史搜索</span>
+          <span class="iconfont" id="tag-title-icon">&#xe608;</span>
+        </div>
+        <span class="label label-default">黄焖鸡米饭</span>
+        <span class="label label-default">柳星螺蛳粉</span>
+        <span class="label label-default">和利家韩式轻餐</span>
+        <span class="label label-default">鸡排</span>
+        <span class="label label-default">五谷鱼粉啊啊啊啊</span>
+        <span class="label label-default">程咬金煲仔饭</span>
+        <span class="label label-default">麻辣烫</span>
+      </div>
+
+      <div id="tag">
+        <div id="tag-title">
+          <span>搜索发现</span>
+        </div>
+        <span class="label label-default">麻辣香锅</span>
+        <span class="label label-default">无敌鸡排</span>
+        <span class="label label-default">和利家韩式轻餐</span>
+        <span class="label label-default">蜜雪冰城</span>
+        <span class="label label-default">鸡公煲啊啊啊啊</span>
+        <span class="label label-default">程咬金煲仔饭</span>
+        <span class="label label-default">华莱士</span>
+      </div>
+
+      <div id="tag-list">
+        <ul id="tag-list-ul">
+          <li id="tag-list-li">
+            <img src="./assets/imgs/dg.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>稻壳儿</p>
+              <p>根据你的浏览推荐</p>
+            </div>
+          </li>
+          <li id="tag-list-li">
+            <img src="./assets/imgs/hmj.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>杨铭宇黄焖鸡</p>
+              <p>根据你的订单推荐</p>
+            </div>
+          </li>
+        </ul>
+        <ul id="tag-list-ul">
+          <li id="tag-list-li">
+            <img src="./assets/imgs/nr.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>程咬金</p>
+              <p>根据你的订单推荐</p>
+            </div>
+          </li>
+          <li id="tag-list-li">
+            <img src="./assets/imgs/yf.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>五谷鱼粉</p>
+              <p>根据你的搜索推荐</p>
+            </div>
+          </li>
+        </ul>
+        <ul id="tag-list-ul">
+          <li id="tag-list-li">
+            <img src="./assets/imgs/mlt.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>爱情麻辣烫</p>
+              <p>根据你的订单推荐</p>
+            </div>
+          </li>
+          <li id="tag-list-li">
+            <img src="./assets/imgs/nr.jpg" alt="">
+            <div id="tag-list-li-title">
+              <p>红烧牛肉</p>
+              <p>根据你的浏览推荐</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+  </div>
+
+  <script>
+    $("#title").on('click', function() {
+      if(document.referrer.split("/")[3] === "search.html"){
+        window.location.href = "./index.html"
+      }else{
+        window.location.href = document.referrer || "./index.html"
+      }
+    })
+    $("#home").on('click', function(){
+      window.location.href = "./index.html"
+    })
+  </script>
+</body>
+</html>

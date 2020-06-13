@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+#content{
+  width: 100vw;
+  height: 40vh;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  background: url(../assets/imgs/404.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+button {
+  font-size: 22px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+  color: rgb(174, 149, 187);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 999;
+  border: 2px solid rgb(143, 159, 168);
+  border-radius: 5px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); 
+  transition: opacity 0.2s ease;
+}
+button:hover {
+  opacity: 0.7;
+}
+button:focus {
+  outline: 0;
+}

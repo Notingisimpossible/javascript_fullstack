@@ -1,0 +1,149 @@
+#header{
+  width: 100vw;
+  height: 17vh;
+  background-color: #ffffff;
+}
+#header-title, ul{
+  width: 100vw;
+  height: 5vh;
+}
+#header-title ul li{
+  list-style: none;
+}
+#header-title-ul-li1{
+  width: 20vw;
+  position: relative;
+  left: 33vw;
+  color: #222426;
+  font-size: 3vh;
+}
+#header-title-ul-li2{
+  position: absolute;
+  right: 17vw;
+  top: 2vh;
+}
+.iconfont{
+  font-size: 3.6vh;
+  color: #222426;
+  font-weight: 600;
+}
+#header-title-ul-li3{
+  position: absolute;
+  right: 5vw;
+  top: 2vh;
+}
+#header-list{
+  box-sizing: border-box;
+  width: 90vw;
+  height: 10vh;
+  padding-top: 1vh;
+}
+#header-list ul li {
+  margin-left: 15vw;
+  list-style: none;
+  float: left;
+}
+#header-list ul li:first-child{
+  margin-left: 0vw;
+}
+.nav-color{
+  color: #00a6ff;
+}
+.ui-content{
+  height: 73vh;
+  padding: 0;
+  margin-bottom: 10vh;
+}
+#oreder-list, #oreder-list-ul{
+  width: 96vw;
+  height: 23vh;
+  padding-left: 0;
+}
+#oreder-list-ul-li{
+  list-style: none;
+  width: 96vw;
+  height: 23vh;
+  background-color: #fff;
+  margin-left: 2vw;
+  border-radius: 10px;
+  margin-bottom: 2vh;
+}
+#order-img{
+  width: 11vh;
+  border-radius: 10px;
+  padding-left: 3vw;
+  padding-top: 2vh;
+  float: left;
+}
+#order-img img{
+  height: 11vh;
+  border-radius: 10px;
+}
+#oreder-detail{
+  width: 68vw;
+  height: 11vh;
+  float: left;
+  margin-top: 2vh;
+  margin-left: 2vw;
+}
+#oreder-detail p {
+  margin: 0;
+  padding-left: 2vw;
+}
+#oreder-detail-p1{
+  font-size: 20px;
+  color: #000000;
+  padding-top: 1vh;
+}
+#oreder-detail-p1::after{
+  font-size: 15px;
+  content: "待配送";
+  margin-left: 30vw;
+  padding-left: 8vw;
+  color: #ff5900;
+}
+#oreder-detail-p2{
+  padding-top: 0.5vh;
+  color: #999999;
+  font-size: 14px;
+}
+#oreder-detail-p2::after{
+  content: "X 8";
+  font-size: 16px;
+  margin-left: 30vw;
+  padding-left: 17vw;
+  color: #333333;
+}
+#oreder-detail-p3{
+  padding-top: 1vh;
+  color: #333333;
+  font-size: 15px;
+}
+#oreder-detail-p3::before{
+  content: "地址：";
+  color: #333333;
+}
+#order-list-button{
+  width: 96vw;
+  height: 8vh;
+}
+#order-list-button ul{
+  padding-left: 50px;
+}
+#order-list-button ul li{
+  text-align: center;
+  padding-top: 1vh;
+  width: 25vw;
+  height: 4vh;
+  float: left;
+  list-style: none;
+  border: 1px solid #999999;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  border-radius: 20px;
+}
+.ui-footer{
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}

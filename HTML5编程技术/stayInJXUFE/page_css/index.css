@@ -1,0 +1,128 @@
+.ui-footer {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+.ui-content {
+  background-color: #ffffff;
+  height: auto;
+  clear: both;
+  margin-bottom: 6vh;
+}
+
+.ui-bar-a,
+.ui-page-theme-a .ui-bar-inherit,
+html .ui-bar-a .ui-bar-inherit,
+html .ui-body-a .ui-bar-inherit,
+html body .ui-group-theme-a .ui-bar-inherit {
+  background-color: #ffffff;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+#title {
+  padding-top: 2vh;
+  margin-left: 2vw;
+}
+.iconfont{
+  color: #1677ff;
+}
+#title::after {
+  content: "   江西财经大学(麦庐园校区宁庐B栋141)";
+  color: black;
+}
+
+#search {
+  width: 96vw;
+  height: 4vh;
+  margin-top: 1vh;
+  border-radius: 10px;
+  background-color: #f0f1f2;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+}
+
+#search .iconfont {
+  margin-left: 3vw;
+  color: #999999;
+}
+
+#search-content {
+  font-size: 15px;
+  color: #999999;
+  padding-left: 3vw;
+}
+#tag{
+  width: 96vw;
+  height: 4vh;
+  background-color: #ffffff;
+  margin-left: 0;
+}
+#tag-ul{
+  height: 4vh;
+  width: 96vw;
+  margin-top: 2vh;
+  display: flex;
+  justify-content:flex-start;
+  padding-left: 0;
+}
+#tag-li{
+  height: 4vh;
+  width: 23vw;
+  background-color: #f2f2f2;
+  font-size: 15px;
+  list-style: none;
+  float: left;
+  color: #333333;
+  margin-left: 4vw;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-title, #nav-ul{
+  height: 5vh;
+  width: 93vw;
+  background-color: #f4ebeb;
+  margin-top: 2vh;
+}
+#nav-li{
+  height: 3vh;
+  width: 33%;
+  list-style: none;
+  float: left;
+  margin-top: 1vh;
+}
+.nav-color{
+  color: #00a6ff;
+}
+.star{
+width: 30vw;
+height: 5vh;
+background: url(../assets/imgs/2304.png) no-repeat;
+background-position: 0 100%;
+margin-top: -10px;
+margin-left: -4px;
+}
+#star-end{
+width: 19vw;
+height: 5vh;
+background: url(../assets/imgs/2304.png) no-repeat;
+background-position: 0 100%;
+margin-top: -10px;
+margin-left: -4px;
+}
+#star-center{
+width: 15.5vw;
+height: 5vh;
+background: url(../assets/imgs/2304.png) no-repeat;
+background-position: 0 100%;
+margin-top: -10px;
+margin-left: -4px;
+}
+#content-img{
+margin-top: 2vh;
+margin-left: 2vw;
+border-radius: 10px;
+}
