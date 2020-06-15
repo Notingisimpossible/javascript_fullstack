@@ -27,8 +27,8 @@ html body .ui-group-theme-a .ui-bar-inherit {
 .iconfont{
   color: #1677ff;
 }
-#title::after {
-  content: "   江西财经大学(麦庐园校区宁庐B栋141)";
+#title span {
+  margin-left: 0.5vw;
   color: black;
 }
 
