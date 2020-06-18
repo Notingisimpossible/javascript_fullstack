@@ -29,6 +29,7 @@ const createWindow = () => {
   });
   // win.loadURL(`file://${__dirname}/main.html`);
   win.loadURL("http://localhost:3000")
+  // win.webContents.openDevTools()
 }
 
 app.on('ready', createWindow);
