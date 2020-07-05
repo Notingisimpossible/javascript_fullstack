@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        list-style-type:none;   
+    }
+    .topbar {
+        background-color: #7777;
+    }
+    #refresh, #loading {
+        background-color: red;
+        font-size: 50px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        display: none;
+    }
+</style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="warper" style="width: 100%;font-size: 100px;">
+    <div class="topbar">
+      Topbar
+    </div>
+    <div id="refresh">
+    </div>
+    <ul id="content">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+    <div id="loading">
+      <p>加载中...</p>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var content = document.querySelector("#content")
+    var refresh = document.querySelector("#refresh")
+    var loading = document.querySelector("#loading")
+    var Xwz,Ywz,Xmove,Ymove,distance,timer,
+        rule = 200
+    content.addEventListener("touchstart", function(e){
+      Ywz = e.touches[0].screenY
+      // console.log("初始位置:",Ywz)
+    })
+    content.addEventListener("touchmove", function(e){
+      Ymove = e.touches[0].screenY
+      console.log("最终位置:",Ymove,"初始位置:",Ywz)
+      distance = Math.floor((Ywz-Ymove))
+      console.log("移动距离:",distance)
+      refresh.style.display = "block"
+      content.style.transform = `tranlateY(${distance}px)`
+    })
+    content.addEventListener("touchend", function(e){
+      // console.log(e)
+    })
+  </script>
+</body>
+</html>

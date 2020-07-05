@@ -16,7 +16,8 @@ router.post(
       const book = new Book(req.file)
       // console.log(req.file)
       book.parse().then(book => {
-        new Result('上传电子书成功').success(res)
+        // console.log(book)
+        new Result(book, '上传电子书成功').success(res)
       }).catch(err => {
         next(boom.badImplementation(err))
       })
@@ -24,5 +25,9 @@ router.post(
     }
   }
 )
+
+router.post('/addBook', function(req, res, next){
+  
+})
 
 module.exports = router

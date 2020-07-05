@@ -1,0 +1,1124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+   <head>
+      <meta name="dtb:uid" content="bookid"/>
+      <meta name="dtb:depth" content="0"/>
+      <meta name="dtb:totalPageCount" content="0"/>
+      <meta name="dtb:maxPageNumber" content="0"/>
+   </head>
+   <docTitle>
+      <text>UnKnown</text>
+   </docTitle>
+   <navMap>
+     <navPoint id="id1" playOrder="1">
+       <navLabel>
+         <text>译者序</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000025152"/>
+     </navPoint>
+     <navPoint id="id2" playOrder="2">
+       <navLabel>
+         <text>绪言 你已经是一名商品交易者了</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000026911"/>
+     </navPoint>
+     <navPoint id="id3" playOrder="3">
+       <navLabel>
+         <text>我最重要的市场信念</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000037522"/>
+     </navPoint>
+     <navPoint id="id4" playOrder="4">
+       <navLabel>
+         <text>我的职业投机生涯的开始</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000040617"/>
+     </navPoint>
+     <navPoint id="id5" playOrder="5">
+       <navLabel>
+         <text>生命之旅</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000050806"/>
+     </navPoint>
+     <navPoint id="id6" playOrder="6">
+       <navLabel>
+         <text>第1章 从短期混沌中理出头绪</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000052710"/>
+     </navPoint>
+     <navPoint id="id7" playOrder="7">
+       <navLabel>
+         <text>1.1 我是如何了解市场的</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000054128"/>
+     </navPoint>
+     <navPoint id="id8" playOrder="8">
+       <navLabel>
+         <text>1.2 制作图表描绘市场</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000059114"/>
+     </navPoint>
+     <navPoint id="id9" playOrder="9">
+       <navLabel>
+         <text>1.3 非随机的市场</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000063158"/>
+     </navPoint>
+     <navPoint id="id10" playOrder="10">
+       <navLabel>
+         <text>1.4 认识市场结构</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000067927"/>
+     </navPoint>
+     <navPoint id="id11" playOrder="11">
+       <navLabel>
+         <text>1.4.1 确定中期的高点与低点</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000073174"/>
+     </navPoint>
+     <navPoint id="id12" playOrder="12">
+       <navLabel>
+         <text>1.4.2 为什么认识市场结构如此重要</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000076078"/>
+     </navPoint>
+     <navPoint id="id13" playOrder="13">
+       <navLabel>
+         <text>1.5 市场结构永远不会改变</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000078547"/>
+     </navPoint>
+     <navPoint id="id14" playOrder="14">
+       <navLabel>
+         <text>1.6 做空形态</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000086265"/>
+     </navPoint>
+     <navPoint id="id15" playOrder="15">
+       <navLabel>
+         <text>1.7 目标时间与跟踪止损</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000088893"/>
+     </navPoint>
+     <navPoint id="id16" playOrder="16">
+       <navLabel>
+         <text>第2章 价格与时间的问题</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000098382"/>
+     </navPoint>
+     <navPoint id="id17" playOrder="17">
+       <navLabel>
+         <text>2.1 你要了解的关于周期的所有知识</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000098882"/>
+     </navPoint>
+     <navPoint id="id18" playOrder="18">
+       <navLabel>
+         <text>2.2 区间变化的自然周期</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000108908"/>
+     </navPoint>
+     <navPoint id="id19" playOrder="19">
+       <navLabel>
+         <text>2.2.1 每日开盘价相对最高价及最低价的重要性</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000117609"/>
+     </navPoint>
+     <navPoint id="id20" playOrder="20">
+       <navLabel>
+         <text>2.2.2 骑虎难下</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000118785"/>
+     </navPoint>
+     <navPoint id="id21" playOrder="21">
+       <navLabel>
+         <text>2.3 顺势而为：价格形态的第二条重要规则</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000123891"/>
+     </navPoint>
+     <navPoint id="id22" playOrder="22">
+       <navLabel>
+         <text>第3章 短线交易的真正诀窍</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000133466"/>
+     </navPoint>
+     <navPoint id="id23" playOrder="23">
+       <navLabel>
+         <text>3.1 关键在于时机</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000138926"/>
+     </navPoint>
+     <navPoint id="id24" playOrder="24">
+       <navLabel>
+         <text>3.2 为交易高手提供资金</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000141804"/>
+     </navPoint>
+     <navPoint id="id25" playOrder="25">
+       <navLabel>
+         <text>3.3 证明我的观点</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000147259"/>
+     </navPoint>
+     <navPoint id="id26" playOrder="26">
+       <navLabel>
+         <text>3.4 如何能获得最大利润</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000150547"/>
+     </navPoint>
+     <navPoint id="id27" playOrder="27">
+       <navLabel>
+         <text>第4章 波动性突破：动能穿透</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000155316"/>
+     </navPoint>
+     <navPoint id="id28" playOrder="28">
+       <navLabel>
+         <text>4.1 简易的日内区间突破</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000166685"/>
+     </navPoint>
+     <navPoint id="id29" playOrder="29">
+       <navLabel>
+         <text>4.2 标准普尔500指数的价格波幅</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000171359"/>
+     </navPoint>
+     <navPoint id="id30" playOrder="30">
+       <navLabel>
+         <text>4.3 利用价格波动区分买卖双方，发现价格波动率</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000189894"/>
+     </navPoint>
+     <navPoint id="id31" playOrder="31">
+       <navLabel>
+         <text>4.4 结果</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000191751"/>
+     </navPoint>
+     <navPoint id="id32" playOrder="32">
+       <navLabel>
+         <text>4.5 更进一步的思考</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000193157"/>
+     </navPoint>
+     <navPoint id="id33" playOrder="33">
+       <navLabel>
+         <text>第5章 短线交易原理</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000195020"/>
+     </navPoint>
+     <navPoint id="id34" playOrder="34">
+       <navLabel>
+         <text>5.1 信息时代的谬误</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000206764"/>
+     </navPoint>
+     <navPoint id="id35" playOrder="35">
+       <navLabel>
+         <text>5.2 E.H.Harriman的百万点金术</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000209332"/>
+     </navPoint>
+     <navPoint id="id36" playOrder="36">
+       <navLabel>
+         <text>第6章 接近真相</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000211438"/>
+     </navPoint>
+     <navPoint id="id37" playOrder="37">
+       <navLabel>
+         <text>6.1 市场不是掷硬币游戏</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000214085"/>
+     </navPoint>
+     <navPoint id="id38" playOrder="38">
+       <navLabel>
+         <text>6.2 关于黄金月交易日TDOM的研究</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000232352"/>
+     </navPoint>
+     <navPoint id="id39" playOrder="39">
+       <navLabel>
+         <text>6.3 关于国债月交易日TDOM的研究</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000234450"/>
+     </navPoint>
+     <navPoint id="id40" playOrder="40">
+       <navLabel>
+         <text>6.4 月度路线图</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000237352"/>
+     </navPoint>
+     <navPoint id="id41" playOrder="41">
+       <navLabel>
+         <text>第7章 获利形态</text>
+       </navLabel>
+       <content src="text00000_split1.html#filepos0000242827"/>
+     </navPoint>
+     <navPoint id="id42" playOrder="42">
+       <navLabel>
+         <text>7.1 共同元素</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000245781"/>
+     </navPoint>
+     <navPoint id="id43" playOrder="43">
+       <navLabel>
+         <text>7.2 质疑的问题</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000256648"/>
+     </navPoint>
+     <navPoint id="id44" playOrder="44">
+       <navLabel>
+         <text>7.3 攻击日形态</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000260260"/>
+     </navPoint>
+     <navPoint id="id45" playOrder="45">
+       <navLabel>
+         <text>7.4 如何使用攻击日形态</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000265650"/>
+     </navPoint>
+     <navPoint id="id46" playOrder="46">
+       <navLabel>
+         <text>7.5 做市商陷阱</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000269959"/>
+     </navPoint>
+     <navPoint id="id47" playOrder="47">
+       <navLabel>
+         <text>7.6 一个重要的记录：在更短的时间周期内也行之有效</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000275355"/>
+     </navPoint>
+     <navPoint id="id48" playOrder="48">
+       <navLabel>
+         <text>7.7 哎呀！这不是个错误</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000276129"/>
+     </navPoint>
+     <navPoint id="id49" playOrder="49">
+       <navLabel>
+         <text>7.8 标准普尔的“哎呀”交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000283731"/>
+     </navPoint>
+     <navPoint id="id50" playOrder="50">
+       <navLabel>
+         <text>第8章 识别买方和卖方</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000287953"/>
+     </navPoint>
+     <navPoint id="id51" playOrder="51">
+       <navLabel>
+         <text>8.1 最大振荡值</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000291840"/>
+     </navPoint>
+     <navPoint id="id52" playOrder="52">
+       <navLabel>
+         <text>8.2 应用最大振荡值进行股票指数交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000297249"/>
+     </navPoint>
+     <navPoint id="id53" playOrder="53">
+       <navLabel>
+         <text>8.2.1 比看起来还好</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000299043"/>
+     </navPoint>
+     <navPoint id="id54" playOrder="54">
+       <navLabel>
+         <text>8.2.2 这一概念的更多应用</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000299950"/>
+     </navPoint>
+     <navPoint id="id55" playOrder="55">
+       <navLabel>
+         <text>8.3 一些建议</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000303367"/>
+     </navPoint>
+     <navPoint id="id56" playOrder="56">
+       <navLabel>
+         <text>第9章 盯住盘面进行短线交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000305713"/>
+     </navPoint>
+     <navPoint id="id57" playOrder="57">
+       <navLabel>
+         <text>9.1 盯盘交易者是怎么赚钱的</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000312331"/>
+     </navPoint>
+     <navPoint id="id58" playOrder="58">
+       <navLabel>
+         <text>9.2 用摆动点来辨别趋势变化</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000314638"/>
+     </navPoint>
+     <navPoint id="id59" playOrder="59">
+       <navLabel>
+         <text>9.3 三根线高点或低点系统</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000317821"/>
+     </navPoint>
+     <navPoint id="id60" playOrder="60">
+       <navLabel>
+         <text>9.4 短线交易的一个新指标：威尔差价</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000320959"/>
+     </navPoint>
+     <navPoint id="id61" playOrder="61">
+       <navLabel>
+         <text>9.4.1 一个实例</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000323151"/>
+     </navPoint>
+     <navPoint id="id62" playOrder="62">
+       <navLabel>
+         <text>9.4.2 我的舒适标准</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000324514"/>
+     </navPoint>
+     <navPoint id="id63" playOrder="63">
+       <navLabel>
+         <text>9.4.3 我们还能做得更好些吗</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000326513"/>
+     </navPoint>
+     <navPoint id="id64" playOrder="64">
+       <navLabel>
+         <text>9.5 威尔差价和标准普尔500股票指数</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000330675"/>
+     </navPoint>
+     <navPoint id="id65" playOrder="65">
+       <navLabel>
+         <text>9.5.1 1987年股市崩盘</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000331757"/>
+     </navPoint>
+     <navPoint id="id66" playOrder="66">
+       <navLabel>
+         <text>9.5.2 单独使用也ok，但我们还能做得更好</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000333852"/>
+     </navPoint>
+     <navPoint id="id67" playOrder="67">
+       <navLabel>
+         <text>第10章 短线交易的特别情况</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000341748"/>
+     </navPoint>
+     <navPoint id="id68" playOrder="68">
+       <navLabel>
+         <text>10.1 月末股票指数交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000343438"/>
+     </navPoint>
+     <navPoint id="id69" playOrder="69">
+       <navLabel>
+         <text>10.2 目标交易月份</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000347618"/>
+     </navPoint>
+     <navPoint id="id70" playOrder="70">
+       <navLabel>
+         <text>10.3 更进一步</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000348264"/>
+     </navPoint>
+     <navPoint id="id71" playOrder="71">
+       <navLabel>
+         <text>10.4 债券市场的月末交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000350269"/>
+     </navPoint>
+     <navPoint id="id72" playOrder="72">
+       <navLabel>
+         <text>10.5 更明确一些</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000352992"/>
+     </navPoint>
+     <navPoint id="id73" playOrder="73">
+       <navLabel>
+         <text>10.6 越来越好</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000355181"/>
+     </navPoint>
+     <navPoint id="id74" playOrder="74">
+       <navLabel>
+         <text>10.7 卖出的适当时机</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000358023"/>
+     </navPoint>
+     <navPoint id="id75" playOrder="75">
+       <navLabel>
+         <text>第11章 何时结束交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000361783"/>
+     </navPoint>
+     <navPoint id="id76" playOrder="76">
+       <navLabel>
+         <text>第12章 对投机的思考</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000364398"/>
+     </navPoint>
+     <navPoint id="id77" playOrder="77">
+       <navLabel>
+         <text>12.1 想好退路再进场</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000365538"/>
+     </navPoint>
+     <navPoint id="id78" playOrder="78">
+       <navLabel>
+         <text>12.2 什么是投机</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000375126"/>
+     </navPoint>
+     <navPoint id="id79" playOrder="79">
+       <navLabel>
+         <text>12.3 时机的选择</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000378323"/>
+     </navPoint>
+     <navPoint id="id80" playOrder="80">
+       <navLabel>
+         <text>12.4 投机的几个要点</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000380711"/>
+     </navPoint>
+     <navPoint id="id81" playOrder="81">
+       <navLabel>
+         <text>12.4.1 富人不下大赌注</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000380835"/>
+     </navPoint>
+     <navPoint id="id82" playOrder="82">
+       <navLabel>
+         <text>12.4.2 要赚1 000美元，就得赌1 000美元</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000382521"/>
+     </navPoint>
+     <navPoint id="id83" playOrder="83">
+       <navLabel>
+         <text>12.4.3 投机适合过山车爱好者</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000385596"/>
+     </navPoint>
+     <navPoint id="id84" playOrder="84">
+       <navLabel>
+         <text>12.4.4 如果没有耐心等待，就什么也等不到</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000387127"/>
+     </navPoint>
+     <navPoint id="id85" playOrder="85">
+       <navLabel>
+         <text>12.4.5 如果不能遵照执行，交易系统或策略有什么用</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000388935"/>
+     </navPoint>
+     <navPoint id="id86" playOrder="86">
+       <navLabel>
+         <text>12.4.6 圣诞节不会在12月到来</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000390870"/>
+     </navPoint>
+     <navPoint id="id87" playOrder="87">
+       <navLabel>
+         <text>12.4.7 如果你在游戏中拥有优势，你参与的时间越长，获胜的概率就越高</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000393611"/>
+     </navPoint>
+     <navPoint id="id88" playOrder="88">
+       <navLabel>
+         <text>12.4.8 抓紧盈利而不是亏损</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000395669"/>
+     </navPoint>
+     <navPoint id="id89" playOrder="89">
+       <navLabel>
+         <text>12.4.9 成就会杀人—财富是危险的</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000397124"/>
+     </navPoint>
+     <navPoint id="id90" playOrder="90">
+       <navLabel>
+         <text>12.4.10 恐惧/贪婪困境</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000398830"/>
+     </navPoint>
+     <navPoint id="id91" playOrder="91">
+       <navLabel>
+         <text>12.4.11 进入点、退出点：趋势变化信号</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000402181"/>
+     </navPoint>
+     <navPoint id="id92" playOrder="92">
+       <navLabel>
+         <text>12.4.12 自信、恐惧和积极</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000406527"/>
+     </navPoint>
+     <navPoint id="id93" playOrder="93">
+       <navLabel>
+         <text>第13章 资金管理：成功之匙</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000413340"/>
+     </navPoint>
+     <navPoint id="id94" playOrder="94">
+       <navLabel>
+         <text>13.1 大多数交易者使用误打误撞的方法</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000415478"/>
+     </navPoint>
+     <navPoint id="id95" playOrder="95">
+       <navLabel>
+         <text>13.2 资金管理的方法：总有一种适合你</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000417382"/>
+     </navPoint>
+     <navPoint id="id96" playOrder="96">
+       <navLabel>
+         <text>13.3 资金管理的好的一面、坏的一面和丑陋面</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000419470"/>
+     </navPoint>
+     <navPoint id="id97" playOrder="97">
+       <navLabel>
+         <text>13.3.1 在尽头处壮士断腕</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000425407"/>
+     </navPoint>
+     <navPoint id="id98" playOrder="98">
+       <navLabel>
+         <text>13.3.2 但它会变得更糟……</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000427406"/>
+     </navPoint>
+     <navPoint id="id99" playOrder="99">
+       <navLabel>
+         <text>13.4 展望新方向，把亏损视为资产</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000429167"/>
+     </navPoint>
+     <navPoint id="id100" playOrder="100">
+       <navLabel>
+         <text>13.4.1 瑞恩·琼斯和固定比率交易</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000432357"/>
+     </navPoint>
+     <navPoint id="id101" playOrder="101">
+       <navLabel>
+         <text>13.4.2 现在轮到我来解决问题了</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000435276"/>
+     </navPoint>
+     <navPoint id="id102" playOrder="102">
+       <navLabel>
+         <text>13.5 回到拉尔夫：2011年资金管理的突破</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000441139"/>
+     </navPoint>
+     <navPoint id="id103" playOrder="103">
+       <navLabel>
+         <text>13.6 凯利比率的幻想</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000444919"/>
+     </navPoint>
+     <navPoint id="id104" playOrder="104">
+       <navLabel>
+         <text>第14章 从肯尼迪到奥巴马，50年交易生涯的思考</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000457122"/>
+     </navPoint>
+     <navPoint id="id105" playOrder="105">
+       <navLabel>
+         <text>14.1 交易与采蜜</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000460697"/>
+     </navPoint>
+     <navPoint id="id106" playOrder="106">
+       <navLabel>
+         <text>14.2 容易实现的目标</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000462660"/>
+     </navPoint>
+     <navPoint id="id107" playOrder="107">
+       <navLabel>
+         <text>14.3 三思而后行</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000465315"/>
+     </navPoint>
+     <navPoint id="id108" playOrder="108">
+       <navLabel>
+         <text>14.4 记住那个叫“挑竹签”的游戏</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000467726"/>
+     </navPoint>
+     <navPoint id="id109" playOrder="109">
+       <navLabel>
+         <text>14.5 事情会变得非常糟糕……</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000470152"/>
+     </navPoint>
+     <navPoint id="id110" playOrder="110">
+       <navLabel>
+         <text>14.6 自我封闭的时候</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000472547"/>
+     </navPoint>
+     <navPoint id="id111" playOrder="111">
+       <navLabel>
+         <text>14.7 贪婪谈得够多了……现在我们来谈谈恐惧</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000475204"/>
+     </navPoint>
+     <navPoint id="id112" playOrder="112">
+       <navLabel>
+         <text>14.8 长跑、交易与亏损</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000478704"/>
+     </navPoint>
+     <navPoint id="id113" playOrder="113">
+       <navLabel>
+         <text>14.9 做错事……这太容易了，不是吗？</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000480808"/>
+     </navPoint>
+     <navPoint id="id114" playOrder="114">
+       <navLabel>
+         <text>14.10 这不是交易，这是战役</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000483441"/>
+     </navPoint>
+     <navPoint id="id115" playOrder="115">
+       <navLabel>
+         <text>14.11 再谈假蝇钓鱼的艺术</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000485545"/>
+     </navPoint>
+     <navPoint id="id116" playOrder="116">
+       <navLabel>
+         <text>14.12 再一次直面恐惧与贪婪</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000487856"/>
+     </navPoint>
+     <navPoint id="id117" playOrder="117">
+       <navLabel>
+         <text>14.12.1 要恐惧的事情比恐惧本身还多</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000488214"/>
+     </navPoint>
+     <navPoint id="id118" playOrder="118">
+       <navLabel>
+         <text>14.12.2 控制贪婪</text>
+       </navLabel>
+       <content src="text00001.html#filepos0000490049"/>
+     </navPoint>
+     <navPoint id="id119" playOrder="119">
+       <navLabel>
+         <text>14.13 为什么大多数交易者会失去大部分的时机</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000491295"/>
+     </navPoint>
+     <navPoint id="id120" playOrder="120">
+       <navLabel>
+         <text>14.14 亏本交易的启示</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000494017"/>
+     </navPoint>
+     <navPoint id="id121" playOrder="121">
+       <navLabel>
+         <text>14.14.1 交易新手们的共同之处</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000494363"/>
+     </navPoint>
+     <navPoint id="id122" playOrder="122">
+       <navLabel>
+         <text>14.14.2 交易中证据的分量并不足以证明什么</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000494894"/>
+     </navPoint>
+     <navPoint id="id123" playOrder="123">
+       <navLabel>
+         <text>14.15 交易赔本的第一大原因</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000496800"/>
+     </navPoint>
+     <navPoint id="id124" playOrder="124">
+       <navLabel>
+         <text>14.16 最重要的交易信念</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000499046"/>
+     </navPoint>
+     <navPoint id="id125" playOrder="125">
+       <navLabel>
+         <text>14.16.1 信念系统</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000499371"/>
+     </navPoint>
+     <navPoint id="id126" playOrder="126">
+       <navLabel>
+         <text>14.16.2 关于恐惧和贪婪的注解</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000501137"/>
+     </navPoint>
+     <navPoint id="id127" playOrder="127">
+       <navLabel>
+         <text>14.17 我养过的最糟糕却又最昂贵的狗</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000502049"/>
+     </navPoint>
+     <navPoint id="id128" playOrder="128">
+       <navLabel>
+         <text>14.18 运动与交易如此相似</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000506504"/>
+     </navPoint>
+     <navPoint id="id129" playOrder="129">
+       <navLabel>
+         <text>14.19 股票与期货市场趋势的起因</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000508905"/>
+     </navPoint>
+     <navPoint id="id130" playOrder="130">
+       <navLabel>
+         <text>14.19.1 货运列车理论</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000509123"/>
+     </navPoint>
+     <navPoint id="id131" playOrder="131">
+       <navLabel>
+         <text>14.19.2 一个重要的类比</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000509747"/>
+     </navPoint>
+     <navPoint id="id132" playOrder="132">
+       <navLabel>
+         <text>14.19.3 从轮船到火车</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000510846"/>
+     </navPoint>
+     <navPoint id="id133" playOrder="133">
+       <navLabel>
+         <text>14.19.4 临界质量</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000511600"/>
+     </navPoint>
+     <navPoint id="id134" playOrder="134">
+       <navLabel>
+         <text>14.20 如何辨别公众交易者与专业交易者</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000512473"/>
+     </navPoint>
+     <navPoint id="id135" playOrder="135">
+       <navLabel>
+         <text>14.20.1 我们开始吧</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000513048"/>
+     </navPoint>
+     <navPoint id="id136" playOrder="136">
+       <navLabel>
+         <text>14.20.2 这一切意味着什么？</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000514048"/>
+     </navPoint>
+     <navPoint id="id137" playOrder="137">
+       <navLabel>
+         <text>14.20.3 关键</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000514903"/>
+     </navPoint>
+     <navPoint id="id138" playOrder="138">
+       <navLabel>
+         <text>14.21 朋友，不能这样做</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000515353"/>
+     </navPoint>
+     <navPoint id="id139" playOrder="139">
+       <navLabel>
+         <text>14.21.1 天哪，好乱的抽屉</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000516291"/>
+     </navPoint>
+     <navPoint id="id140" playOrder="140">
+       <navLabel>
+         <text>14.21.2 政治也难测</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000518610"/>
+     </navPoint>
+     <navPoint id="id141" playOrder="141">
+       <navLabel>
+         <text>14.21.3 让我们总结一下</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000519196"/>
+     </navPoint>
+     <navPoint id="id142" playOrder="142">
+       <navLabel>
+         <text>14.21.4 总结性的话</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000520031"/>
+     </navPoint>
+     <navPoint id="id143" playOrder="143">
+       <navLabel>
+         <text>14.22 交易的狂喜</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000520572"/>
+     </navPoint>
+     <navPoint id="id144" playOrder="144">
+       <navLabel>
+         <text>14.22.1 两难困境</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000521205"/>
+     </navPoint>
+     <navPoint id="id145" playOrder="145">
+       <navLabel>
+         <text>14.22.2 这导致心理呓语</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000522451"/>
+     </navPoint>
+     <navPoint id="id146" playOrder="146">
+       <navLabel>
+         <text>14.22.3 未经掩饰的事实</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000524594"/>
+     </navPoint>
+     <navPoint id="id147" playOrder="147">
+       <navLabel>
+         <text>14.22.4 一套制胜的交易系统和耐心</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000525630"/>
+     </navPoint>
+     <navPoint id="id148" playOrder="148">
+       <navLabel>
+         <text>14.23 打得他们原形毕露</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000526628"/>
+     </navPoint>
+     <navPoint id="id149" playOrder="149">
+       <navLabel>
+         <text>14.23.1 有时候研究过去，可以预测未来</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000527052"/>
+     </navPoint>
+     <navPoint id="id150" playOrder="150">
+       <navLabel>
+         <text>14.23.2 这意味着数百万美元</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000527901"/>
+     </navPoint>
+     <navPoint id="id151" playOrder="151">
+       <navLabel>
+         <text>14.23.3 金玉良言</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000531134"/>
+     </navPoint>
+     <navPoint id="id152" playOrder="152">
+       <navLabel>
+         <text>14.24 对我来说太难了</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000532183"/>
+     </navPoint>
+     <navPoint id="id153" playOrder="153">
+       <navLabel>
+         <text>14.25 我正视恐惧和贪婪</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000534716"/>
+     </navPoint>
+     <navPoint id="id154" playOrder="154">
+       <navLabel>
+         <text>14.26 演出必须继续</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000537366"/>
+     </navPoint>
+     <navPoint id="id155" playOrder="155">
+       <navLabel>
+         <text>14.27 流鼻血、菜花耳与坏交易</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000539980"/>
+     </navPoint>
+     <navPoint id="id156" playOrder="156">
+       <navLabel>
+         <text>14.28 学会如何赔钱</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000542253"/>
+     </navPoint>
+     <navPoint id="id157" playOrder="157">
+       <navLabel>
+         <text>14.29 希拉里、高期望与心痛</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000545666"/>
+     </navPoint>
+     <navPoint id="id158" playOrder="158">
+       <navLabel>
+         <text>14.30 焦虑不安，如坐针毡—通往天堂之路</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000548386"/>
+     </navPoint>
+     <navPoint id="id159" playOrder="159">
+       <navLabel>
+         <text>14.31 系统开发与交易的秘诀</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000551495"/>
+     </navPoint>
+     <navPoint id="id160" playOrder="160">
+       <navLabel>
+         <text>14.32 赢家与输家的区别</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000555152"/>
+     </navPoint>
+     <navPoint id="id161" playOrder="161">
+       <navLabel>
+         <text>14.32.1 他们之间的共通之处</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000557346"/>
+     </navPoint>
+     <navPoint id="id162" playOrder="162">
+       <navLabel>
+         <text>14.32.2 他们的不同之处</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000558599"/>
+     </navPoint>
+     <navPoint id="id163" playOrder="163">
+       <navLabel>
+         <text>14.32.3 现在谈谈赢家的共同点</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000560234"/>
+     </navPoint>
+     <navPoint id="id164" playOrder="164">
+       <navLabel>
+         <text>第15章 到底是什么让股市上涨</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000562101"/>
+     </navPoint>
+     <navPoint id="id165" playOrder="165">
+       <navLabel>
+         <text>15.1 逻辑初级</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000564585"/>
+     </navPoint>
+     <navPoint id="id166" playOrder="166">
+       <navLabel>
+         <text>15.2 这些话我可以用名誉担保</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000565700"/>
+     </navPoint>
+     <navPoint id="id167" playOrder="167">
+       <navLabel>
+         <text>15.3 观察数据A和数据B</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000567118"/>
+     </navPoint>
+     <navPoint id="id168" playOrder="168">
+       <navLabel>
+         <text>15.4 让我们戒掉坏习惯</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000569819"/>
+     </navPoint>
+     <navPoint id="id169" playOrder="169">
+       <navLabel>
+         <text>15.5 怎么戒掉坏习惯</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000572184"/>
+     </navPoint>
+     <navPoint id="id170" playOrder="170">
+       <navLabel>
+         <text>15.5.1 真相1</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000572681"/>
+     </navPoint>
+     <navPoint id="id171" playOrder="171">
+       <navLabel>
+         <text>15.5.2 真相2</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000575079"/>
+     </navPoint>
+     <navPoint id="id172" playOrder="172">
+       <navLabel>
+         <text>15.6 设置止损的建议：金钱损失和不可预期</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000576977"/>
+     </navPoint>
+     <navPoint id="id173" playOrder="173">
+       <navLabel>
+         <text>15.6.1 止损的目的是什么</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000577520"/>
+     </navPoint>
+     <navPoint id="id174" playOrder="174">
+       <navLabel>
+         <text>15.6.2 现在回到现实</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000578716"/>
+     </navPoint>
+     <navPoint id="id175" playOrder="175">
+       <navLabel>
+         <text>15.7 概述我是如何进行交易的</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000582240"/>
+     </navPoint>
+     <navPoint id="id176" playOrder="176">
+       <navLabel>
+         <text>15.8 我的交易策略……它是如何起作用的</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000591636"/>
+     </navPoint>
+     <navPoint id="id177" playOrder="177">
+       <navLabel>
+         <text>15.8.1 寻找市场</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000592882"/>
+     </navPoint>
+     <navPoint id="id178" playOrder="178">
+       <navLabel>
+         <text>15.8.2 进入市场</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000593323"/>
+     </navPoint>
+     <navPoint id="id179" playOrder="179">
+       <navLabel>
+         <text>15.8.3 退出市场</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000594231"/>
+     </navPoint>
+     <navPoint id="id180" playOrder="180">
+       <navLabel>
+         <text>第16章 结语</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000598698"/>
+     </navPoint>
+     <navPoint id="id181" playOrder="181">
+       <navLabel>
+         <text>16.1 这就像生活一样</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000607074"/>
+     </navPoint>
+     <navPoint id="id182" playOrder="182">
+       <navLabel>
+         <text>16.2 或许你并不适合做这行……</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000614884"/>
+     </navPoint>
+     <navPoint id="id183" playOrder="183">
+       <navLabel>
+         <text>16.3 你正处于困境……</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000620210"/>
+     </navPoint>
+     <navPoint id="id184" playOrder="184">
+       <navLabel>
+         <text>16.4 但是还有一点……</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000621732"/>
+     </navPoint>
+     <navPoint id="id185" playOrder="185">
+       <navLabel>
+         <text>致谢</text>
+       </navLabel>
+       <content src="text00002.html#filepos0000625211"/>
+     </navPoint>
+   </navMap>
+</ncx>

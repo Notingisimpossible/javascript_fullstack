@@ -17,7 +17,7 @@
 <body>
   <div data-role="page" id="pageone">
     <div data-role="header" id="header-box">
-      <div id="title" class="iconfont">&#xe634;<span id="location">江西财经大学(麦庐园校区宁庐B栋141)</span></div>
+      <div id="title" class="iconfont">&#xe634;<span id="location"></span></div>
       <div id="search">
         <span class="iconfont">&#xe7c4;</span>
         <span id="search-content">去宁庐抢单</span>
@@ -135,8 +135,7 @@
       "去宁庐抢单"
     ]
     var getLocation = (function(){
-      let val = window.sessionStorage.getItem("map")
-      console.log(val)
+      let val = window.sessionStorage.getItem("map") || "江西财经大学(麦庐园校区宁庐B栋141)"
       $("#location").html(val)
     })()
     var changeSerchContent = (function () {

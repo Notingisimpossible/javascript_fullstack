@@ -22,25 +22,25 @@
 
 // // Generator
 // // 你理解的Generator是什么?
-// function *foo(x) {
-//   let y = 2 * (yield(x+1))
-//   let z = yield(y / 3)
-//   return (X+Y+z)
-// }
-// let it = foo(5)
-// console.log(it.next())
-// console.log(it.next(12))
-// console.log(it.next(13))
+function *foo(x) {
+  let y = 2 * (yield(x+1))
+  let z = yield(y / 3)
+  return (X+Y+z)
+}
+let it = foo(5)
+console.log(it.next())
+console.log(it.next(12))
+console.log(it.next(13))
 
-// function *fetch() {
-//   yield ajax(url, () => {})
-//   yield ajax(url1, () => {})
-//   yield ajax(url2, () => {})
-// }
-// let it = fetch()
-// let result1 = it.next()
-// let result2 = it.next()
-// let result3 = it.next()
+function *fetch() {
+  yield ajax(url, () => {})
+  yield ajax(url1, () => {})
+  yield ajax(url2, () => {})
+}
+let it = fetch()
+let result1 = it.next()
+let result2 = it.next()
+let result3 = it.next()
 
 // Promise
 // 特点?优缺点?什么是Promise链?Promise构造函数执行和then执行有啥区别?

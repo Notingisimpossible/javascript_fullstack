@@ -132,6 +132,7 @@ export default {
         });
       });
     },
+    // 绘制折线图
     initEchart() {
       let dom = this.$refs.echartContaier;
       let myChart = echarts.init(dom);

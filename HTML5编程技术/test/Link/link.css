@@ -1,0 +1,11 @@
+body{
+  background-color: darkorange;
+}
+.box{
+  width: 100px;
+  height: 100px;
+}
+.box::after{
+  content: "你好";
+  color: red;
+}

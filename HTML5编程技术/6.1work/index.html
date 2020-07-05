@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #pageone{
+    background: url(./imgs/2301.jpg) no-repeat;
+    background-size: auto 100%;
+  }
+  #box{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #box img{
+    width: auto;
+    padding-top: 5vh;
+  }
+  #title{
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    padding-left: 12vw;
+  }
+  #tagImg{
+    width: 40px;
+    height: 40px;
+    background: url(./imgs/2304.png);
+    background-position: 0 10%;
+    float: left;
+  }
+  .ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head+body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head+body .ui-btn.ui-btn-a:visited{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  ul li h2{
+    color: #FFFFFF;
+    font-size: medium;
+  }
+</style>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="head" id="box">
+    <img src="./imgs/2302.png" alt="">
+  </div>
+  <div data-role="main" class="ui-content">
+    <div id="tagImg"></div>
+    <h2 id="title">今天你想吃点什么？</h2>
+    <ul data-role="listview" data-inset="true">
+      <li>
+        <a href="city.html" target="_blank">
+        <img src="./imgs/2305.jpg">
+        <h2>传统中餐</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="./imgs/2306.jpg">
+        <h2>意大利Pizza</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="./imgs/2307.jpg">
+        <h2>日式料理</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="./imgs/2308.jpg">
+        <h2>汉堡</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="./imgs/2309.jpg">
+        <h2>蛋糕西点</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+        <img src="./imgs/2310.jpg">
+        <h2>自助烧烤</h2>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

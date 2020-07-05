@@ -124,7 +124,7 @@
     </div>
     <div class="goods">
       <img src="./img/phone3.jpg"/>
-      <p onclick="addCart(4)">魅族16s</p>
+      <p onclick="addCart(4)">魅族16</p>
     </div>
   </section>
   <footer><a href="./cart.html">购物车</a></footer>
@@ -134,6 +134,26 @@
     var count2 = 0
     var count3 = 0
     var count4 = 0
+    if(localStorage.length !==0){
+      for(let i = 0; i < localStorage.length; i++){
+        switch(localStorage.key(i)){
+          case "小米6":
+            count1 = localStorage["小米6"]
+            break
+          case "苹果7":
+            count2 = localStorage["苹果7"]
+            break
+          case "荣耀9":
+            count3 = localStorage["荣耀9"]
+            break
+          case "魅族16":
+            count4 = localStorage["魅族16"]
+            break
+          default:
+          break
+        }
+      }
+    }
     function addCart(n){
       switch (n) {
         case 1:

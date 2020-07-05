@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            width: 100%;
+        }
+
+        .ct {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* 图片容器 */
+        .img-box {
+            float: left;
+            display: flex;
+        }
+        .imgSB {
+            margin-bottom: 5px;
+            overflow: hidden;
+        }
+        .imgS {
+            margin-right: 5px;
+            margin-bottom: 5px;
+            overflow: hidden;
+
+        }
+        .img-row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+ .img-row .img-box:last-child{
+     flex:1;
+ }
+        /* 行容器 清楚子元素（图片容器）的浮动*/
+        .img-row::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ct"></div>
+    <script>
+        var allImgUrl = [];
+        window.onload = function () {
+            let ct = document.querySelector(".ct");
+            let barrel = new Barrel(ct, 60, 200); // 100张图片数量， 指定每行的初始行高为100 
+        }
+        var debounce = function (idle, action) {
+            var last
+            return function () {
+                var ctx = this,
+                    args = arguments
+                clearTimeout(last)
+                last = setTimeout(function () {
+                    action.apply(ctx, args)
+                }, idle)
+            }
+        }
+        window.onresize = debounce(100, function () {
+            let ct = document.querySelector(".ct");
+            ct.innerHTML = "";//删除子节点,resize的时候会比较烦,因为要先把之前的图片存好,删除子节点,然后执行重排..
+            let barrel = new Barrel(ct, 60, 200, 'resize'); // 100张图片数量， 指定每行的初始行高为100 
+        })
+
+        function Barrel(ct, imgNum, height, type = 'new',ww=0) {
+            this.ct = ct; // 木桶布局容器的DOM节点
+            this.ww = ww;
+            this.type = type;
+            this.width = parseInt(window.getComputedStyle(ct, null).getPropertyValue("width")) - 20; // 行宽，预防滚动条出现预留20
+            console.log(this.width)
+            this.rowHeight = height; // 行高
+            this.imgArr = []; // 存放每行图片的数组
+            this.loadImg(imgNum);
+
+        }
+        Barrel.prototype = {
+            getImgUrls: function (imgNum) { //模拟后台获取的图片地址
+                console.log(this.type)
+                if (this.type !== 'resize') {
+                    let imgUrls = [];
+                    let colorArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"]; // 颜色数组[0-9, A-F]，
+                    // 该颜色数组生成与源代码稍有不同，在我的GitHub上是用for循环生成的 
+
+                    for (let i = 0; i < imgNum; i++) {
+                        let imgWidth = Math.floor(Math.random() * 500 + 500); // 设定宽度500-1000
+                        let imgHeight = Math.floor(Math.random() * 300 + 500); // 设定高度为300-800
+                        let bgColor = textColor = ""; // 下面使用的是字符串拼接，每次使用都需要重新清空
+
+                        for (let j = 0; j < 6; j++) {
+                            bgColor += colorArr[Math.floor(Math.random() * 16)];
+                            textColor += colorArr[Math.floor(Math.random() * 16)];
+                        }
+
+                        let url = "http://via.placeholder.com/" + imgWidth + "x" + imgHeight + "/" +
+                            bgColor + "/" + textColor;
+                        imgUrls.push(url);
+                    }
+                    allImgUrl = imgUrls;
+                    return imgUrls;
+                } else {
+                    // console.log(allImgUrl)
+                    return allImgUrl;
+                }
+            },
+            loadImg: function (imgNum) {
+                let imgUrlsArr = this.getImgUrls(imgNum);
+                let _this = this; // 保存this指针的指向，方便调用属性及方法
+
+                for (let i = 0; i < imgNum; i++) {
+                    let newImg = new Image(); // 新建图片对象
+                    newImg.src = imgUrlsArr[i]; // 加载图片内容
+                    let ww = 0;
+                    newImg.onload = function () {
+                        // Image对象加载了src后拥有宽高属性, imgInfo存储图片信息
+                        let ratio = this.width / this.height;
+                        // console.log(ratio)
+                        let imgInfo = {
+                            target: this, // 用来存放当前目标newImg,方便后续调用
+                            height: _this.rowHeight,
+                            width: ratio * _this.rowHeight, // 等比例缩放
+                            ratio: ratio,
+                        };
+                        // 把加载完的图片加入渲染队列
+                        _this.render(imgInfo,i);
+                    }
+                }
+            },
+            render: function (imgInfo,i) {
+                this.imgArr.push(imgInfo);                
+                // let ww = 0;
+                this.ww += imgInfo.width //性能优化,利用总ww来执行直接加
+                if (this.ww > this.width) {
+                    let lastImg = this.imgArr.pop();
+                    this.ww -= lastImg.width;
+
+                    // 利用面积相等原则，来计算新的高度
+                    let newHeight = this.width * this.rowHeight / this.ww;
+                    let newRatio = this.width/this.ww;
+                    this.layout(newHeight,newRatio);
+                    // 放置完毕之前的图片之后，清空该图片队列
+                    // 并将上一行溢出的图片 作为下一行的第一张
+                    this.imgArr = [];
+                    this.imgArr.push(lastImg);
+                    this.ww = lastImg.width;//重置ww,但是要等于pop掉的那张图的width
+                }
+                // 定义该行图片宽度之和
+                // let wholeWidth = 0;
+                // this.imgArr.push(imgInfo);
+                // let wholePadding = 0;
+                // for (let i = 0; i < this.imgArr.length; i++) {
+                //     wholeWidth += this.imgArr[i].width;
+                //     wholePadding += 10;
+                // }
+                // // 如果该行加入的图片宽度大于了该行的宽度 
+                // // 就需要弹出最后一张图片，并更改前面的图片大小比例
+                // if (wholeWidth > this.width) {
+                //     // console.log(this.imgArr)
+                //     let lastImg = this.imgArr.pop();
+                //     wholeWidth -= lastImg.width;
+
+                //     // 利用面积相等原则，来计算新的高度
+                //     let newHeight = this.width * this.rowHeight / wholeWidth;
+                //     let newRatio = this.width/wholeWidth;
+                //     console.log(newRatio)
+                //     this.layout(newHeight,newRatio);
+                //     // 放置完毕之前的图片之后，清空该图片队列
+                //     // 并将上一行溢出的图片 作为下一行的第一张
+                //     this.imgArr = [];
+                //     this.imgArr.push(lastImg);
+                // }
+            },
+            layout: function (newHeight,newRatio) {
+                // 一次只放一行， 所以只生成一个imgRow
+                let imgRow = document.createElement("div"); //可以选择一排排layout
+                imgRow.classList.add("img-row");//可以选择一排排layout
+                // console.log(this.imgArr)
+                // 一行包含若干个图片，所以需要若干个imgBox,并将图片加入其中
+                for (let i = 0; i < this.imgArr.length; i++) {
+                    let imgBox = document.createElement("div");
+                    imgBox.classList.add("img-box");
+                    let imgS = document.createElement("div");
+                    if (i === this.imgArr.length - 1) {
+                        imgS.classList.add("imgSB");
+                    } else {
+                        imgS.classList.add("imgS");
+                    }
+                    let img = this.imgArr[i].target;
+                    // 改变了高度之后宽度自己会跟着改变
+                    // console.log(newRatio,this.imgArr[i].width)
+                    img.style.width =parseInt(newRatio*this.imgArr[i].width)-5+'px';// 注意加"px",减掉一个margin-right的值
+                    // img.style.height = newHeight - 5 + "px"; // 注意加"px",减掉一个margin-right的值
+                    imgS.appendChild(img);
+                    imgBox.appendChild(imgS);
+                    imgRow.appendChild(imgBox);
+                    // this.ct.appendChild(imgBox);//也可以一个个插入,反正都是float
+                }
+                // 先把图片加载到图片盒子里，然后加到图片列中，最后加到容器中
+                this.ct.appendChild(imgRow);//可以选择一排排layout
+            },
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #pageone{
+    background: url(./imgs/2301.jpg) no-repeat;
+    background-size: auto 100%;
+  }
+  #head-box{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+  #head-box img{
+    width: auto;
+    padding-top: 5vh;
+  }
+  #box{
+    width: 90vw;
+    height: auto;
+  }
+  #box1{
+    width: 90vw;
+    height: 30vh;
+    background:rgba(0, 0, 0, 0.3)
+  }
+  #box2{
+    width: 90vw;
+    height: 35vh;
+    background:rgba(0, 0, 0, 0.3);
+    margin-top: 2vh;
+  }
+  #list h2{
+    color: white;
+    font-weight: 200;
+    padding-left: 2vw;
+    padding-bottom: 1vh;
+  }
+  #list p{
+    color: white;
+    padding-left: 2vw;
+    padding-bottom: 2vh;
+  }
+  ul li{
+    color: white;
+    margin-left: 6vw;
+    padding-top: 1vh;
+  }
+  #rImg{
+    width: 150px;
+    height: 100px;
+    border: 1px solid white;
+    position: absolute;
+    right: 10vw;
+    top: 35vh;
+    background: url(./imgs/2313.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+  #mImg{
+    width: 150px;
+    height: 100px;
+    border: 1px solid white;
+    position: absolute;
+    right: 10vw;
+    top: 63vh;
+    background: url(./imgs/2319.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+  #dress{
+    height: 20px;
+    width: 80px;
+    font-size: 10px;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    float: right;
+    margin-right: 20px;
+  }
+  #message h2{
+    color: white;
+    font-weight: 200;
+    padding-left: 2vw;
+    padding-bottom: 1vh;
+  }
+  #message b{
+    padding-top: 5px;
+    color: white;
+    font-weight: 200;
+    font-size: 15px;
+  }
+  #call{
+    margin-top: 15px;
+    display: block;
+  }
+  #box2 a {
+    height: 3vh;
+    width: 70vw;
+    background: rgb(43, 42, 42);
+    border-radius: 10px;
+    margin-left: 2vw;
+    font-weight: 200;
+    color: white;
+    padding-top: 8px;
+
+  }
+  #box2 button {
+    height: 6vh;
+    width: 85vw;
+    background: rgb(43, 42, 42);
+    border-radius: 10px;
+    margin-left: 2vw;
+    font-weight: 200;
+    color: white;
+    padding-top: 8px;
+
+  }
+</style>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="head" id="head-box">
+    <img src="./imgs/2302.png" alt="">
+  </div>
+  <div data-role="content" id="box">
+    <div id="box1">
+      <div id="list">
+        <h2>乐缪夫达西餐厅</h2>
+        <p>特色菜品：</p>
+        <ul>
+          <li>经典西冷牛排</li>
+          <li>巧克力味老八</li>
+          <li>经典小吃</li>
+        </ul>
+        <div id="rImg"></div>
+        <div id="dress">查看餐厅网站</div>
+      </div>
+    </div>
+    <div id="box2">
+      <div id="message">
+        <h2>联系信息</h2>
+        <b>北京市西城区xx大厦xx栋</b>
+        <br>
+        <b>就是在这里啊</b>
+        <br>
+        <b id="call">电话：0791-7039043</b>
+        <div id="mImg"></div>
+      </div>
+      <a href="map.html" target="_blank" class="ui-btn ui-icon-location ui-btn-icon-left">在地图上查找</a>
+      <button class="ui-btn ui-icon-phone ui-btn-icon-left">给餐厅打电话</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

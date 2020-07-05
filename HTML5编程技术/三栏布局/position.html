@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html{
+      background-color: red;
+    }
+    body{
+      /* position: absolute; */
+      background-color: yellow;
+      z-index: 100;
+      display: none;
+    }
+    #box1{
+      height: 200px;
+      width: 200px;
+      background-color: #fff;
+      margin-left: 50px;
+    }
+    #box2{
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      position: absolute;
+      left: 150px;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="box1">
+    <div id="box2"></div>
+  </div>
+</body>
+</html>

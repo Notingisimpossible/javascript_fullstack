@@ -34,6 +34,7 @@
     var userName = document.querySelector("#userName");
     var passWord = document.querySelector("#passWord");
     var userNameTip = document.querySelector("#userNameTip");
+    
     var isletter = /^[a-zA-Z]+$/; // 字母的正则表达式
     var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/; // 判断邮箱的正则表达式
     // 判断字符串中是否包含字母
@@ -93,7 +94,6 @@
       window.sessionStorage.setItem("login","ok")
       window.sessionStorage.setItem(`123.${userName.value}`, passWord.value)
     }
-    // 
     // 点击登录
     $('#login-button').click(function (event) {
         let flag = findUser()

@@ -79,6 +79,15 @@ console.log('script end') //4
 // 4. 执行完所有微任务后,如有有必要的话会渲染页面
 // 5. 开始下一轮的event loop,执行宏任务中的异步代码,也就是setTimeout中的回调
 
-// 微任务
+  // 微任务: process.nextTick, pormise, MutationObserver
 
-// 宏任务
+// 宏任务: script, setTimeout, setInterval, setImmediate, I/O, UI render
+
+// 浏览器先执行一个宏任务，接下来有异步代码的话就先执行微任务
+
+
+// Node 中的 Event Loop 和浏览器中的有啥区别？process.nextTick执行顺序？
+// https://www.jianshu.com/p/deedcbf68880
+
+// 在node中微任务一定比宏任务先执行
+// 

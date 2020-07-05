@@ -5,15 +5,16 @@
 //     title: "you don't know js"
 //   }
 // }
-// function cloneShallow(source) {
-//   var target = {}
-//   for (var key in source) {
-//     if(Object.prototype.hasOwnProperty.call(source,key)) {
-//       target[key] = source[key]
-//     }
-//   }
-//   return target
-// }
+// 浅拷贝
+function cloneShallow(source) {
+  var target = {}
+  for (var key in source) {
+    if(Object.prototype.hasOwnProperty.call(source,key)) {
+      target[key] = source[key]
+    }
+  }
+  return target
+}
 // let b = cloneShallow(a)
 // // console.log(a)
 // a.name = '蜗牛'

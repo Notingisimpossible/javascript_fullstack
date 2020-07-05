@@ -8,7 +8,7 @@
     - 代码执行优化
       1. 节流 防抖    
       2. 重绘 回流  
-      3. vue react (ssr) 常见的优化 代码执行的更少 dom操作更少 加快受屏渲染
+      3. vue react (ssr) 常见的优化 代码执行的更少 dom操作更少 加快首屏渲染
       4. 浏览器如何渲染页面  
       5. vue源码做过哪些层面的优化
 
@@ -91,7 +91,7 @@
       5. offset 和 offsetHeight
       6. fixed
 
-  ## lazy-load
+  ## lazy-load 懒加载
 
   ## Vue
     - v-if 和 v-show
@@ -110,4 +110,23 @@
     - key 和 无状态组件
     - pureComponent(渲染时机) shouldComponentUpdate
     - 少在render中绑定事件
-    - 长列表优化
+    - 长列表优化  --- react virtualized
+
+  ## 浏览器渲染
+    1. 浏览器执行所有的加载解析逻辑，解析html的过程中发出了页面渲染所需的各种外部资源
+    2. 浏览器识别所有的css样式信息与Dom树合并，生产render树
+    3. 页面中的所有元素的几何信息都在这一步计算出来
+    4. 这一步中浏览器会根据我们的DOM代码结果，把每一个页面图层转化为像素，对所有媒体文件进行解码
+    5. 最后浏览器会合并各个图层，将数据由cpu 输出给GPU最终绘制在屏幕上
+
+  ## css
+
+  ## 算法
+    1. 排序
+    2. 动态规划
+  ## vue的dom diff 做了哪些优化
+    1. vue中 使用definePropery实际上是能够知道所有的数据的修改，知道哪个数据修改了，然后去修改dom(Vue1.0)
+    2. 虚拟dom是什么，数据修改后，我们通过dom diff算出哪个数据改了，然后再去修改dom
+    3. 有definPeropery 为啥还要虚拟 dom
+
+    - vue1的问题？每个数据都有监听器，watcher太多了，项目庞大之后问题尤其明显，vue2做了一个折中，watcher只到组件层面，一个组件只有一个watcher,组件内部使用dom diff

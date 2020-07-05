@@ -1,0 +1,197 @@
+.apple-tab-span {
+    bornder: none;
+    white-space: pre-wrap;
+    margin: 0;
+    padding: 0
+    }
+.calibre {
+    bornder: none;
+    display: block;
+    font-size: 1em;
+    line-height: 1.2;
+    margin: 0 5pt;
+    padding: 0
+    }
+.calibre1 {
+    bornder: none;
+    display: block;
+    font-weight: bold;
+    line-height: 1.618em;
+    text-align: left;
+    margin: 0.5em 0 1.5em;
+    padding: 0
+    }
+.calibre2 {
+    bornder: none;
+    display: block;
+    line-height: 1.618em;
+    text-align: left;
+    margin: 0.5em 0;
+    padding: 0
+    }
+.calibre3 {
+    bornder: none;
+    display: block;
+    line-height: 1.618em;
+    text-align: left;
+    margin: 0.5em 0 1.5em;
+    padding: 0
+    }
+.calibre4 {
+    bornder: none;
+    display: block;
+    font-weight: bold;
+    line-height: 1.618em;
+    text-align: left;
+    margin: 0.5em 0;
+    padding: 0
+    }
+.calibre5 {
+    height: auto;
+    width: auto
+    }
+.calibre6 {
+    bornder: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0
+    }
+.calibre7 {
+    bornder: none;
+    display: block;
+    line-height: 1.618em;
+    text-align: left;
+    text-indent: 2em;
+    margin: 0.5em 0;
+    padding: 0
+    }
+.calibre8 {
+    bornder: none;
+    display: block;
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin: 1em 0;
+    padding: 0
+    }
+.calibre9 {
+    bornder: none;
+    display: block;
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.618em;
+    text-align: center;
+    margin: 1em 0;
+    padding: 0
+    }
+.calibre10 {
+    bornder: none;
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0
+    }
+.calibre11 {
+    bornder: none;
+    font-size: 0.75em;
+    line-height: 1.2;
+    vertical-align: super;
+    margin: 0;
+    padding: 0
+    }
+.calibre12 {
+    bornder: none;
+    text-decoration: underline;
+    margin: 0;
+    padding: 0
+    }
+.calibre13 {
+    bornder: none;
+    display: block;
+    line-height: 1.618em;
+    text-align: left;
+    text-indent: 0;
+    margin: 0.5em 0;
+    padding: 0
+    }
+.calibre14 {
+    bornder: none;
+    display: block;
+    font-size: 1em;
+    line-height: 1.618em;
+    text-align: left;
+    margin: 0 auto 1em;
+    padding: 0
+    }
+.chapter_page {
+    bornder: none;
+    bottom: 0;
+    display: block;
+    height: 8em;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: auto;
+    padding: 0
+    }
+.chapter_word {
+    bornder: none;
+    bottom: 0;
+    display: block;
+    height: 6.5em;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin: auto;
+    padding: 0
+    }
+.copyright {
+    bornder: none;
+    display: block;
+    text-align: left;
+    text-indent: 2em;
+    margin: 2em auto 0;
+    padding: 0
+    }
+.oration {
+    bornder: none;
+    display: block;
+    margin: 0;
+    padding: 0
+    }
+.sgc-toc-level {
+    bornder: none;
+    display: block;
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0.5em 0 0.5em 1em;
+    padding: 0
+    }
+.sgc-toc-title {
+    bornder: none;
+    display: block;
+    font-size: 1.41667em;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    margin: 1em 0;
+    padding: 0
+    }
+.toc {
+    bornder: none;
+    display: block;
+    line-height: 1.618em;
+    margin: 0 auto;
+    padding: 0
+    }
+.wrap {
+    bornder: none;
+    display: block;
+    margin: 0 auto;
+    padding: 0
+    }

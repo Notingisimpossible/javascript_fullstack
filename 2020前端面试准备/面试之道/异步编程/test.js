@@ -28,17 +28,26 @@
 //       console.log(result);
 //   })
 
-let p1 = new Promise(resolve => {
-  setTimeout(() => {
-      resolve('I\`m p1 ')
-  }, 1000)
-});
-let p2 = new Promise(resolve => {
-  setTimeout(() => {
-      resolve('I\`m p2 ')
-  }, 2000)
-});
-Promise.race([p1, p2])
-  .then(value => {
-      console.log(value)
-  })
+// let p1 = new Promise(resolve => {
+//   setTimeout(() => {
+//       resolve('I\`m p1 ')
+//   }, 1000)
+// });
+// let p2 = new Promise(resolve => {
+//   setTimeout(() => {
+//       resolve('I\`m p2 ')
+//   }, 2000)
+// });
+// Promise.race([p1, p2])
+//   .then(value => {
+//       console.log(value)
+//   })
+function *foo(x) {
+  let y = 2 * (yield(x+1))
+  let z = yield(y / 3)
+  return (x+y+z)
+}
+let it = foo(5)
+console.log(it.next())
+console.log(it.next(12))
+console.log(it.next(13))

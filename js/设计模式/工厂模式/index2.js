@@ -1,4 +1,4 @@
-// 这是一个复杂工厂
+// 这是一个抽象工厂
 var XMLHttpFactory = function() {
 
 }
@@ -13,6 +13,8 @@ var XHRHander = function() {
 }
 XHRHander.prototype = new XMLHttpFactory()
 XHRHander.prototype.constructor = XHRHander //重新定义createFactory
+
+
 XHRHander.prototype.createFactory = function() {
   var XMLHttp = null
   // XMLHttpFActory.createXMLHttp() 这个方法根据当前环境返回一个XML对象

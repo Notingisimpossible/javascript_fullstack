@@ -17,3 +17,35 @@ function after(time, cb) {
     }
   }
 }
+
+let eat = after(3, function() {
+  console.log('我吃饱了')
+})
+
+
+// 创建一个单例模式
+let single = function (fn) {
+  let ret;
+  return function() {
+    console.log(ret)
+    return ret || (ret = fn.apply(this, arguments))
+  }
+}
+
+let bindEvent = single(function() {
+  // 虽然renders执行三次，bindEvent也执行三次
+  // 但是根据单例模式特点，第一次被调用后就不再调用了
+  document.getElementById('box').onclick = function() {
+    alert('click')
+  }
+  return true
+})
+
+let renders = function() {
+  console.log('渲染')
+  bindEvent()
+}
+
+renders()
+renders()
+renders()

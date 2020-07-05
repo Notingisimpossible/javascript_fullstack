@@ -20,31 +20,25 @@ function Topic({match}) {
   return <h3>Requested Param:{match.params.id}</h3>
 }
 
-// class Topics extends React.Component  {
-//   constructor(props){
-//     super(props)
-//   }
-// }
-
 // react中二级路由
 function Topices (props) {
   console.log(props)
   const {match} = props
+  console.log(match)
   return (
     <div>
       <h2>Topices</h2>
       {/* 二级路由跳转 */}
       <ul>
         <li>
-          <Link to={`${match.url}/components`}>Components</Link>
+          <Link to={`${match.url}/components`}>Com</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-roud`}>props-v-roud</Link>
+          <Link to={`${match.url}/props-v-roud`}>props</Link>
         </li>
       </ul>
     {/* Topics 的另一个二级组件 */}
-      <Route path={`${match.path}/:id`} component={Topic}/>
-      <Route exact path={match.path} render={() => <h3>Please select Topic</h3>}/>
+    <Route path={`${match.path}/:id`} component={Topic}/>
     </div>
   )
 }
