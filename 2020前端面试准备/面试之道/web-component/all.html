@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active{
+      color:aqua;
+    }
+  </style>
+</head>
+<body>
+  <!-- template定义模板 专门定义公共的东西 -->
+  <template id="header">
+    <h2>好</h2>
+    <span class="active">
+      <slot name="title">无敌</slot>
+    </span>
+  </template>
+  <yt-header>
+    <span slot="title">首页</span>
+  </yt-header>
+
+  <script>
+    class YTHeader extends HTMLElement{
+      constructor(){
+        super()
+
+        const commonTpl = document.getElementById('header')
+        this.appendChild(commonTpl.content)
+      }
+    }
+    customElements.define('yt-header',YTHeader)
+  </script>
+</body>
+</html>

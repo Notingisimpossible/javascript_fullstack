@@ -1,0 +1,17 @@
+<script>
+  Promise.myAll = function(arr) {
+    return new Promise((resolve,reject) => {
+      let total = 0;
+      let res = [];
+      for(let pro of arr) {
+        pro.then(r => {
+          total++
+          res.push(r)
+          if(total === arr.length){
+            resolve(res)
+          }
+        })
+      }
+    })
+  }
+</script>

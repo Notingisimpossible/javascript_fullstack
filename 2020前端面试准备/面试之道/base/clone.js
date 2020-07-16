@@ -9,12 +9,13 @@
 // b.push(1)
 // console.log(a)
 
-// 深拷贝
-// Object.assign
-// let a = {age: 1}
-// let b = Object.assign({}, a)
-// b.age = 3
-// console.log(a)
+// 浅拷贝
+Object.assign
+let a = {age: 1,person:{name:'jake'}}
+let b = Object.assign({}, a)
+b.age = 3
+b.person.name="mike"
+console.log(a)
 
 // {...}实现浅拷贝
 // let a = {age: 1, name:{my:'hello'}}
@@ -60,23 +61,23 @@
 // 如果你需要拷贝的对象含有内置类型并且不包含函数，可以使用MessageChannel
 
 // 手写深拷贝？ 递归拷贝
-function deepClone(obj) {
-  let res = obj instanceof Array ? [] : {}
-  for (let i in obj) {
-    if(obj.hasOwnProperty(i)){
-      res[i] = typeof obj[i] === 'object' ? deepClone(obj[i]) : obj[i]
-    }
-  }
-  return res
-}
+// function deepClone(obj) {
+//   let res = obj instanceof Array ? [] : {}
+//   for (let i in obj) {
+//     if(obj.hasOwnProperty(i)){
+//       res[i] = typeof obj[i] === 'object' ? deepClone(obj[i]) : obj[i]
+//     }
+//   }
+//   return res
+// }
 
-let obj = {
-  a: 1,
-  b:{
-    c:2,
-    d:3
-  }
-}
-let res = deepClone(obj)
-obj.b.c = 20
-console.log(res)
+// let obj = {
+//   a: 1,
+//   b:{
+//     c:2,
+//     d:3
+//   }
+// }
+// let res = deepClone(obj)
+// obj.b.c = 20
+// console.log(res)

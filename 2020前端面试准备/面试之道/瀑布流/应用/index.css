@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+html{
+  height: auto;
+}
+img {
+  display: block;
+  width: 250px;
+}
+
+.item {
+  box-shadow: 2px 2px 2px #999;
+  position: absolute;
+}

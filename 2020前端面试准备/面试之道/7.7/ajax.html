@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var xhr =  new XMLHttpRequest()
+    xhr.open('GET', 
+    'http://neteasecloudmusicapi.zhaoboy.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA', 
+    true)
+    xhr.onload = function (res) {
+      console.log(xhr.responseText);
+    }
+    xhr.send()
+  </script>
+</body>
+</html>
