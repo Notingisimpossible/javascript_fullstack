@@ -1,0 +1,154 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200725.121644.7488.0.001.json",
+    "dumpEventTime": "2020-07-25T12:16:44Z",
+    "dumpEventTimeStamp": "1595650604460",
+    "processId": 7488,
+    "cwd": "F:\\javascript_fullstack\\js\\剑指offer",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      ".\\threeDeepyh.js"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.16.1/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.18363",
+    "osVersion": "Windows 10 Pro",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 10377312,
+        "nice": 0,
+        "sys": 6762890,
+        "idle": 236332718,
+        "irq": 1770843
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 6002890,
+        "nice": 0,
+        "sys": 1009109,
+        "idle": 246460609,
+        "irq": 37312
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 10880671,
+        "nice": 0,
+        "sys": 3445921,
+        "idle": 239146015,
+        "irq": 87406
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 5040015,
+        "nice": 0,
+        "sys": 1757812,
+        "idle": 246674781,
+        "irq": 49109
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 10983500,
+        "nice": 0,
+        "sys": 3055984,
+        "idle": 239433125,
+        "irq": 105234
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 4962078,
+        "nice": 0,
+        "sys": 1183125,
+        "idle": 247327406,
+        "irq": 31562
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 7455781,
+        "nice": 0,
+        "sys": 2030656,
+        "idle": 243986156,
+        "irq": 72406
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-6700HQ CPU @ 2.60GHz",
+        "speed": 2592,
+        "user": 7854796,
+        "nice": 0,
+        "sys": 3383406,
+        "idle": 242234390,
+        "irq": 58906
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "以太网",
+        "internal": false,
+        "mac": "10:7b:44:1c:03:b1",
+        "address": "2409:8a38:6e39:7210:53b:a758:7ee3:cb9",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "以太网",
+        "internal": false,
+        "mac": "10:7b:44:1c:03:b1",
+        "address": "2409:8a38:6e39:7210:386c:5c60:399b:3a45",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "以太网",
+        "internal": false,
+        "mac": "10:7b:44:1c:03:b1",
+        "address": "fe80::53b:a758:7ee3:cb9",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 8
+      },
+      {
+        "name": "以太网",
+        "internal": false,
+        "m

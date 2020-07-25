@@ -123,8 +123,22 @@
 // console.log('%s', ret2)  // undefined
 // console.log(arr1.fill("hello"))
 // arr1.re
-var arr = [1,2,3,4,5,6,7]  
-var result = arr.some((item, index, arr) => {
-  console.log(index,arr)
-})
-console.log(result) // true
+// var arr = [1,2,3,4,5,6,7]  
+// var result = arr.some((item, index, arr) => {
+//   console.log(index,arr)
+// })
+// console.log(result) // true
+// var arr = new Array(6,5,4,3,2,1)
+// var sum = 0
+// for(i = 1; i < arr.length; i++) {
+//   sum +=arr[i]
+// }
+// console.log(sum)
+
+// let user = {
+//   name: 'mg'
+// }
+// console.log(user("name"))
+
+// var a = 1
+// console.log(a[b])
